@@ -198,7 +198,7 @@ class _Body extends StatelessWidget {
             ),
             SizedBox(height: 5.h),
             Padding(
-              padding: const EdgeInsets.only(left: 58.0),
+              padding: EdgeInsets.only(left: 80.w),
               child: Center(
                 child: Image.asset(
                   'assets/images/improve_iq_assets/casual-life-3d-tall-stack-of-books.png',

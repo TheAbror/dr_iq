@@ -67,13 +67,13 @@ class _HomePageState extends State<HomePage> {
               'Hi ' '$name',
               style: TextStyle(fontSize: 24.sp),
             ),
-            // Text(
-            //   'Welcome to Dr.iQ',
-            //   style: TextStyle(
-            //     fontSize: 28.sp,
-            //     fontWeight: FontWeight.bold,
-            //   ),
-            // ),
+            Text(
+              'Welcome to Dr.iQ',
+              style: TextStyle(
+                fontSize: 28.sp,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
             SizedBox(height: 40.h),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,

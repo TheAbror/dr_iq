@@ -5,6 +5,7 @@ import 'package:dr_iq/core/app_colors.dart';
 import 'package:dr_iq/core/roots/app_routes.dart';
 import 'package:dr_iq/ui/splash_page/bloc/splash_bloc.dart';
 import 'package:dr_iq/ui/splash_page/splash_auth_status.dart';
+import 'package:flutter_svg/svg.dart';
 
 class SplashPage extends StatefulWidget {
   const SplashPage({super.key});
@@ -54,13 +55,13 @@ class _SplashPageState extends State<SplashPage> {
           crossAxisAlignment: CrossAxisAlignment.end,
           children: [
             SizedBox(height: 250.h),
-            // Center(
-            //   child: SvgPicture.asset(
-            //     'assets/images/Component 1.svg',
-            //     width: 350.w,
-            //     fit: BoxFit.fill,
-            //   ),
-            // ),
+            Center(
+              child: SvgPicture.asset(
+                'assets/images/Component 1.svg',
+                width: 350.w,
+                fit: BoxFit.fill,
+              ),
+            ),
             SizedBox(height: 170.h),
             const Center(
               child: CircularProgressIndicator(color: AppColors.textMain),

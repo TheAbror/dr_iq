@@ -45,7 +45,11 @@ class _Body extends StatelessWidget {
             width: 430.w,
             decoration: BoxDecoration(
               color: AppColors.profileColor,
-              borderRadius: BorderRadius.circular(25.r),
+              borderRadius: BorderRadius.only(
+                topRight: Radius.circular(25.r),
+                topLeft: Radius.circular(25.r),
+              ),
+              //
             ),
             alignment: Alignment.center,
           ),
@@ -58,7 +62,7 @@ class _Body extends StatelessWidget {
             ProfileBodyItem(text: 'Phone', icons: Icons.phone),
             ProfileBodyItem(text: 'Email', icons: Icons.email),
             ProfileBodyItem(text: 'Facebook account', icons: Icons.facebook),
-            SizedBox(height: 130.h),
+            SizedBox(height: 100.h),
             Container(
               width: double.infinity,
               margin: EdgeInsets.only(left: 16.w, right: 16.w),
