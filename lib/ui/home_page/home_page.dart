@@ -135,6 +135,9 @@ class _HomePageState extends State<HomePage> {
                   icon: Icons.adobe_outlined,
                   text: 'About',
                   color: AppColors.primary,
+                  onTap: () {
+                    Navigator.pushNamed(context, AppRoutes.aboutTab);
+                  },
                 ),
               ],
             ),

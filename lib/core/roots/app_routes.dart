@@ -7,4 +7,5 @@ abstract class AppRoutes {
   static const profilePage = '/profilesPage';
   static const todos = '/toDosPage';
   static const improveIQ = '/improveIQ';
+  static const aboutTab = '/aboutTab';
 }

@@ -1,4 +1,5 @@
 import 'package:dr_iq/core/global_constants.dart';
+import 'package:dr_iq/ui/home_page/tabs/about_tab/about.page.dart';
 import 'package:dr_iq/ui/home_page/tabs/improve_iq/improve_iq_tab.dart';
 import 'package:dr_iq/ui/home_page/tabs/take_iq_test_tab/take_iq_test_tab.dart';
 import 'package:dr_iq/ui/home_page/tabs/todos_page/todos_page.dart';
@@ -47,6 +48,10 @@ class MainRouteGenerator {
       case AppRoutes.improveIQ:
         return CustomCupertinoStyleNavigationRoute(
           builder: (_) => const ImproveIQTab(),
+        );
+      case AppRoutes.aboutTab:
+        return CustomCupertinoStyleNavigationRoute(
+          builder: (_) => const AboutTab(),
         );
 
       default:
