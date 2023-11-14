@@ -7,7 +7,7 @@ import 'package:dr_iq/core/app_colors.dart';
 import 'package:dr_iq/core/global_constants.dart';
 import 'package:dr_iq/core/preference_services/preference_services.dart';
 import 'package:dr_iq/core/preference_services/shpref_keys.dart';
-import 'package:dr_iq/ui/home_page/tabs/take_iq_test_page/bloc/questions_bloc.dart';
+import 'package:dr_iq/ui/home_page/tabs/take_iq_test_tab/bloc/questions_bloc.dart';
 import 'package:rive/rive.dart';
 
 Future<dynamic> finishDialog(BuildContext context, QuestionsState state) {

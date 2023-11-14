@@ -4,7 +4,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:dr_iq/core/app_colors.dart';
 import 'package:dr_iq/core/preference_services/preference_services.dart';
 import 'package:dr_iq/core/roots/app_routes.dart';
-import 'package:dr_iq/ui/home_page/tabs/take_iq_test_page/widgets/home_page_item.dart';
+import 'package:dr_iq/ui/home_page/tabs/take_iq_test_tab/widgets/home_page_item.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});

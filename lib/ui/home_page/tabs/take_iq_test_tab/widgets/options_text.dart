@@ -5,7 +5,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:dr_iq/core/app_colors.dart';
 import 'package:dr_iq/core/global_constants.dart';
-import 'package:dr_iq/ui/home_page/tabs/take_iq_test_page/bloc/questions_bloc.dart';
+import 'package:dr_iq/ui/home_page/tabs/take_iq_test_tab/bloc/questions_bloc.dart';
 
 class OptionsText extends StatelessWidget {
   final int counter;

@@ -4,7 +4,7 @@ import 'dart:io';
 import 'package:chopper/chopper.dart';
 import 'package:http/io_client.dart' as http;
 import 'package:dr_iq/core/api/custom_converter.dart';
-import 'package:dr_iq/ui/home_page/tabs/take_iq_test_page/services/questions_service.dart';
+import 'package:dr_iq/ui/home_page/tabs/take_iq_test_tab/services/questions_service.dart';
 
 class ApiProvider {
   static late ChopperClient _client;

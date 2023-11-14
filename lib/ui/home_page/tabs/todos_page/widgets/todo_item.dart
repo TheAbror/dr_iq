@@ -1,8 +1,8 @@
 // ignore_for_file: prefer_typing_uninitialized_variables
 
+import 'package:dr_iq/ui/home_page/tabs/todos_page/colors/todo_colors.dart';
+import 'package:dr_iq/ui/home_page/tabs/todos_page/model/todo_model.dart';
 import 'package:flutter/material.dart';
-import 'package:dr_iq/ui/home_page/tabs/todos_page.dart/colors/todo_colors.dart';
-import 'package:dr_iq/ui/home_page/tabs/todos_page.dart/model/todo_model.dart';
 
 class ToDoItem extends StatelessWidget {
   final ToDo todo;

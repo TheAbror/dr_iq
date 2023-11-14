@@ -1,5 +1,5 @@
 import 'package:chopper/chopper.dart';
-import 'package:dr_iq/ui/home_page/tabs/take_iq_test_page/model/questions_model.dart';
+import 'package:dr_iq/ui/home_page/tabs/take_iq_test_tab/model/questions_model.dart';
 
 class CustomDataConverter extends JsonConverter {
   @override

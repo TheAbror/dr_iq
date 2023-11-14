@@ -1,11 +1,11 @@
 // ignore_for_file: unused_field
 
+import 'package:dr_iq/ui/home_page/tabs/todos_page/colors/todo_colors.dart';
+import 'package:dr_iq/ui/home_page/tabs/todos_page/model/todo_model.dart';
+import 'package:dr_iq/ui/home_page/tabs/todos_page/widgets/todo_item.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:dr_iq/core/app_colors.dart';
-import 'package:dr_iq/ui/home_page/tabs/todos_page.dart/colors/todo_colors.dart';
-import 'package:dr_iq/ui/home_page/tabs/todos_page.dart/model/todo_model.dart';
-import 'package:dr_iq/ui/home_page/tabs/todos_page.dart/widgets/todo_item.dart';
 
 class ToDosPage extends StatelessWidget {
   const ToDosPage({super.key});
