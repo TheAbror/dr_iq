@@ -31,7 +31,7 @@ class HistoryBodyItem extends StatelessWidget {
         ),
       ),
       title: Text(
-        'Score: $score',
+        'Score: $score  ',
         style: TextStyle(
           fontSize: 24.sp,
           fontWeight: FontWeight.bold,

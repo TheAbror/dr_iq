@@ -50,6 +50,7 @@ flutter:
     - assets/
     - assets/fonts/
     - assets/images/
+    - assets/images/improve_iq_assets/
     
 
   fonts:
