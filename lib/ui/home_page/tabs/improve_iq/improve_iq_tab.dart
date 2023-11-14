@@ -1,4 +1,5 @@
 import 'package:dr_iq/core/app_colors.dart';
+import 'package:dr_iq/core/global_constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -30,57 +31,116 @@ class _Body extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: EdgeInsets.symmetric(horizontal: 16.w),
-      child: Column(
-        children: const [
-          SizedBox(height: 20),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              MyCard(image: 'assets/images/improve_iq_assets/bouncy-planet-earth.png'),
-              MyCard(
-                image: 'assets/images/improve_iq_assets/usaflag.png',
-              ),
-            ],
-          ),
-          SizedBox(height: 20),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              // MyCard(),
-              // MyCard(),
-            ],
-          ),
-        ],
+    return GridView.builder(
+      gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
+        maxCrossAxisExtent: 190.w,
+        childAspectRatio: 4 / 5,
+        crossAxisSpacing: 10,
+        mainAxisSpacing: 0,
       ),
+      itemCount: 4,
+      shrinkWrap: true,
+      padding: EdgeInsets.symmetric(horizontal: 16.w),
+      physics: AlwaysScrollableScrollPhysics(),
+      itemBuilder: (context, index) {
+        String image;
+        String cardTitle;
+
+        if (index == 0) {
+          image = 'assets/images/improve_iq_assets/bouncy-planet-earth.png';
+          cardTitle = 'IQ Questions';
+        } else if (index == 1) {
+          image = 'assets/images/improve_iq_assets/usaflag.png';
+          cardTitle = 'Random Questions';
+        } else if (index == 2) {
+          image = 'assets/images/improve_iq_assets/3d-fluency-rubiks-cube.png';
+          cardTitle = 'Critical Thinking Questions';
+        } else if (index == 3) {
+          image = 'assets/images/improve_iq_assets/random.png';
+          cardTitle = 'Critical Thinking Questions';
+        } else {
+          image = 'assets/images/improve_iq_assets/3d-fluency-rubiks-cube.png';
+          cardTitle = 'Critical Thinking Questions';
+        }
+
+        return MyCard(
+          text: cardTitle,
+          image: image,
+        );
+      },
     );
   }
 }
 
 class MyCard extends StatelessWidget {
   final String image;
+  final String text;
 
   const MyCard({
     super.key,
     required this.image,
+    required this.text,
   });
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: 180.w,
-      width: 190.w,
-      padding: EdgeInsets.all(8.w),
-      decoration: BoxDecoration(
-        color: AppColors.background,
-        borderRadius: BorderRadius.circular(8.r),
-        border: Border.all(
-          color: AppColors.outline,
-          width: 0.5.w,
+    return Column(
+      children: [
+        Container(
+          padding: EdgeInsets.all(8.w),
+          decoration: BoxDecoration(
+            color: AppColors.background,
+            borderRadius: BorderRadius.circular(8.r),
+            border: Border.all(
+              color: AppColors.outline,
+              width: 0.5.w,
+            ),
+          ),
+          child: Image.asset(image),
         ),
-      ),
-      child: Image.asset(image),
+        SizedBox(height: 10.h),
+        Text(
+          text,
+          style: TextStyle(
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+        SizedBox(height: 10.h),
+      ],
     );
   }
 }
+
+// class CardSection extends StatelessWidget {
+//   final String cardTitle;
+//   final List<Map<String, dynamic>> questions;
+
+//   const CardSection({
+//     super.key,
+//     required this.cardTitle,
+//     required this.questions,
+//   });
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return Column(
+//       crossAxisAlignment: CrossAxisAlignment.start,
+//       children: [
+//         Row(
+//           crossAxisAlignment: CrossAxisAlignment.start,
+//           children: List.generate(
+//             2,
+//             (index) => Expanded(
+//               child: Padding(
+//                 padding: EdgeInsets.symmetric(horizontal: 8.0),
+//                 child: MyCard(text: cardTitle, image: 'assets/images/improve_iq_assets/bouncy-planet-earth.png'),
+//               ),
+//             ),
+//           ),
+//         ),
+//       ],
+//     );
+//   }
+// }
+
+

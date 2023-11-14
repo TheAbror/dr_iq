@@ -11,14 +11,11 @@ import 'package:dr_iq/ui/home_page/tabs/take_iq_test_tab/widgets/my_spacer.dart'
 import 'package:dr_iq/ui/home_page/tabs/take_iq_test_tab/widgets/options_text.dart';
 import 'package:dr_iq/ui/home_page/tabs/take_iq_test_tab/widgets/question_text.dart';
 
-class TakeIQTest extends StatefulWidget {
-  const TakeIQTest({super.key});
+class TakeIQTest extends StatelessWidget {
+  final GlobalConstants questions;
 
-  @override
-  State<TakeIQTest> createState() => _TakeIQTestState();
-}
+  const TakeIQTest({super.key, required this.questions});
 
-class _TakeIQTestState extends State<TakeIQTest> {
   @override
   Widget build(BuildContext context) {
     var questionsLength = GlobalConstants.questions.length;
@@ -57,10 +54,6 @@ class _TakeIQTestState extends State<TakeIQTest> {
                         },
                       ),
                     ),
-                    // Row(
-                    //   crossAxisAlignment: CrossAxisAlignment.end,
-                    //   children: iconsList,
-                    // ),
                   ],
                 );
               },
@@ -83,16 +76,12 @@ class _TakeIQTestState extends State<TakeIQTest> {
   }
 }
 
-
-
-
-  // if (state.blocProgress == BlocProgress.IS_LOADING) {
-                //   return const PrimaryLoader();
-                // }
-
-                // if (state.blocProgress == BlocProgress.FAILED) {
-                //   return const SomethingWentWrong();
-                // }
-
-                // final counter = state.counter;
-                // final iconsList = state.icons;
+// if (state.blocProgress == BlocProgress.IS_LOADING) {
+//   return const PrimaryLoader();
+// }// if (state.blocProgress == BlocProgress.FAILED) {
+//   return const SomethingWentWrong();
+// }// final counter = state.counter;
+// final iconsList = state.icons; // Row(
+    //   crossAxisAlignment: CrossAxisAlignment.end,
+    //   children: iconsList,
+    // ),
