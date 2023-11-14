@@ -1,5 +1,4 @@
-import 'package:dr_iq/core/global_constants.dart';
-import 'package:dr_iq/ui/home_page/tabs/about_tab/about.page.dart';
+import 'package:dr_iq/ui/home_page/tabs/about_tab/about_tab.dart';
 import 'package:dr_iq/ui/home_page/tabs/improve_iq/improve_iq_tab.dart';
 import 'package:dr_iq/ui/home_page/tabs/take_iq_test_tab/take_iq_test_tab.dart';
 import 'package:dr_iq/ui/home_page/tabs/todos_page/todos_page.dart';
@@ -30,8 +29,8 @@ class MainRouteGenerator {
       case AppRoutes.takeiqtest:
         return CustomCupertinoStyleNavigationRoute(
           builder: (_) => TakeIQTest(
-            questions: settings.arguments as GlobalConstants,
-          ),
+              // questions: settings.arguments as GlobalConstants,
+              ),
         );
       case AppRoutes.historyPage:
         return CustomCupertinoStyleNavigationRoute(

@@ -1,4 +1,3 @@
-import 'package:dr_iq/core/global_constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
@@ -84,7 +83,10 @@ class _HomePageState extends State<HomePage> {
                   text: 'Take IQ Test',
                   color: const Color(0xffc30010),
                   onTap: () {
-                    Navigator.pushNamed(context, AppRoutes.takeiqtest, arguments: GlobalConstants.questions);
+                    Navigator.pushNamed(
+                      context, AppRoutes.takeiqtest,
+                      // , arguments: GlobalConstants.questions
+                    );
                   },
                 ),
                 HomePageItem(
@@ -133,7 +135,7 @@ class _HomePageState extends State<HomePage> {
                 ),
                 HomePageItem(
                   icon: Icons.adobe_outlined,
-                  text: 'About',
+                  text: 'About IQ',
                   color: AppColors.primary,
                   onTap: () {
                     Navigator.pushNamed(context, AppRoutes.aboutTab);

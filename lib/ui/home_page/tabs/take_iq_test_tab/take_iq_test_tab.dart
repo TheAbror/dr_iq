@@ -12,9 +12,9 @@ import 'package:dr_iq/ui/home_page/tabs/take_iq_test_tab/widgets/options_text.da
 import 'package:dr_iq/ui/home_page/tabs/take_iq_test_tab/widgets/question_text.dart';
 
 class TakeIQTest extends StatelessWidget {
-  final GlobalConstants questions;
+  // final GlobalConstants questions;
 
-  const TakeIQTest({super.key, required this.questions});
+  const TakeIQTest({super.key});
 
   @override
   Widget build(BuildContext context) {
