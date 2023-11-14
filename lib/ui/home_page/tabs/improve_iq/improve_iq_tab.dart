@@ -1,5 +1,4 @@
 import 'package:dr_iq/core/app_colors.dart';
-import 'package:dr_iq/core/global_constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -110,37 +109,3 @@ class MyCard extends StatelessWidget {
     );
   }
 }
-
-// class CardSection extends StatelessWidget {
-//   final String cardTitle;
-//   final List<Map<String, dynamic>> questions;
-
-//   const CardSection({
-//     super.key,
-//     required this.cardTitle,
-//     required this.questions,
-//   });
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return Column(
-//       crossAxisAlignment: CrossAxisAlignment.start,
-//       children: [
-//         Row(
-//           crossAxisAlignment: CrossAxisAlignment.start,
-//           children: List.generate(
-//             2,
-//             (index) => Expanded(
-//               child: Padding(
-//                 padding: EdgeInsets.symmetric(horizontal: 8.0),
-//                 child: MyCard(text: cardTitle, image: 'assets/images/improve_iq_assets/bouncy-planet-earth.png'),
-//               ),
-//             ),
-//           ),
-//         ),
-//       ],
-//     );
-//   }
-// }
-
-
