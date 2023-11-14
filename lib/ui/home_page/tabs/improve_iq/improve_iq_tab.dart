@@ -1,4 +1,5 @@
 import 'package:dr_iq/core/app_colors.dart';
+import 'package:dr_iq/ui/home_page/tabs/improve_iq/widgets/improve_iq_app_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -9,17 +10,7 @@ class ImproveIQTab extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: AppColors.float,
-      appBar: AppBar(
-        backgroundColor: AppColors.float,
-        elevation: 0,
-        leading: IconButton(
-          color: AppColors.textMain,
-          onPressed: () {
-            Navigator.pop(context);
-          },
-          icon: Icon(Icons.arrow_back),
-        ),
-      ),
+      appBar: ImproveIQAppBar(),
       body: _Body(),
     );
   }
@@ -37,28 +28,28 @@ class _Body extends StatelessWidget {
         crossAxisSpacing: 10,
         mainAxisSpacing: 0,
       ),
-      itemCount: 4,
+      itemCount: 8,
       shrinkWrap: true,
-      padding: EdgeInsets.symmetric(horizontal: 16.w),
+      padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 16.w),
       physics: AlwaysScrollableScrollPhysics(),
       itemBuilder: (context, index) {
         String image;
         String cardTitle;
 
         if (index == 0) {
-          image = 'assets/images/improve_iq_assets/bouncy-planet-earth.png';
-          cardTitle = 'IQ Questions';
+          image = 'assets/images/improve_iq_assets/logical.png';
+          cardTitle = 'Logical Reasoning';
         } else if (index == 1) {
-          image = 'assets/images/improve_iq_assets/usaflag.png';
+          image = 'assets/images/improve_iq_assets/3d-fluency-rubiks-cube.png';
           cardTitle = 'Random Questions';
         } else if (index == 2) {
-          image = 'assets/images/improve_iq_assets/3d-fluency-rubiks-cube.png';
-          cardTitle = 'Critical Thinking Questions';
-        } else if (index == 3) {
           image = 'assets/images/improve_iq_assets/random.png';
           cardTitle = 'Critical Thinking Questions';
+        } else if (index == 3) {
+          image = 'assets/images/improve_iq_assets/math.png';
+          cardTitle = 'Mathematical Problem Solving';
         } else {
-          image = 'assets/images/improve_iq_assets/3d-fluency-rubiks-cube.png';
+          image = 'assets/images/improve_iq_assets/3d-fluency-faq.png';
           cardTitle = 'Critical Thinking Questions';
         }
 
@@ -86,6 +77,7 @@ class MyCard extends StatelessWidget {
     return Column(
       children: [
         Container(
+          height: 190.w,
           padding: EdgeInsets.all(8.w),
           decoration: BoxDecoration(
             color: AppColors.background,
@@ -103,6 +95,8 @@ class MyCard extends StatelessWidget {
           style: TextStyle(
             fontWeight: FontWeight.bold,
           ),
+          maxLines: 1,
+          overflow: TextOverflow.ellipsis,
         ),
         SizedBox(height: 10.h),
       ],

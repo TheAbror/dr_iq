@@ -120,12 +120,13 @@ class _ReorderableListViewExampleState extends State<ReorderableExample> {
             ),
             child: TextField(
               style: const TextStyle(
-                fontWeight: FontWeight.w500,
+                fontWeight: FontWeight.bold,
               ),
               controller: _todoController,
               decoration: const InputDecoration(
                 hintText: 'Add a new todo item',
                 border: InputBorder.none,
+                hintStyle: TextStyle(fontWeight: FontWeight.bold),
               ),
             ),
           ),
