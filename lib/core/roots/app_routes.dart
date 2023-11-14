@@ -6,4 +6,5 @@ abstract class AppRoutes {
   static const historyPage = '/historyPage';
   static const profilePage = '/profilesPage';
   static const todos = '/toDosPage';
+  static const improveIQ = '/improveIQ';
 }

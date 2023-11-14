@@ -1,3 +1,4 @@
+import 'package:dr_iq/ui/home_page/tabs/improve_iq/improve_iq_tab.dart';
 import 'package:dr_iq/ui/home_page/tabs/todos_page/todos_page.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:dr_iq/core/roots/app_routes.dart';
@@ -39,6 +40,10 @@ class MainRouteGenerator {
       case AppRoutes.todos:
         return CustomCupertinoStyleNavigationRoute(
           builder: (_) => const ToDosPage(),
+        );
+      case AppRoutes.improveIQ:
+        return CustomCupertinoStyleNavigationRoute(
+          builder: (_) => const ImproveIQTab(),
         );
 
       default:

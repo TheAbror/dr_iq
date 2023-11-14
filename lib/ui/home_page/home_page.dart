@@ -104,6 +104,9 @@ class _HomePageState extends State<HomePage> {
                   icon: Icons.school_outlined,
                   text: 'Improve IQ',
                   color: Colors.blue.shade900,
+                  onTap: () {
+                    Navigator.pushNamed(context, AppRoutes.improveIQ);
+                  },
                 ),
                 HomePageItem(
                   icon: Icons.person_add_alt_1_outlined,
