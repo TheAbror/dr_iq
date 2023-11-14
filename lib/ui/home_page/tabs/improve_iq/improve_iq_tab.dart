@@ -34,7 +34,7 @@ class _Body extends StatelessWidget {
     return GridView.builder(
       gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
         maxCrossAxisExtent: 190.w,
-        childAspectRatio: 4 / 5,
+        childAspectRatio: 5 / 6,
         crossAxisSpacing: 10,
         mainAxisSpacing: 0,
       ),
