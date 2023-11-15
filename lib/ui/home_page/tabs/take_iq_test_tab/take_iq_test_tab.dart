@@ -46,13 +46,28 @@ class TakeIQTest extends StatelessWidget {
                         physics: NeverScrollableScrollPhysics(),
                         itemCount: questionsLength,
                         itemBuilder: (context, index) {
+                          var myValue =
+                              GlobalConstants.testQuestions[state.questionCounter]["options"][index]["option_text"];
                           return Column(
                             children: [
                               QuestionText(
                                 textQuestion: GlobalConstants.testQuestions[state.questionCounter]['question_text'],
                               ),
                               MySpacer(),
-                              OptionsText(counter: state.questionCounter),
+                              GestureDetector(
+                                onTap: () {
+                                  var isCorrect = myValue["is_correct"];
+                                  context.read<QuestionsBloc>().toNextQuestion();
+                                  print('Selected value: ${myValue["option_text"]}');
+                                  print('Is Correct: $isCorrect');
+                                  if (isCorrect == true) {
+                                    context.read<QuestionsBloc>().resultOfTest();
+                                  }
+                                },
+                                child: OptionsText(
+                                  optionText: myValue,
+                                ),
+                              ),
                               SizedBox(height: 100.h),
                             ],
                           );

@@ -1,4 +1,3 @@
-import 'package:dr_iq/core/global_constants.dart';
 import 'package:dr_iq/ui/home_page/tabs/about_tab/about_tab.dart';
 import 'package:dr_iq/ui/home_page/tabs/improve_iq/improve_iq_tab.dart';
 import 'package:dr_iq/ui/home_page/tabs/take_iq_test_tab/take_iq_test_tab.dart';
@@ -36,7 +35,6 @@ class MainRouteGenerator {
             questions: questions,
           ),
         );
-
       case AppRoutes.historyPage:
         return CustomCupertinoStyleNavigationRoute(
           builder: (_) => const HistoryPage(),
