@@ -54,20 +54,7 @@ class TakeIQTest extends StatelessWidget {
                                 textQuestion: questions[state.questionCounter]['question_text'],
                               ),
                               MySpacer(),
-                              GestureDetector(
-                                onTap: () {
-                                  var isCorrect = myValue["is_correct"];
-                                  context.read<QuestionsBloc>().toNextQuestion();
-                                  print('Selected value: ${myValue["option_text"]}');
-                                  print('Is Correct: $isCorrect');
-                                  if (isCorrect == true) {
-                                    context.read<QuestionsBloc>().resultOfTest();
-                                  }
-                                },
-                                child: OptionsText(
-                                  optionText: myValue,
-                                ),
-                              ),
+                              OptionsText(optionText: myValue, options: questions),
                               SizedBox(height: 100.h),
                             ],
                           );
