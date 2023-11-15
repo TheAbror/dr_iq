@@ -614,4 +614,328 @@ class GlobalConstants {
           "Which component is not found in blood? Red Blood Cells, White Blood Cells, Platelets, Hexagon, Plasma?"
     }
   ];
+
+  static final List<Map<String, dynamic>> countries = [
+    {
+      "id": 31,
+      "options": [
+        {"option_text": "Brazil", "is_correct": false},
+        {"option_text": "India", "is_correct": false},
+        {"option_text": "Canada", "is_correct": false},
+        {"option_text": "Square", "is_correct": true}
+      ],
+      "question_text": "Which is not a country? Brazil, India, Canada, Square, Australia?"
+    },
+    {
+      "id": 32,
+      "options": [
+        {"option_text": "Paris", "is_correct": false},
+        {"option_text": "Rome", "is_correct": false},
+        {"option_text": "Berlin", "is_correct": false},
+        {"option_text": "Triangle", "is_correct": true}
+      ],
+      "question_text": "Which is not a capital city? Paris, Rome, Berlin, Triangle, Madrid?"
+    },
+    {
+      "id": 33,
+      "options": [
+        {"option_text": "Japan", "is_correct": false},
+        {"option_text": "China", "is_correct": false},
+        {"option_text": "Russia", "is_correct": false},
+        {"option_text": "Hexagon", "is_correct": true}
+      ],
+      "question_text": "Which is not a country in Asia? Japan, China, Russia, Hexagon, Australia?"
+    },
+    {
+      "id": 34,
+      "options": [
+        {"option_text": "Africa", "is_correct": false},
+        {"option_text": "Asia", "is_correct": false},
+        {"option_text": "Europe", "is_correct": false},
+        {"option_text": "Square", "is_correct": true}
+      ],
+      "question_text": "Which is not a continent? Africa, Asia, Europe, Square, Antarctica?"
+    },
+    {
+      "id": 35,
+      "options": [
+        {"option_text": "Mexico", "is_correct": false},
+        {"option_text": "Canada", "is_correct": false},
+        {"option_text": "United States", "is_correct": false},
+        {"option_text": "Pentagon", "is_correct": true}
+      ],
+      "question_text": "Which is not in North America? Mexico, Canada, United States, Pentagon, Brazil?"
+    },
+    {
+      "id": 36,
+      "options": [
+        {"option_text": "Australia", "is_correct": false},
+        {"option_text": "Brazil", "is_correct": false},
+        {"option_text": "Canada", "is_correct": false},
+        {"option_text": "Rectangle", "is_correct": true}
+      ],
+      "question_text": "Which is not in the Southern Hemisphere? Australia, Brazil, Canada, Rectangle, South Africa?"
+    },
+    {
+      "id": 37,
+      "options": [
+        {"option_text": "Tokyo", "is_correct": false},
+        {"option_text": "Seoul", "is_correct": false},
+        {"option_text": "Beijing", "is_correct": false},
+        {"option_text": "Circle", "is_correct": true}
+      ],
+      "question_text": "Which is not an Asian capital city? Tokyo, Seoul, Beijing, Circle, Moscow?"
+    },
+    {
+      "id": 38,
+      "options": [
+        {"option_text": "Germany", "is_correct": false},
+        {"option_text": "Italy", "is_correct": false},
+        {"option_text": "France", "is_correct": false},
+        {"option_text": "Pentagon", "is_correct": true}
+      ],
+      "question_text": "Which is not in Western Europe? Germany, Italy, France, Pentagon, Poland?"
+    },
+    {
+      "id": 39,
+      "options": [
+        {"option_text": "Argentina", "is_correct": false},
+        {"option_text": "Chile", "is_correct": false},
+        {"option_text": "Peru", "is_correct": false},
+        {"option_text": "Hexagon", "is_correct": true}
+      ],
+      "question_text": "Which is not in South America? Argentina, Chile, Peru, Hexagon, Australia?"
+    },
+    {
+      "id": 40,
+      "options": [
+        {"option_text": "Egypt", "is_correct": false},
+        {"option_text": "Kenya", "is_correct": false},
+        {"option_text": "Nigeria", "is_correct": false},
+        {"option_text": "Rectangle", "is_correct": true}
+      ],
+      "question_text": "Which is not in Africa? Egypt, Kenya, Nigeria, Rectangle, Bangladesh?"
+    }
+  ];
+
+  static final List<Map<String, dynamic>> trickyQuestions = [
+    {
+      "id": 41,
+      "options": [
+        {"option_text": "An egg", "is_correct": false},
+        {"option_text": "A clock", "is_correct": false},
+        {"option_text": "A mirror", "is_correct": false},
+        {"option_text": "Square", "is_correct": true}
+      ],
+      "question_text":
+          "I speak without a mouth and hear without ears. I have no body, but I come alive with the wind. What am I? An egg, A clock, A mirror, Square, Echo?"
+    },
+    {
+      "id": 42,
+      "options": [
+        {"option_text": "The beginning", "is_correct": false},
+        {"option_text": "The end", "is_correct": false},
+        {"option_text": "The present", "is_correct": false},
+        {"option_text": "Pentagon", "is_correct": true}
+      ],
+      "question_text":
+          "What comes once in a minute, twice in a moment, but never in a thousand years? The beginning, The end, The present, Pentagon, The letter 'M'?"
+    },
+    {
+      "id": 43,
+      "options": [
+        {"option_text": "A candle", "is_correct": false},
+        {"option_text": "A matchstick", "is_correct": false},
+        {"option_text": "A flashlight", "is_correct": false},
+        {"option_text": "Circle", "is_correct": true}
+      ],
+      "question_text":
+          "The more you take, the more you leave behind. What am I? A candle, A matchstick, A flashlight, Circle, Footsteps?"
+    },
+    {
+      "id": 44,
+      "options": [
+        {"option_text": "Tomorrow", "is_correct": false},
+        {"option_text": "Yesterday", "is_correct": false},
+        {"option_text": "Today", "is_correct": false},
+        {"option_text": "Triangle", "is_correct": true}
+      ],
+      "question_text": "What always comes but never arrives? Tomorrow, Yesterday, Today, Triangle, The letter 'A'?"
+    },
+    {
+      "id": 45,
+      "options": [
+        {"option_text": "A glove", "is_correct": false},
+        {"option_text": "A hat", "is_correct": false},
+        {"option_text": "A shirt", "is_correct": false},
+        {"option_text": "Hexagon", "is_correct": true}
+      ],
+      "question_text":
+          "I have keys but no locks. I have space but no room. You can enter, but you can't go inside. What am I? A glove, A hat, A shirt, Hexagon, A keyboard?"
+    },
+    {
+      "id": 46,
+      "options": [
+        {"option_text": "The letter 'H'", "is_correct": false},
+        {"option_text": "The letter 'A'", "is_correct": false},
+        {"option_text": "The letter 'B'", "is_correct": false},
+        {"option_text": "Rectangle", "is_correct": true}
+      ],
+      "question_text":
+          "What comes once in a year, twice in a month, but never in a week? The letter 'H', The letter 'A', The letter 'B', Rectangle, The letter 'O'?"
+    },
+    {
+      "id": 47,
+      "options": [
+        {"option_text": "A river", "is_correct": false},
+        {"option_text": "A mountain", "is_correct": false},
+        {"option_text": "A bridge", "is_correct": false},
+        {"option_text": "Circle", "is_correct": true}
+      ],
+      "question_text":
+          "I can fly without wings. I can cry without eyes. Wherever I go, darkness follows me. What am I? A river, A mountain, A bridge, Circle, Clouds?"
+    },
+    {
+      "id": 48,
+      "options": [
+        {"option_text": "A secret", "is_correct": false},
+        {"option_text": "A riddle", "is_correct": false},
+        {"option_text": "A mystery", "is_correct": false},
+        {"option_text": "Pentagon", "is_correct": true}
+      ],
+      "question_text":
+          "The more you take, the more you leave behind. What am I? A secret, A riddle, A mystery, Pentagon, Footsteps?"
+    },
+    {
+      "id": 49,
+      "options": [
+        {"option_text": "A shoe", "is_correct": false},
+        {"option_text": "A hat", "is_correct": false},
+        {"option_text": "A shirt", "is_correct": false},
+        {"option_text": "Triangle", "is_correct": true}
+      ],
+      "question_text": "What has a neck but no head? A shoe, A hat, A shirt, Triangle, A bottle?"
+    },
+    {
+      "id": 50,
+      "options": [
+        {"option_text": "A candle", "is_correct": false},
+        {"option_text": "A flashlight", "is_correct": false},
+        {"option_text": "A bonfire", "is_correct": false},
+        {"option_text": "Rectangle", "is_correct": true}
+      ],
+      "question_text":
+          "The more you feed it, the more it grows. What is it? A candle, A flashlight, A bonfire, Rectangle, A plant?"
+    }
+  ];
+
+  static final List<Map<String, dynamic>> moreTrickyQuestions = [
+    {
+      "id": 51,
+      "options": [
+        {"option_text": "A towel", "is_correct": false},
+        {"option_text": "A sponge", "is_correct": false},
+        {"option_text": "A cloud", "is_correct": false},
+        {"option_text": "Circle", "is_correct": true}
+      ],
+      "question_text":
+          "I can be cracked, made, told, and played. What am I? A towel, A sponge, A cloud, Circle, A joke?"
+    },
+    {
+      "id": 52,
+      "options": [
+        {"option_text": "A needle", "is_correct": false},
+        {"option_text": "A compass", "is_correct": false},
+        {"option_text": "A ruler", "is_correct": false},
+        {"option_text": "Pentagon", "is_correct": true}
+      ],
+      "question_text": "I have a head, a tail, but no body. What am I? A needle, A compass, A ruler, Pentagon, A coin?"
+    },
+    {
+      "id": 53,
+      "options": [
+        {"option_text": "A calendar", "is_correct": false},
+        {"option_text": "A clock", "is_correct": false},
+        {"option_text": "A mirror", "is_correct": false},
+        {"option_text": "Triangle", "is_correct": true}
+      ],
+      "question_text":
+          "I have keys but no locks. I have space but no room. You can enter, but you can't go inside. What am I? A calendar, A clock, A mirror, Triangle, A keyboard?"
+    },
+    {
+      "id": 54,
+      "options": [
+        {"option_text": "A snake", "is_correct": false},
+        {"option_text": "A ladder", "is_correct": false},
+        {"option_text": "A hose", "is_correct": false},
+        {"option_text": "Rectangle", "is_correct": true}
+      ],
+      "question_text": "I have a head, a tail, but no body. What am I? A snake, A ladder, A hose, Rectangle, A coin?"
+    },
+    {
+      "id": 55,
+      "options": [
+        {"option_text": "A river", "is_correct": false},
+        {"option_text": "A mountain", "is_correct": false},
+        {"option_text": "A bridge", "is_correct": false},
+        {"option_text": "Circle", "is_correct": true}
+      ],
+      "question_text":
+          "I can fly without wings. I can cry without eyes. Wherever I go, darkness follows me. What am I? A river, A mountain, A bridge, Circle, Clouds?"
+    },
+    {
+      "id": 56,
+      "options": [
+        {"option_text": "A candle", "is_correct": false},
+        {"option_text": "A flashlight", "is_correct": false},
+        {"option_text": "A bonfire", "is_correct": false},
+        {"option_text": "Pentagon", "is_correct": true}
+      ],
+      "question_text":
+          "The more you feed it, the more it grows. What is it? A candle, A flashlight, A bonfire, Pentagon, A plant?"
+    },
+    {
+      "id": 57,
+      "options": [
+        {"option_text": "An echo", "is_correct": false},
+        {"option_text": "A shadow", "is_correct": false},
+        {"option_text": "A mirror", "is_correct": false},
+        {"option_text": "Rectangle", "is_correct": true}
+      ],
+      "question_text":
+          "I speak without a mouth and hear without ears. I have no body, but I come alive with the wind. What am I? An echo, A shadow, A mirror, Rectangle, A reflection?"
+    },
+    {
+      "id": 58,
+      "options": [
+        {"option_text": "A towel", "is_correct": false},
+        {"option_text": "A sponge", "is_correct": false},
+        {"option_text": "A cloud", "is_correct": false},
+        {"option_text": "Hexagon", "is_correct": true}
+      ],
+      "question_text":
+          "I can be filled with holes and still hold water. What am I? A towel, A sponge, A cloud, Hexagon, A bucket?"
+    },
+    {
+      "id": 59,
+      "options": [
+        {"option_text": "A needle", "is_correct": false},
+        {"option_text": "A compass", "is_correct": false},
+        {"option_text": "A ruler", "is_correct": false},
+        {"option_text": "Pentagon", "is_correct": true}
+      ],
+      "question_text": "I have a head, a tail, but no body. What am I? A needle, A compass, A ruler, Pentagon, A coin?"
+    },
+    {
+      "id": 60,
+      "options": [
+        {"option_text": "A calendar", "is_correct": false},
+        {"option_text": "A clock", "is_correct": false},
+        {"option_text": "A mirror", "is_correct": false},
+        {"option_text": "Hexagon", "is_correct": true}
+      ],
+      "question_text":
+          "I have keys but no locks. I have space but no room. You can enter, but you can't go inside. What am I? A calendar, A clock, A mirror, Hexagon, A keyboard?"
+    }
+  ];
 }
