@@ -412,10 +412,10 @@ class GlobalConstants {
     {
       "id": 61,
       "options": [
+        {"option_text": "24", "is_correct": true},
         {"option_text": "15", "is_correct": false},
         {"option_text": "18", "is_correct": false},
         {"option_text": "21", "is_correct": false},
-        {"option_text": "24", "is_correct": true},
       ],
       "question_text": "If 3x + 6 = 18, what is the value of x?"
     },
@@ -423,9 +423,9 @@ class GlobalConstants {
       "id": 62,
       "options": [
         {"option_text": "12", "is_correct": false},
+        {"option_text": "21", "is_correct": true},
         {"option_text": "15", "is_correct": false},
         {"option_text": "18", "is_correct": false},
-        {"option_text": "21", "is_correct": true},
       ],
       "question_text": "If 5y - 3 = 12, what is the value of y?"
     },
@@ -434,8 +434,8 @@ class GlobalConstants {
       "options": [
         {"option_text": "16", "is_correct": false},
         {"option_text": "18", "is_correct": false},
-        {"option_text": "20", "is_correct": false},
         {"option_text": "24", "is_correct": true},
+        {"option_text": "20", "is_correct": false},
       ],
       "question_text": "If 2z + 4 = 28, what is the value of z?"
     },
@@ -463,9 +463,9 @@ class GlobalConstants {
       "id": 66,
       "options": [
         {"option_text": "6", "is_correct": false},
+        {"option_text": "12", "is_correct": true},
         {"option_text": "8", "is_correct": false},
         {"option_text": "10", "is_correct": false},
-        {"option_text": "12", "is_correct": true},
       ],
       "question_text": "If 3c + 6 = 30, what is the value of c?"
     },
@@ -484,18 +484,18 @@ class GlobalConstants {
       "options": [
         {"option_text": "24", "is_correct": false},
         {"option_text": "30", "is_correct": false},
-        {"option_text": "36", "is_correct": false},
         {"option_text": "42", "is_correct": true},
+        {"option_text": "36", "is_correct": false},
       ],
       "question_text": "If 5e + 12 = 30, what is the value of e?"
     },
     {
       "id": 69,
       "options": [
+        {"option_text": "24", "is_correct": true},
         {"option_text": "15", "is_correct": false},
         {"option_text": "18", "is_correct": false},
         {"option_text": "21", "is_correct": false},
-        {"option_text": "24", "is_correct": true},
       ],
       "question_text": "If 3f + 9 = 30, what is the value of f?"
     },
