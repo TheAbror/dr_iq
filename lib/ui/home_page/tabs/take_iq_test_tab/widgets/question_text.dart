@@ -1,14 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:dr_iq/core/app_colors.dart';
-import 'package:dr_iq/core/global_constants.dart';
 
 class QuestionText extends StatelessWidget {
-  final int counter;
+  final String textQuestion;
 
   const QuestionText({
     super.key,
-    required this.counter,
+    required this.textQuestion,
   });
 
   @override
@@ -24,7 +23,7 @@ class QuestionText extends StatelessWidget {
       ),
       child: Center(
         child: Text(
-          GlobalConstants.testQuestions[counter]['question_text'],
+          textQuestion,
           style: TextStyle(
             color: AppColors.float,
             fontWeight: FontWeight.bold,

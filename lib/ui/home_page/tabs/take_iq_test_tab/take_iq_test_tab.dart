@@ -12,9 +12,12 @@ import 'package:dr_iq/ui/home_page/tabs/take_iq_test_tab/widgets/options_text.da
 import 'package:dr_iq/ui/home_page/tabs/take_iq_test_tab/widgets/question_text.dart';
 
 class TakeIQTest extends StatelessWidget {
-  // final GlobalConstants questions;
+  final List<Map<String, dynamic>> questions;
 
-  const TakeIQTest({super.key});
+  const TakeIQTest({
+    Key? key,
+    required this.questions,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -45,7 +48,9 @@ class TakeIQTest extends StatelessWidget {
                         itemBuilder: (context, index) {
                           return Column(
                             children: [
-                              QuestionText(counter: state.questionCounter),
+                              QuestionText(
+                                textQuestion: GlobalConstants.testQuestions[state.questionCounter]['question_text'],
+                              ),
                               MySpacer(),
                               OptionsText(counter: state.questionCounter),
                               SizedBox(height: 100.h),

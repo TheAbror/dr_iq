@@ -1,4 +1,6 @@
 import 'package:dr_iq/core/app_colors.dart';
+import 'package:dr_iq/core/global_constants.dart';
+import 'package:dr_iq/core/roots/app_routes.dart';
 import 'package:dr_iq/ui/home_page/tabs/improve_iq/widgets/improve_iq_app_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -22,84 +24,136 @@ class _Body extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GridView.builder(
-      gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
-        maxCrossAxisExtent: 190.w,
-        childAspectRatio: 5 / 6,
-        crossAxisSpacing: 10,
-        mainAxisSpacing: 0,
-      ),
-      itemCount: 8,
-      shrinkWrap: true,
-      padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 16.w),
-      physics: AlwaysScrollableScrollPhysics(),
-      itemBuilder: (context, index) {
-        String image;
-        String cardTitle;
+        gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
+          maxCrossAxisExtent: 190.w,
+          childAspectRatio: 5 / 6,
+          crossAxisSpacing: 10,
+          mainAxisSpacing: 0,
+        ),
+        itemCount: 10,
+        shrinkWrap: true,
+        padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 16.w),
+        physics: AlwaysScrollableScrollPhysics(),
+        itemBuilder: (context, index) {
+          String image;
+          String cardTitle;
+          List<Map<String, dynamic>> questionsList;
 
-        if (index == 0) {
-          image = 'assets/images/improve_iq_assets/logical.png';
-          cardTitle = 'Logical Reasoning';
-        } else if (index == 1) {
-          image = 'assets/images/improve_iq_assets/3d-fluency-rubiks-cube.png';
-          cardTitle = 'Random Questions';
-        } else if (index == 2) {
-          image = 'assets/images/improve_iq_assets/random.png';
-          cardTitle = 'Critical Thinking Questions';
-        } else if (index == 3) {
-          image = 'assets/images/improve_iq_assets/math.png';
-          cardTitle = 'Mathematical Problem Solving';
-        } else {
-          image = 'assets/images/improve_iq_assets/3d-fluency-faq.png';
-          cardTitle = 'Critical Thinking Questions';
-        }
+          switch (index) {
+            case 0:
+              image = 'assets/images/improve_iq_assets/logical.png';
+              cardTitle = 'Logical Reasoning';
+              questionsList = GlobalConstants.logicalReasoning;
+              break;
+            case 1:
+              image = 'assets/images/improve_iq_assets/3d-fluency-rubiks-cube.png';
+              cardTitle = 'Random Questions';
+              questionsList = GlobalConstants.randomQuestions;
+              break;
+            case 2:
+              image = 'assets/images/improve_iq_assets/random.png';
+              cardTitle = 'Critical Thinking Questions';
+              questionsList = GlobalConstants.criticalThinkingQuestions;
+              break;
+            case 3:
+              image = 'assets/images/improve_iq_assets/math.png';
+              cardTitle = 'Mathematical Problem Solving';
+              questionsList = GlobalConstants.math;
+              break;
+            case 4:
+              image = 'assets/images/improve_iq_assets/general_k.png';
+              cardTitle = 'General Knowledge';
+              questionsList = GlobalConstants.generalKnowledge;
+              break;
+            case 5:
+              image = 'assets/images/improve_iq_assets/3d-casual-life-map.png';
+              cardTitle = 'Countries';
+              questionsList = GlobalConstants.countries;
+              break;
+            case 6:
+              image = 'assets/images/improve_iq_assets/verbal_r.png';
+              cardTitle = 'Verbal Reasoning';
+              questionsList = GlobalConstants.verbalReasoning;
+              break;
+            case 7:
+              image = 'assets/images/improve_iq_assets/statistics.png';
+              cardTitle = 'Analytical Reasoning';
+              questionsList = GlobalConstants.analyticalReasoning;
+              break;
+            case 8:
+              image = 'assets/images/improve_iq_assets/flame-tricky.png';
+              cardTitle = 'Tricky Questions';
+              questionsList = GlobalConstants.trickyQuestions;
+              break;
+            case 9:
+              image = 'assets/images/improve_iq_assets/more_t.png';
+              cardTitle = 'More Tricky Questions';
+              questionsList = GlobalConstants.moreTrickyQuestions;
+              break;
+            default:
+              image = 'assets/images/improve_iq_assets/3d-fluency-faq.png';
+              cardTitle = 'Critical Thinking Questions';
+              questionsList = GlobalConstants.criticalThinkingQuestions;
+          }
 
-        return MyCard(
-          text: cardTitle,
-          image: image,
-        );
-      },
-    );
+          return MyCard(
+            onTap: () {
+              Navigator.pushNamed(
+                context,
+                AppRoutes.takeiqtest,
+                arguments: questionsList,
+              );
+            },
+            text: cardTitle,
+            image: image,
+          );
+        });
   }
 }
 
 class MyCard extends StatelessWidget {
   final String image;
   final String text;
+  final VoidCallback? onTap;
 
   const MyCard({
     super.key,
     required this.image,
     required this.text,
+    required this.onTap,
   });
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Container(
-          height: 190.w,
-          padding: EdgeInsets.all(8.w),
-          decoration: BoxDecoration(
-            color: AppColors.background,
-            borderRadius: BorderRadius.circular(8.r),
-            border: Border.all(
-              color: AppColors.outline,
-              width: 0.5.w,
+    return GestureDetector(
+      onTap: onTap,
+      child: Column(
+        children: [
+          Container(
+            height: 190.w,
+            padding: EdgeInsets.all(8.w),
+            decoration: BoxDecoration(
+              color: AppColors.background,
+              borderRadius: BorderRadius.circular(8.r),
+              border: Border.all(
+                color: AppColors.outline,
+                width: 0.5.w,
+              ),
             ),
+            child: Image.asset(image),
           ),
-          child: Image.asset(image),
-        ),
-        SizedBox(height: 10.h),
-        Text(
-          text,
-          style: TextStyle(
-            fontWeight: FontWeight.bold,
+          SizedBox(height: 10.h),
+          Text(
+            text,
+            style: TextStyle(
+              fontWeight: FontWeight.bold,
+            ),
+            maxLines: 1,
+            overflow: TextOverflow.ellipsis,
           ),
-          maxLines: 1,
-          overflow: TextOverflow.ellipsis,
-        ),
-        SizedBox(height: 10.h),
-      ],
+          SizedBox(height: 10.h),
+        ],
+      ),
     );
   }
 }
