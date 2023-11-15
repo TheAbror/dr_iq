@@ -302,4 +302,213 @@ class GlobalConstants {
       "question_text": "Which month does not have 28 days?"
     }
   ];
+
+  static final List<Map<String, dynamic>> verbalReasoning = [
+    {
+      "id": 1,
+      "options": [
+        {"option_text": "Square", "is_correct": false},
+        {"option_text": "Circle", "is_correct": false},
+        {"option_text": "Rectangle", "is_correct": true},
+        {"option_text": "Triangle", "is_correct": false}
+      ],
+      "question_text": "Which shape does not belong to the group? Square, Circle, Rectangle, Triangle, Oval?"
+    },
+    {
+      "id": 2,
+      "options": [
+        {"option_text": "Happy", "is_correct": false},
+        {"option_text": "Joyful", "is_correct": false},
+        {"option_text": "Pleasant", "is_correct": false},
+        {"option_text": "Sad", "is_correct": true}
+      ],
+      "question_text": "Which word does not belong to the group? Happy, Joyful, Pleasant, Sad, Content?"
+    },
+    {
+      "id": 3,
+      "options": [
+        {"option_text": "Cat", "is_correct": false},
+        {"option_text": "Dog", "is_correct": false},
+        {"option_text": "Lion", "is_correct": false},
+        {"option_text": "Table", "is_correct": true}
+      ],
+      "question_text": "Which word does not belong to the group? Cat, Dog, Lion, Table, Elephant?"
+    },
+    {
+      "id": 4,
+      "options": [
+        {"option_text": "Summer", "is_correct": false},
+        {"option_text": "Winter", "is_correct": false},
+        {"option_text": "Spring", "is_correct": false},
+        {"option_text": "Square", "is_correct": true}
+      ],
+      "question_text": "Which word does not belong to the group? Summer, Winter, Spring, Square, Autumn?"
+    },
+    {
+      "id": 5,
+      "options": [
+        {"option_text": "Pen", "is_correct": false},
+        {"option_text": "Pencil", "is_correct": false},
+        {"option_text": "Book", "is_correct": false},
+        {"option_text": "Mango", "is_correct": true}
+      ],
+      "question_text": "Which word does not belong to the group? Pen, Pencil, Book, Mango, Eraser?"
+    },
+    {
+      "id": 6,
+      "options": [
+        {"option_text": "Earth", "is_correct": false},
+        {"option_text": "Mars", "is_correct": false},
+        {"option_text": "Moon", "is_correct": false},
+        {"option_text": "Oval", "is_correct": true}
+      ],
+      "question_text": "Which word does not belong to the group? Earth, Mars, Moon, Oval, Venus?"
+    },
+    {
+      "id": 7,
+      "options": [
+        {"option_text": "Rug", "is_correct": false},
+        {"option_text": "Carpet", "is_correct": false},
+        {"option_text": "Lamp", "is_correct": false},
+        {"option_text": "Triangle", "is_correct": true}
+      ],
+      "question_text": "Which word does not belong to the group? Rug, Carpet, Lamp, Triangle, Sofa?"
+    },
+    {
+      "id": 8,
+      "options": [
+        {"option_text": "Laptop", "is_correct": false},
+        {"option_text": "Desktop", "is_correct": false},
+        {"option_text": "Mouse", "is_correct": false},
+        {"option_text": "Cow", "is_correct": true}
+      ],
+      "question_text": "Which word does not belong to the group? Laptop, Desktop, Mouse, Cow, Tablet?"
+    },
+    {
+      "id": 9,
+      "options": [
+        {"option_text": "Orange", "is_correct": false},
+        {"option_text": "Grape", "is_correct": false},
+        {"option_text": "Pear", "is_correct": false},
+        {"option_text": "Pineapple", "is_correct": true}
+      ],
+      "question_text": "Which word does not belong to the group? Orange, Grape, Pear, Pineapple, Apple?"
+    },
+    {
+      "id": 10,
+      "options": [
+        {"option_text": "Happy", "is_correct": false},
+        {"option_text": "Sad", "is_correct": false},
+        {"option_text": "Angry", "is_correct": false},
+        {"option_text": "Circle", "is_correct": true}
+      ],
+      "question_text": "Which word does not belong to the group? Happy, Sad, Angry, Circle, Excited?"
+    }
+  ];
+
+  static final List<Map<String, dynamic>> analyticalReasoning = [
+    {
+      "id": 11,
+      "options": [
+        {"option_text": "Brother", "is_correct": false},
+        {"option_text": "Father", "is_correct": false},
+        {"option_text": "Uncle", "is_correct": false},
+        {"option_text": "The man in the portrait", "is_correct": true}
+      ],
+      "question_text":
+          "A man is looking at a portrait. His friend asks, 'Who is it that you are looking at?' The man replies, 'Brothers and sisters, I have none. But the father of that man in the portrait is my father's son.' Who is in the portrait?"
+    },
+    {
+      "id": 12,
+      "options": [
+        {"option_text": "The hotel clerk kept it", "is_correct": false},
+        {"option_text": "The bellboy kept it", "is_correct": false},
+        {"option_text": "The guests got it back", "is_correct": true},
+        {"option_text": "The missing dollar never existed", "is_correct": false}
+      ],
+      "question_text":
+          "Three people check into a hotel room that costs \$30. Later, the hotel clerk realizes there was a mistake, and the room only cost \$25. The hotel clerk gives \$5 to the bellboy to return to the guests. The bellboy decides to keep \$2 and gives \$1 back to each guest. Now, each guest has paid \$9, and the bellboy has kept \$2. What happened to the missing dollar?"
+    },
+    {
+      "id": 13,
+      "options": [
+        {"option_text": "It's buried in the U.S.", "is_correct": false},
+        {"option_text": "It's buried in Canada.", "is_correct": false},
+        {"option_text": "They don't bury survivors.", "is_correct": true},
+        {"option_text": "It depends on the survivors' wishes.", "is_correct": false}
+      ],
+      "question_text": "If a plane crashes on the border between the U.S. and Canada, where do they bury the survivors?"
+    },
+    {
+      "id": 14,
+      "options": [
+        {"option_text": "Once", "is_correct": true},
+        {"option_text": "Twice", "is_correct": false},
+        {"option_text": "Thrice", "is_correct": false},
+        {"option_text": "Infinite times", "is_correct": false}
+      ],
+      "question_text": "How many times can you subtract 10 from 100?"
+    },
+    {
+      "id": 15,
+      "options": [
+        {"option_text": "The oldest", "is_correct": false},
+        {"option_text": "The tallest", "is_correct": true},
+        {"option_text": "The heaviest", "is_correct": false},
+        {"option_text": "The smartest", "is_correct": false}
+      ],
+      "question_text": "Which word does not belong to the group? Elephant, Lion, Snake, Giraffe, Mango?"
+    },
+    {
+      "id": 16,
+      "options": [
+        {"option_text": "All cars are blue", "is_correct": false},
+        {"option_text": "Some cars are blue", "is_correct": true},
+        {"option_text": "No cars are blue", "is_correct": false},
+        {"option_text": "Cars are not blue", "is_correct": false}
+      ],
+      "question_text": "If all cars are vehicles, and some vehicles are blue, can we conclude that some cars are blue?"
+    },
+    {
+      "id": 17,
+      "options": [
+        {"option_text": "30 seconds", "is_correct": false},
+        {"option_text": "One minute", "is_correct": false},
+        {"option_text": "Two minutes", "is_correct": false},
+        {"option_text": "The egg won't hatch, it's a boiled egg", "is_correct": true}
+      ],
+      "question_text":
+          "A chicken and a half lay an egg and a half in a day and a half. How long does it take for the egg to hatch?"
+    },
+    {
+      "id": 18,
+      "options": [
+        {"option_text": "6", "is_correct": false},
+        {"option_text": "8", "is_correct": true},
+        {"option_text": "10", "is_correct": false},
+        {"option_text": "12", "is_correct": false}
+      ],
+      "question_text": "What comes next in the sequence: 2, 5, 10, 17, ...?"
+    },
+    {
+      "id": 19,
+      "options": [
+        {"option_text": "Tennis", "is_correct": false},
+        {"option_text": "Badminton", "is_correct": false},
+        {"option_text": "Table Tennis", "is_correct": false},
+        {"option_text": "Squash", "is_correct": true}
+      ],
+      "question_text": "Which sport does not belong to the group? Tennis, Badminton, Table Tennis, Squash, Basketball?"
+    },
+    {
+      "id": 20,
+      "options": [
+        {"option_text": "February", "is_correct": false},
+        {"option_text": "April", "is_correct": false},
+        {"option_text": "June", "is_correct": false},
+        {"option_text": "August", "is_correct": true}
+      ],
+      "question_text": "Which month does not have 28 days?"
+    }
+  ];
 }
