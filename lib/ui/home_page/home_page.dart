@@ -1,3 +1,6 @@
+import 'dart:math';
+
+import 'package:dr_iq/core/global_constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
@@ -156,9 +159,29 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                   text: 'Take IQ Test',
                   color: const Color(0xffc30010),
                   onTap: () {
+                    //
+                    List<List<Map<String, dynamic>>> questionsList = [
+                      GlobalConstants.logicalReasoning,
+                      GlobalConstants.randomQuestions,
+                      GlobalConstants.criticalThinkingQuestions,
+                      GlobalConstants.math,
+                      GlobalConstants.generalKnowledge,
+                      GlobalConstants.countries,
+                      GlobalConstants.verbalReasoning,
+                      GlobalConstants.analyticalReasoning,
+                      GlobalConstants.trickyQuestions,
+                      GlobalConstants.moreTrickyQuestions,
+                      GlobalConstants.testQuestions,
+                    ];
+
+                    int randomIndex = Random().nextInt(questionsList.length);
+
+                    List<Map<String, dynamic>> randomQuestions = questionsList[randomIndex];
+
                     Navigator.pushNamed(
-                      context, AppRoutes.takeiqtest,
-                      // , arguments: GlobalConstants.questions
+                      context,
+                      AppRoutes.takeiqtest,
+                      arguments: randomQuestions,
                     );
                   },
                 ),
