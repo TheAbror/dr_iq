@@ -415,7 +415,7 @@ class GlobalConstants {
         {"option_text": "15", "is_correct": false},
         {"option_text": "18", "is_correct": false},
         {"option_text": "21", "is_correct": false},
-        {"option_text": "24", "is_correct": true}
+        {"option_text": "24", "is_correct": true},
       ],
       "question_text": "If 3x + 6 = 18, what is the value of x?"
     },
@@ -425,7 +425,7 @@ class GlobalConstants {
         {"option_text": "12", "is_correct": false},
         {"option_text": "15", "is_correct": false},
         {"option_text": "18", "is_correct": false},
-        {"option_text": "21", "is_correct": true}
+        {"option_text": "21", "is_correct": true},
       ],
       "question_text": "If 5y - 3 = 12, what is the value of y?"
     },
@@ -435,7 +435,7 @@ class GlobalConstants {
         {"option_text": "16", "is_correct": false},
         {"option_text": "18", "is_correct": false},
         {"option_text": "20", "is_correct": false},
-        {"option_text": "24", "is_correct": true}
+        {"option_text": "24", "is_correct": true},
       ],
       "question_text": "If 2z + 4 = 28, what is the value of z?"
     },
@@ -455,7 +455,7 @@ class GlobalConstants {
         {"option_text": "35", "is_correct": false},
         {"option_text": "45", "is_correct": false},
         {"option_text": "55", "is_correct": false},
-        {"option_text": "65", "is_correct": true}
+        {"option_text": "65", "is_correct": true},
       ],
       "question_text": "If 4b + 15 = 100, what is the value of b?"
     },
@@ -465,7 +465,7 @@ class GlobalConstants {
         {"option_text": "6", "is_correct": false},
         {"option_text": "8", "is_correct": false},
         {"option_text": "10", "is_correct": false},
-        {"option_text": "12", "is_correct": true}
+        {"option_text": "12", "is_correct": true},
       ],
       "question_text": "If 3c + 6 = 30, what is the value of c?"
     },
@@ -485,7 +485,7 @@ class GlobalConstants {
         {"option_text": "24", "is_correct": false},
         {"option_text": "30", "is_correct": false},
         {"option_text": "36", "is_correct": false},
-        {"option_text": "42", "is_correct": true}
+        {"option_text": "42", "is_correct": true},
       ],
       "question_text": "If 5e + 12 = 30, what is the value of e?"
     },
@@ -495,7 +495,7 @@ class GlobalConstants {
         {"option_text": "15", "is_correct": false},
         {"option_text": "18", "is_correct": false},
         {"option_text": "21", "is_correct": false},
-        {"option_text": "24", "is_correct": true}
+        {"option_text": "24", "is_correct": true},
       ],
       "question_text": "If 3f + 9 = 30, what is the value of f?"
     },
@@ -505,7 +505,7 @@ class GlobalConstants {
         {"option_text": "9", "is_correct": false},
         {"option_text": "12", "is_correct": false},
         {"option_text": "15", "is_correct": false},
-        {"option_text": "18", "is_correct": true}
+        {"option_text": "18", "is_correct": true},
       ],
       "question_text": "If 2g - 6 = 12, what is the value of g?"
     }
@@ -517,18 +517,18 @@ class GlobalConstants {
       "options": [
         {"option_text": "Mercury", "is_correct": false},
         {"option_text": "Venus", "is_correct": false},
+        {"option_text": "Square", "is_correct": true},
         {"option_text": "Earth", "is_correct": false},
-        {"option_text": "Square", "is_correct": true}
       ],
       "question_text": "Which is not a planet in our solar system? Mercury, Venus, Earth, Square, Mars?"
     },
     {
       "id": 22,
       "options": [
+        {"option_text": "Circle", "is_correct": true},
         {"option_text": "Hydrogen", "is_correct": false},
         {"option_text": "Oxygen", "is_correct": false},
         {"option_text": "Carbon", "is_correct": false},
-        {"option_text": "Circle", "is_correct": true}
       ],
       "question_text":
           "Which is not a primary element in the composition of water? Hydrogen, Oxygen, Carbon, Circle, Nitrogen?"
@@ -539,7 +539,7 @@ class GlobalConstants {
         {"option_text": "Photosynthesis", "is_correct": false},
         {"option_text": "Respiration", "is_correct": false},
         {"option_text": "Circulation", "is_correct": false},
-        {"option_text": "Triangle", "is_correct": true}
+        {"option_text": "Triangle", "is_correct": true},
       ],
       "question_text":
           "Which process is responsible for the conversion of sunlight into energy in plants? Photosynthesis, Respiration, Circulation, Triangle, Transpiration?"
@@ -550,7 +550,7 @@ class GlobalConstants {
         {"option_text": "Newton", "is_correct": false},
         {"option_text": "Einstein", "is_correct": false},
         {"option_text": "Galileo", "is_correct": false},
-        {"option_text": "Rectangle", "is_correct": true}
+        {"option_text": "Rectangle", "is_correct": true},
       ],
       "question_text":
           "Who is known for his laws of motion and universal gravitation? Newton, Einstein, Galileo, Rectangle, Tesla?"
@@ -560,8 +560,8 @@ class GlobalConstants {
       "options": [
         {"option_text": "Solar System", "is_correct": false},
         {"option_text": "Human Body", "is_correct": false},
+        {"option_text": "Hexagon", "is_correct": true},
         {"option_text": "Computer Science", "is_correct": false},
-        {"option_text": "Hexagon", "is_correct": true}
       ],
       "question_text":
           "Which subject does not belong to the group? Solar System, Human Body, Computer Science, Hexagon, Chemistry?"
@@ -571,8 +571,8 @@ class GlobalConstants {
       "options": [
         {"option_text": "Celsius", "is_correct": false},
         {"option_text": "Fahrenheit", "is_correct": false},
+        {"option_text": "Pentagon", "is_correct": true},
         {"option_text": "Kelvin", "is_correct": false},
-        {"option_text": "Pentagon", "is_correct": true}
       ],
       "question_text": "Which is not a unit of temperature measurement? Celsius, Fahrenheit, Kelvin, Pentagon, Rankine?"
     },
@@ -582,7 +582,7 @@ class GlobalConstants {
         {"option_text": "Mars", "is_correct": false},
         {"option_text": "Saturn", "is_correct": false},
         {"option_text": "Jupiter", "is_correct": false},
-        {"option_text": "Triangle", "is_correct": true}
+        {"option_text": "Triangle", "is_correct": true},
       ],
       "question_text": "Which is not a gas giant in our solar system? Mars, Saturn, Jupiter, Triangle, Neptune?"
     },
@@ -592,7 +592,7 @@ class GlobalConstants {
         {"option_text": "Evaporation", "is_correct": false},
         {"option_text": "Condensation", "is_correct": false},
         {"option_text": "Sublimation", "is_correct": false},
-        {"option_text": "Square", "is_correct": true}
+        {"option_text": "Square", "is_correct": true},
       ],
       "question_text":
           "Which is not a phase of the water cycle? Evaporation, Condensation, Sublimation, Square, Precipitation?"
@@ -600,10 +600,10 @@ class GlobalConstants {
     {
       "id": 29,
       "options": [
+        {"option_text": "Rectangle", "is_correct": true},
         {"option_text": "Nucleus", "is_correct": false},
         {"option_text": "Electron", "is_correct": false},
         {"option_text": "Proton", "is_correct": false},
-        {"option_text": "Rectangle", "is_correct": true}
       ],
       "question_text": "Which is not a subatomic particle? Nucleus, Electron, Proton, Rectangle, Neutron?"
     },
@@ -612,8 +612,8 @@ class GlobalConstants {
       "options": [
         {"option_text": "Red Blood Cells", "is_correct": false},
         {"option_text": "White Blood Cells", "is_correct": false},
+        {"option_text": "Hexagon", "is_correct": true},
         {"option_text": "Platelets", "is_correct": false},
-        {"option_text": "Hexagon", "is_correct": true}
       ],
       "question_text":
           "Which component is not found in blood? Red Blood Cells, White Blood Cells, Platelets, Hexagon, Plasma?"
@@ -626,18 +626,18 @@ class GlobalConstants {
       "options": [
         {"option_text": "Brazil", "is_correct": false},
         {"option_text": "India", "is_correct": false},
+        {"option_text": "Square", "is_correct": true},
         {"option_text": "Canada", "is_correct": false},
-        {"option_text": "Square", "is_correct": true}
       ],
       "question_text": "Which is not a country? Brazil, India, Canada, Square, Australia?"
     },
     {
       "id": 32,
       "options": [
+        {"option_text": "Triangle", "is_correct": true},
         {"option_text": "Paris", "is_correct": false},
         {"option_text": "Rome", "is_correct": false},
         {"option_text": "Berlin", "is_correct": false},
-        {"option_text": "Triangle", "is_correct": true}
       ],
       "question_text": "Which is not a capital city? Paris, Rome, Berlin, Triangle, Madrid?"
     },
@@ -645,9 +645,9 @@ class GlobalConstants {
       "id": 33,
       "options": [
         {"option_text": "Japan", "is_correct": false},
+        {"option_text": "Hexagon", "is_correct": true},
         {"option_text": "China", "is_correct": false},
         {"option_text": "Russia", "is_correct": false},
-        {"option_text": "Hexagon", "is_correct": true}
       ],
       "question_text": "Which is not a country in Asia? Japan, China, Russia, Hexagon, Australia?"
     },
@@ -656,8 +656,8 @@ class GlobalConstants {
       "options": [
         {"option_text": "Africa", "is_correct": false},
         {"option_text": "Asia", "is_correct": false},
+        {"option_text": "Square", "is_correct": true},
         {"option_text": "Europe", "is_correct": false},
-        {"option_text": "Square", "is_correct": true}
       ],
       "question_text": "Which is not a continent? Africa, Asia, Europe, Square, Antarctica?"
     },
@@ -667,7 +667,7 @@ class GlobalConstants {
         {"option_text": "Mexico", "is_correct": false},
         {"option_text": "Canada", "is_correct": false},
         {"option_text": "United States", "is_correct": false},
-        {"option_text": "Pentagon", "is_correct": true}
+        {"option_text": "Pentagon", "is_correct": true},
       ],
       "question_text": "Which is not in North America? Mexico, Canada, United States, Pentagon, Brazil?"
     },
@@ -675,9 +675,9 @@ class GlobalConstants {
       "id": 36,
       "options": [
         {"option_text": "Australia", "is_correct": false},
+        {"option_text": "Rectangle", "is_correct": true},
         {"option_text": "Brazil", "is_correct": false},
         {"option_text": "Canada", "is_correct": false},
-        {"option_text": "Rectangle", "is_correct": true}
       ],
       "question_text": "Which is not in the Southern Hemisphere? Australia, Brazil, Canada, Rectangle, South Africa?"
     },
@@ -687,17 +687,17 @@ class GlobalConstants {
         {"option_text": "Tokyo", "is_correct": false},
         {"option_text": "Seoul", "is_correct": false},
         {"option_text": "Beijing", "is_correct": false},
-        {"option_text": "Circle", "is_correct": true}
+        {"option_text": "Circle", "is_correct": true},
       ],
       "question_text": "Which is not an Asian capital city? Tokyo, Seoul, Beijing, Circle, Moscow?"
     },
     {
       "id": 38,
       "options": [
+        {"option_text": "Pentagon", "is_correct": true},
         {"option_text": "Germany", "is_correct": false},
         {"option_text": "Italy", "is_correct": false},
         {"option_text": "France", "is_correct": false},
-        {"option_text": "Pentagon", "is_correct": true}
       ],
       "question_text": "Which is not in Western Europe? Germany, Italy, France, Pentagon, Poland?"
     },
@@ -707,7 +707,7 @@ class GlobalConstants {
         {"option_text": "Argentina", "is_correct": false},
         {"option_text": "Chile", "is_correct": false},
         {"option_text": "Peru", "is_correct": false},
-        {"option_text": "Hexagon", "is_correct": true}
+        {"option_text": "Hexagon", "is_correct": true},
       ],
       "question_text": "Which is not in South America? Argentina, Chile, Peru, Hexagon, Australia?"
     },
@@ -716,8 +716,8 @@ class GlobalConstants {
       "options": [
         {"option_text": "Egypt", "is_correct": false},
         {"option_text": "Kenya", "is_correct": false},
+        {"option_text": "Rectangle", "is_correct": true},
         {"option_text": "Nigeria", "is_correct": false},
-        {"option_text": "Rectangle", "is_correct": true}
       ],
       "question_text": "Which is not in Africa? Egypt, Kenya, Nigeria, Rectangle, Bangladesh?"
     }
@@ -730,7 +730,7 @@ class GlobalConstants {
         {"option_text": "An egg", "is_correct": false},
         {"option_text": "A clock", "is_correct": false},
         {"option_text": "A mirror", "is_correct": false},
-        {"option_text": "Square", "is_correct": true}
+        {"option_text": "Square", "is_correct": true},
       ],
       "question_text":
           "I speak without a mouth and hear without ears. I have no body, but I come alive with the wind. What am I? An egg, A clock, A mirror, Square, Echo?"
@@ -740,8 +740,8 @@ class GlobalConstants {
       "options": [
         {"option_text": "The beginning", "is_correct": false},
         {"option_text": "The end", "is_correct": false},
+        {"option_text": "Pentagon", "is_correct": true},
         {"option_text": "The present", "is_correct": false},
-        {"option_text": "Pentagon", "is_correct": true}
       ],
       "question_text":
           "What comes once in a minute, twice in a moment, but never in a thousand years? The beginning, The end, The present, Pentagon, The letter 'M'?"
@@ -750,9 +750,9 @@ class GlobalConstants {
       "id": 43,
       "options": [
         {"option_text": "A candle", "is_correct": false},
+        {"option_text": "Circle", "is_correct": true},
         {"option_text": "A matchstick", "is_correct": false},
         {"option_text": "A flashlight", "is_correct": false},
-        {"option_text": "Circle", "is_correct": true}
       ],
       "question_text":
           "The more you take, the more you leave behind. What am I? A candle, A matchstick, A flashlight, Circle, Footsteps?"
@@ -760,10 +760,10 @@ class GlobalConstants {
     {
       "id": 44,
       "options": [
+        {"option_text": "Triangle", "is_correct": true},
         {"option_text": "Tomorrow", "is_correct": false},
         {"option_text": "Yesterday", "is_correct": false},
         {"option_text": "Today", "is_correct": false},
-        {"option_text": "Triangle", "is_correct": true}
       ],
       "question_text": "What always comes but never arrives? Tomorrow, Yesterday, Today, Triangle, The letter 'A'?"
     },
@@ -772,8 +772,8 @@ class GlobalConstants {
       "options": [
         {"option_text": "A glove", "is_correct": false},
         {"option_text": "A hat", "is_correct": false},
+        {"option_text": "Hexagon", "is_correct": true},
         {"option_text": "A shirt", "is_correct": false},
-        {"option_text": "Hexagon", "is_correct": true}
       ],
       "question_text":
           "I have keys but no locks. I have space but no room. You can enter, but you can't go inside. What am I? A glove, A hat, A shirt, Hexagon, A keyboard?"
@@ -782,9 +782,9 @@ class GlobalConstants {
       "id": 46,
       "options": [
         {"option_text": "The letter 'H'", "is_correct": false},
+        {"option_text": "Rectangle", "is_correct": true},
         {"option_text": "The letter 'A'", "is_correct": false},
         {"option_text": "The letter 'B'", "is_correct": false},
-        {"option_text": "Rectangle", "is_correct": true}
       ],
       "question_text":
           "What comes once in a year, twice in a month, but never in a week? The letter 'H', The letter 'A', The letter 'B', Rectangle, The letter 'O'?"
@@ -795,7 +795,7 @@ class GlobalConstants {
         {"option_text": "A river", "is_correct": false},
         {"option_text": "A mountain", "is_correct": false},
         {"option_text": "A bridge", "is_correct": false},
-        {"option_text": "Circle", "is_correct": true}
+        {"option_text": "Circle", "is_correct": true},
       ],
       "question_text":
           "I can fly without wings. I can cry without eyes. Wherever I go, darkness follows me. What am I? A river, A mountain, A bridge, Circle, Clouds?"
@@ -805,8 +805,8 @@ class GlobalConstants {
       "options": [
         {"option_text": "A secret", "is_correct": false},
         {"option_text": "A riddle", "is_correct": false},
+        {"option_text": "Pentagon", "is_correct": true},
         {"option_text": "A mystery", "is_correct": false},
-        {"option_text": "Pentagon", "is_correct": true}
       ],
       "question_text":
           "The more you take, the more you leave behind. What am I? A secret, A riddle, A mystery, Pentagon, Footsteps?"
@@ -814,10 +814,10 @@ class GlobalConstants {
     {
       "id": 49,
       "options": [
+        {"option_text": "Triangle", "is_correct": true},
         {"option_text": "A shoe", "is_correct": false},
         {"option_text": "A hat", "is_correct": false},
         {"option_text": "A shirt", "is_correct": false},
-        {"option_text": "Triangle", "is_correct": true}
       ],
       "question_text": "What has a neck but no head? A shoe, A hat, A shirt, Triangle, A bottle?"
     },
@@ -826,8 +826,8 @@ class GlobalConstants {
       "options": [
         {"option_text": "A candle", "is_correct": false},
         {"option_text": "A flashlight", "is_correct": false},
+        {"option_text": "Rectangle", "is_correct": true},
         {"option_text": "A bonfire", "is_correct": false},
-        {"option_text": "Rectangle", "is_correct": true}
       ],
       "question_text":
           "The more you feed it, the more it grows. What is it? A candle, A flashlight, A bonfire, Rectangle, A plant?"
@@ -840,8 +840,8 @@ class GlobalConstants {
       "options": [
         {"option_text": "A towel", "is_correct": false},
         {"option_text": "A sponge", "is_correct": false},
+        {"option_text": "Circle", "is_correct": true},
         {"option_text": "A cloud", "is_correct": false},
-        {"option_text": "Circle", "is_correct": true}
       ],
       "question_text":
           "I can be cracked, made, told, and played. What am I? A towel, A sponge, A cloud, Circle, A joke?"
@@ -849,10 +849,10 @@ class GlobalConstants {
     {
       "id": 52,
       "options": [
+        {"option_text": "Pentagon", "is_correct": true},
         {"option_text": "A needle", "is_correct": false},
         {"option_text": "A compass", "is_correct": false},
         {"option_text": "A ruler", "is_correct": false},
-        {"option_text": "Pentagon", "is_correct": true}
       ],
       "question_text": "I have a head, a tail, but no body. What am I? A needle, A compass, A ruler, Pentagon, A coin?"
     },
@@ -862,7 +862,7 @@ class GlobalConstants {
         {"option_text": "A calendar", "is_correct": false},
         {"option_text": "A clock", "is_correct": false},
         {"option_text": "A mirror", "is_correct": false},
-        {"option_text": "Triangle", "is_correct": true}
+        {"option_text": "Triangle", "is_correct": true},
       ],
       "question_text":
           "I have keys but no locks. I have space but no room. You can enter, but you can't go inside. What am I? A calendar, A clock, A mirror, Triangle, A keyboard?"
@@ -872,8 +872,8 @@ class GlobalConstants {
       "options": [
         {"option_text": "A snake", "is_correct": false},
         {"option_text": "A ladder", "is_correct": false},
+        {"option_text": "Rectangle", "is_correct": true},
         {"option_text": "A hose", "is_correct": false},
-        {"option_text": "Rectangle", "is_correct": true}
       ],
       "question_text": "I have a head, a tail, but no body. What am I? A snake, A ladder, A hose, Rectangle, A coin?"
     },
@@ -881,9 +881,9 @@ class GlobalConstants {
       "id": 55,
       "options": [
         {"option_text": "A river", "is_correct": false},
+        {"option_text": "Circle", "is_correct": true},
         {"option_text": "A mountain", "is_correct": false},
         {"option_text": "A bridge", "is_correct": false},
-        {"option_text": "Circle", "is_correct": true}
       ],
       "question_text":
           "I can fly without wings. I can cry without eyes. Wherever I go, darkness follows me. What am I? A river, A mountain, A bridge, Circle, Clouds?"
@@ -891,10 +891,10 @@ class GlobalConstants {
     {
       "id": 56,
       "options": [
+        {"option_text": "Pentagon", "is_correct": true},
         {"option_text": "A candle", "is_correct": false},
         {"option_text": "A flashlight", "is_correct": false},
         {"option_text": "A bonfire", "is_correct": false},
-        {"option_text": "Pentagon", "is_correct": true}
       ],
       "question_text":
           "The more you feed it, the more it grows. What is it? A candle, A flashlight, A bonfire, Pentagon, A plant?"
@@ -905,7 +905,7 @@ class GlobalConstants {
         {"option_text": "An echo", "is_correct": false},
         {"option_text": "A shadow", "is_correct": false},
         {"option_text": "A mirror", "is_correct": false},
-        {"option_text": "Rectangle", "is_correct": true}
+        {"option_text": "Rectangle", "is_correct": true},
       ],
       "question_text":
           "I speak without a mouth and hear without ears. I have no body, but I come alive with the wind. What am I? An echo, A shadow, A mirror, Rectangle, A reflection?"
@@ -915,8 +915,8 @@ class GlobalConstants {
       "options": [
         {"option_text": "A towel", "is_correct": false},
         {"option_text": "A sponge", "is_correct": false},
+        {"option_text": "Hexagon", "is_correct": true},
         {"option_text": "A cloud", "is_correct": false},
-        {"option_text": "Hexagon", "is_correct": true}
       ],
       "question_text":
           "I can be filled with holes and still hold water. What am I? A towel, A sponge, A cloud, Hexagon, A bucket?"
@@ -924,10 +924,10 @@ class GlobalConstants {
     {
       "id": 59,
       "options": [
+        {"option_text": "Pentagon", "is_correct": true},
         {"option_text": "A needle", "is_correct": false},
         {"option_text": "A compass", "is_correct": false},
         {"option_text": "A ruler", "is_correct": false},
-        {"option_text": "Pentagon", "is_correct": true}
       ],
       "question_text": "I have a head, a tail, but no body. What am I? A needle, A compass, A ruler, Pentagon, A coin?"
     },
@@ -936,8 +936,8 @@ class GlobalConstants {
       "options": [
         {"option_text": "A calendar", "is_correct": false},
         {"option_text": "A clock", "is_correct": false},
+        {"option_text": "Hexagon", "is_correct": true},
         {"option_text": "A mirror", "is_correct": false},
-        {"option_text": "Hexagon", "is_correct": true}
       ],
       "question_text":
           "I have keys but no locks. I have space but no room. You can enter, but you can't go inside. What am I? A calendar, A clock, A mirror, Hexagon, A keyboard?"
@@ -959,19 +959,19 @@ class GlobalConstants {
       "id": 2,
       "options": [
         {"option_text": "Happy", "is_correct": false},
+        {"option_text": "Sad", "is_correct": true},
         {"option_text": "Joyful", "is_correct": false},
         {"option_text": "Pleasant", "is_correct": false},
-        {"option_text": "Sad", "is_correct": true}
       ],
       "question_text": "Which word does not belong to the group? Happy, Joyful, Pleasant, Sad, Content?"
     },
     {
       "id": 3,
       "options": [
+        {"option_text": "Table", "is_correct": true},
         {"option_text": "Cat", "is_correct": false},
         {"option_text": "Dog", "is_correct": false},
         {"option_text": "Lion", "is_correct": false},
-        {"option_text": "Table", "is_correct": true}
       ],
       "question_text": "Which word does not belong to the group? Cat, Dog, Lion, Table, Elephant?"
     },
@@ -980,8 +980,8 @@ class GlobalConstants {
       "options": [
         {"option_text": "Summer", "is_correct": false},
         {"option_text": "Winter", "is_correct": false},
+        {"option_text": "Square", "is_correct": true},
         {"option_text": "Spring", "is_correct": false},
-        {"option_text": "Square", "is_correct": true}
       ],
       "question_text": "Which word does not belong to the group? Summer, Winter, Spring, Square, Autumn?"
     },
@@ -989,9 +989,9 @@ class GlobalConstants {
       "id": 5,
       "options": [
         {"option_text": "Pen", "is_correct": false},
+        {"option_text": "Mango", "is_correct": true},
         {"option_text": "Pencil", "is_correct": false},
         {"option_text": "Book", "is_correct": false},
-        {"option_text": "Mango", "is_correct": true}
       ],
       "question_text": "Which word does not belong to the group? Pen, Pencil, Book, Mango, Eraser?"
     },
@@ -1000,18 +1000,18 @@ class GlobalConstants {
       "options": [
         {"option_text": "Earth", "is_correct": false},
         {"option_text": "Mars", "is_correct": false},
+        {"option_text": "Oval", "is_correct": true},
         {"option_text": "Moon", "is_correct": false},
-        {"option_text": "Oval", "is_correct": true}
       ],
       "question_text": "Which word does not belong to the group? Earth, Mars, Moon, Oval, Venus?"
     },
     {
       "id": 7,
       "options": [
-        {"option_text": "Rug", "is_correct": false},
         {"option_text": "Carpet", "is_correct": false},
         {"option_text": "Lamp", "is_correct": false},
-        {"option_text": "Triangle", "is_correct": true}
+        {"option_text": "Triangle", "is_correct": true},
+        {"option_text": "Rug", "is_correct": false},
       ],
       "question_text": "Which word does not belong to the group? Rug, Carpet, Lamp, Triangle, Sofa?"
     },
@@ -1030,8 +1030,8 @@ class GlobalConstants {
       "options": [
         {"option_text": "Orange", "is_correct": false},
         {"option_text": "Grape", "is_correct": false},
+        {"option_text": "Pineapple", "is_correct": true},
         {"option_text": "Pear", "is_correct": false},
-        {"option_text": "Pineapple", "is_correct": true}
       ],
       "question_text": "Which word does not belong to the group? Orange, Grape, Pear, Pineapple, Apple?"
     },
@@ -1039,9 +1039,9 @@ class GlobalConstants {
       "id": 10,
       "options": [
         {"option_text": "Happy", "is_correct": false},
+        {"option_text": "Circle", "is_correct": true},
         {"option_text": "Sad", "is_correct": false},
         {"option_text": "Angry", "is_correct": false},
-        {"option_text": "Circle", "is_correct": true}
       ],
       "question_text": "Which word does not belong to the group? Happy, Sad, Angry, Circle, Excited?"
     }
@@ -1134,10 +1134,10 @@ class GlobalConstants {
     {
       "id": 19,
       "options": [
+        {"option_text": "Squash", "is_correct": true},
         {"option_text": "Tennis", "is_correct": false},
         {"option_text": "Badminton", "is_correct": false},
         {"option_text": "Table Tennis", "is_correct": false},
-        {"option_text": "Squash", "is_correct": true}
       ],
       "question_text": "Which sport does not belong to the group? Tennis, Badminton, Table Tennis, Squash, Basketball?"
     },
