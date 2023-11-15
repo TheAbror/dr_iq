@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:dr_iq/core/app_colors.dart';
 import 'package:dr_iq/core/preference_services/preference_services.dart';
 import 'package:dr_iq/core/roots/app_routes.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class SignInPage extends StatefulWidget {
   const SignInPage({super.key});
@@ -33,13 +34,13 @@ class _SignInPageState extends State<SignInPage> {
           child: Column(
             children: [
               const SizedBox(height: 70),
-              // Center(
-              //   child: SvgPicture.asset(
-              //     'assets/images/Component 1.svg',
-              //     width: 350.w,
-              //     fit: BoxFit.fill,
-              //   ),
-              // ),
+              Center(
+                child: SvgPicture.asset(
+                  'assets/images/Component 1.svg',
+                  width: 350.w,
+                  fit: BoxFit.fill,
+                ),
+              ),
               const SizedBox(height: 70),
               ListBody(
                 children: <Widget>[

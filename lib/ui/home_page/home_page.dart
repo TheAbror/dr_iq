@@ -13,7 +13,7 @@ class HomePage extends StatefulWidget {
   State<HomePage> createState() => _HomePageState();
 }
 
-class _HomePageState extends State<HomePage> {
+class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
   String? name = 'Abror';
 
   void getName() async {
@@ -23,11 +23,83 @@ class _HomePageState extends State<HomePage> {
     }
   }
 
+  late AnimationController _controller1;
+  late AnimationController _controller2;
+  late AnimationController _controller3;
+  late AnimationController _controller4;
+  late AnimationController _controller5;
+  late AnimationController _controller6;
+
   @override
   void initState() {
-    super.initState();
+    _controller1 = AnimationController(
+      vsync: this,
+      duration: Duration(milliseconds: 200),
+      lowerBound: 0.0,
+      upperBound: 0.1,
+    )..addListener(() {
+        setState(() {});
+      });
+
+    _controller2 = AnimationController(
+      vsync: this,
+      duration: Duration(milliseconds: 200),
+      lowerBound: 0.0,
+      upperBound: 0.1,
+    )..addListener(() {
+        setState(() {});
+      });
+
+    _controller3 = AnimationController(
+      vsync: this,
+      duration: Duration(milliseconds: 200),
+      lowerBound: 0.0,
+      upperBound: 0.1,
+    )..addListener(() {
+        setState(() {});
+      });
+
+    _controller4 = AnimationController(
+      vsync: this,
+      duration: Duration(milliseconds: 200),
+      lowerBound: 0.0,
+      upperBound: 0.1,
+    )..addListener(() {
+        setState(() {});
+      });
+
+    _controller5 = AnimationController(
+      vsync: this,
+      duration: Duration(milliseconds: 200),
+      lowerBound: 0.0,
+      upperBound: 0.1,
+    )..addListener(() {
+        setState(() {});
+      });
+
+    _controller6 = AnimationController(
+      vsync: this,
+      duration: Duration(milliseconds: 200),
+      lowerBound: 0.0,
+      upperBound: 0.1,
+    )..addListener(() {
+        setState(() {});
+      });
 
     getName();
+
+    super.initState();
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
+    _controller1.dispose();
+    _controller2.dispose();
+    _controller3.dispose();
+    _controller4.dispose();
+    _controller5.dispose();
+    _controller6.dispose();
   }
 
   @override
@@ -79,6 +151,7 @@ class _HomePageState extends State<HomePage> {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 HomePageItem(
+                  controller: _controller1,
                   icon: Icons.text_increase_sharp,
                   text: 'Take IQ Test',
                   color: const Color(0xffc30010),
@@ -90,6 +163,7 @@ class _HomePageState extends State<HomePage> {
                   },
                 ),
                 HomePageItem(
+                  controller: _controller2,
                   icon: Icons.add_task_sharp,
                   text: 'Todos',
                   color: AppColors.iconMain,
@@ -104,6 +178,7 @@ class _HomePageState extends State<HomePage> {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 HomePageItem(
+                  controller: _controller3,
                   icon: Icons.school_outlined,
                   text: 'Improve IQ',
                   color: Colors.blue.shade900,
@@ -112,6 +187,7 @@ class _HomePageState extends State<HomePage> {
                   },
                 ),
                 HomePageItem(
+                  controller: _controller4,
                   icon: Icons.person_add_alt_1_outlined,
                   text: 'Profile  ',
                   color: AppColors.profileColor,
@@ -126,6 +202,7 @@ class _HomePageState extends State<HomePage> {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 HomePageItem(
+                  controller: _controller5,
                   icon: Icons.data_object_outlined,
                   text: 'History',
                   color: AppColors.historyPageColor,
@@ -134,6 +211,7 @@ class _HomePageState extends State<HomePage> {
                   },
                 ),
                 HomePageItem(
+                  controller: _controller6,
                   icon: Icons.adobe_outlined,
                   text: 'About IQ',
                   color: AppColors.primary,
