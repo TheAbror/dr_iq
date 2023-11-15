@@ -10,7 +10,7 @@ class HomePageItem extends AnimatedWidget {
   final AnimationController controller;
 
   const HomePageItem({
-    Key? key,
+    super.key,
     required this.text,
     required this.icon,
     required this.color,

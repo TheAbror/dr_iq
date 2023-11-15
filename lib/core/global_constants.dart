@@ -1,5 +1,5 @@
 class GlobalConstants {
-  static final List<Map<String, dynamic>> questions = [
+  static final List<Map<String, dynamic>> testQuestions = [
     {
       "id": 1,
       "options": [
@@ -106,10 +106,7 @@ class GlobalConstants {
       "question_text": "Which country is closest to the South Pole?"
     }
   ];
-//
-//
-//
-//
+
   static final List<Map<String, dynamic>> randomQuestions = [
     {
       "id": 1,
@@ -193,10 +190,7 @@ class GlobalConstants {
       "question_text": "Which fruit does not belong to the group? Peach, Plum, Cherry, Pear, Banana?"
     }
   ];
-  //
-  //
-  //
-  //
+
   static final List<Map<String, dynamic>> criticalThinkingQuestions = [
     {
       "id": 1,
@@ -509,6 +503,115 @@ class GlobalConstants {
         {"option_text": "August", "is_correct": true}
       ],
       "question_text": "Which month does not have 28 days?"
+    }
+  ];
+
+  static final List<Map<String, dynamic>> generalKnowledge = [
+    {
+      "id": 21,
+      "options": [
+        {"option_text": "Mercury", "is_correct": false},
+        {"option_text": "Venus", "is_correct": false},
+        {"option_text": "Earth", "is_correct": false},
+        {"option_text": "Square", "is_correct": true}
+      ],
+      "question_text": "Which is not a planet in our solar system? Mercury, Venus, Earth, Square, Mars?"
+    },
+    {
+      "id": 22,
+      "options": [
+        {"option_text": "Hydrogen", "is_correct": false},
+        {"option_text": "Oxygen", "is_correct": false},
+        {"option_text": "Carbon", "is_correct": false},
+        {"option_text": "Circle", "is_correct": true}
+      ],
+      "question_text":
+          "Which is not a primary element in the composition of water? Hydrogen, Oxygen, Carbon, Circle, Nitrogen?"
+    },
+    {
+      "id": 23,
+      "options": [
+        {"option_text": "Photosynthesis", "is_correct": false},
+        {"option_text": "Respiration", "is_correct": false},
+        {"option_text": "Circulation", "is_correct": false},
+        {"option_text": "Triangle", "is_correct": true}
+      ],
+      "question_text":
+          "Which process is responsible for the conversion of sunlight into energy in plants? Photosynthesis, Respiration, Circulation, Triangle, Transpiration?"
+    },
+    {
+      "id": 24,
+      "options": [
+        {"option_text": "Newton", "is_correct": false},
+        {"option_text": "Einstein", "is_correct": false},
+        {"option_text": "Galileo", "is_correct": false},
+        {"option_text": "Rectangle", "is_correct": true}
+      ],
+      "question_text":
+          "Who is known for his laws of motion and universal gravitation? Newton, Einstein, Galileo, Rectangle, Tesla?"
+    },
+    {
+      "id": 25,
+      "options": [
+        {"option_text": "Solar System", "is_correct": false},
+        {"option_text": "Human Body", "is_correct": false},
+        {"option_text": "Computer Science", "is_correct": false},
+        {"option_text": "Hexagon", "is_correct": true}
+      ],
+      "question_text":
+          "Which subject does not belong to the group? Solar System, Human Body, Computer Science, Hexagon, Chemistry?"
+    },
+    {
+      "id": 26,
+      "options": [
+        {"option_text": "Celsius", "is_correct": false},
+        {"option_text": "Fahrenheit", "is_correct": false},
+        {"option_text": "Kelvin", "is_correct": false},
+        {"option_text": "Pentagon", "is_correct": true}
+      ],
+      "question_text": "Which is not a unit of temperature measurement? Celsius, Fahrenheit, Kelvin, Pentagon, Rankine?"
+    },
+    {
+      "id": 27,
+      "options": [
+        {"option_text": "Mars", "is_correct": false},
+        {"option_text": "Saturn", "is_correct": false},
+        {"option_text": "Jupiter", "is_correct": false},
+        {"option_text": "Triangle", "is_correct": true}
+      ],
+      "question_text": "Which is not a gas giant in our solar system? Mars, Saturn, Jupiter, Triangle, Neptune?"
+    },
+    {
+      "id": 28,
+      "options": [
+        {"option_text": "Evaporation", "is_correct": false},
+        {"option_text": "Condensation", "is_correct": false},
+        {"option_text": "Sublimation", "is_correct": false},
+        {"option_text": "Square", "is_correct": true}
+      ],
+      "question_text":
+          "Which is not a phase of the water cycle? Evaporation, Condensation, Sublimation, Square, Precipitation?"
+    },
+    {
+      "id": 29,
+      "options": [
+        {"option_text": "Nucleus", "is_correct": false},
+        {"option_text": "Electron", "is_correct": false},
+        {"option_text": "Proton", "is_correct": false},
+        {"option_text": "Rectangle", "is_correct": true}
+      ],
+      "question_text": "Which is not a subatomic particle? Nucleus, Electron, Proton, Rectangle, Neutron?"
+    },
+    {
+      "id": 30,
+      "options": [
+        {"option_text": "Red Blood Cells", "is_correct": false},
+        {"option_text": "White Blood Cells", "is_correct": false},
+        {"option_text": "Platelets", "is_correct": false},
+        {"option_text": "Hexagon", "is_correct": true}
+      ],
+      "question_text":
+          "Which component is not found in blood? Red Blood Cells, White Blood Cells, Platelets, Hexagon, Plasma?"
     }
   ];
 }

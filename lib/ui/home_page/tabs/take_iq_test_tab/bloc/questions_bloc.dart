@@ -10,7 +10,7 @@ part 'questions_state.dart';
 
 class QuestionsBloc extends Cubit<QuestionsState> {
   QuestionsBloc() : super(QuestionsState.initial());
-  var questionsLength = GlobalConstants.questions.length;
+  var questionsLength = GlobalConstants.testQuestions.length;
 
   void toNextQuestion() {
     if (questionsLength > state.questionCounter + 1) {

@@ -22,7 +22,7 @@ class OptionsText extends StatelessWidget {
       physics: const NeverScrollableScrollPhysics(),
       itemCount: 4,
       itemBuilder: (context, index) {
-        var myValue = GlobalConstants.questions[counter]["options"][index];
+        var myValue = GlobalConstants.testQuestions[counter]["options"][index];
 
         return GestureDetector(
           onTap: () {

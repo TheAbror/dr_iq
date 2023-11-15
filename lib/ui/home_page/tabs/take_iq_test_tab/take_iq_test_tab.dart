@@ -18,7 +18,7 @@ class TakeIQTest extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var questionsLength = GlobalConstants.questions.length;
+    var questionsLength = GlobalConstants.testQuestions.length;
     print(questionsLength);
     return Scaffold(
       appBar: _takeIQTestAppBar(),

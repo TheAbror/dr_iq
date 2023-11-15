@@ -24,7 +24,7 @@ class QuestionText extends StatelessWidget {
       ),
       child: Center(
         child: Text(
-          GlobalConstants.questions[counter]['question_text'],
+          GlobalConstants.testQuestions[counter]['question_text'],
           style: TextStyle(
             color: AppColors.float,
             fontWeight: FontWeight.bold,

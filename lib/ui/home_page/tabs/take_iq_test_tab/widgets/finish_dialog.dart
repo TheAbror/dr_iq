@@ -11,7 +11,7 @@ import 'package:dr_iq/ui/home_page/tabs/take_iq_test_tab/bloc/questions_bloc.dar
 import 'package:rive/rive.dart';
 
 Future<dynamic> finishDialog(BuildContext context, QuestionsState state) {
-  var questionsLength = GlobalConstants.questions.length;
+  var questionsLength = GlobalConstants.testQuestions.length;
   //TODO make it only close on close button
   return showDialog(
     context: context,
