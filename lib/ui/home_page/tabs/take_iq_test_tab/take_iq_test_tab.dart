@@ -21,7 +21,7 @@ class TakeIQTest extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var questionsLength = GlobalConstants.testQuestions.length;
+    var questionsLength = questions.length;
     print(questionsLength);
     return Scaffold(
       appBar: _takeIQTestAppBar(),
@@ -46,12 +46,12 @@ class TakeIQTest extends StatelessWidget {
                         physics: NeverScrollableScrollPhysics(),
                         itemCount: questionsLength,
                         itemBuilder: (context, index) {
-                          var myValue =
-                              GlobalConstants.testQuestions[state.questionCounter]["options"][index]["option_text"];
+                          var myValue = questions[state.questionCounter]["options"][index]["option_text"];
+
                           return Column(
                             children: [
                               QuestionText(
-                                textQuestion: GlobalConstants.testQuestions[state.questionCounter]['question_text'],
+                                textQuestion: questions[state.questionCounter]['question_text'],
                               ),
                               MySpacer(),
                               GestureDetector(

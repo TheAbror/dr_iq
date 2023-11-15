@@ -27,7 +27,6 @@ class MainRouteGenerator {
           builder: (_) => const SignInPage(),
         );
       case AppRoutes.takeiqtest:
-        // Retrieve the questions list from arguments
         List<Map<String, dynamic>> questions = settings.arguments as List<Map<String, dynamic>>;
 
         return CustomCupertinoStyleNavigationRoute(
