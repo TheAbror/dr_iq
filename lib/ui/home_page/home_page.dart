@@ -17,12 +17,16 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
-  String? name = 'Abror';
+  String? name;
 
   void getName() async {
     String? nameD = await PreferencesServices.getName();
     if (nameD != null) {
-      nameD = name;
+      name = nameD;
+      setState(() {});
+    }
+    if (name == '') {
+      name = 'User';
     }
   }
 
@@ -35,6 +39,8 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
 
   @override
   void initState() {
+    getName();
+
     _controller1 = AnimationController(
       vsync: this,
       duration: Duration(milliseconds: 200),
@@ -88,8 +94,6 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
     )..addListener(() {
         setState(() {});
       });
-
-    getName();
 
     super.initState();
   }

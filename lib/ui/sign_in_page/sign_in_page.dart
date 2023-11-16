@@ -51,6 +51,7 @@ class _SignInPageState extends State<SignInPage> {
                   TextFormField(
                     controller: _nameController,
                     textInputAction: TextInputAction.next,
+                    style: TextStyle(fontWeight: FontWeight.bold),
                   ),
                   const SizedBox(height: 20),
                   const Text(
@@ -59,6 +60,7 @@ class _SignInPageState extends State<SignInPage> {
                   ),
                   TextFormField(
                     controller: _ageController,
+                    style: TextStyle(fontWeight: FontWeight.bold),
                   ),
                 ],
               ),
