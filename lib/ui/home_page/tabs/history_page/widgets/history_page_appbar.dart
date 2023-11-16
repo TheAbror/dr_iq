@@ -12,6 +12,13 @@ AppBar historyPageAppBar(BuildContext context) {
         fontWeight: FontWeight.bold,
       ),
     ),
+    leading: IconButton(
+      color: AppColors.float,
+      onPressed: () {
+        Navigator.pop(context);
+      },
+      icon: Icon(Icons.arrow_back),
+    ),
     actions: [
       IconButton(
         icon: const Icon(

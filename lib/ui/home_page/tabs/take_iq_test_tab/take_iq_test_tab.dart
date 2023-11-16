@@ -23,7 +23,7 @@ class TakeIQTest extends StatelessWidget {
     var questionsLength = questions.length;
     print(questionsLength);
     return Scaffold(
-      appBar: _takeIQTestAppBar(),
+      appBar: _takeIQTestAppBar(context),
       body: SafeArea(
         child: Padding(
           padding: EdgeInsets.symmetric(horizontal: 20.w),
@@ -75,7 +75,7 @@ class TakeIQTest extends StatelessWidget {
     );
   }
 
-  AppBar _takeIQTestAppBar() {
+  AppBar _takeIQTestAppBar(BuildContext context) {
     return AppBar(
       backgroundColor: AppColors.textMain,
       centerTitle: true,
@@ -83,6 +83,13 @@ class TakeIQTest extends StatelessWidget {
         //TODO change this to real value
         'Test',
         style: TextStyle(fontSize: 24.sp, fontWeight: FontWeight.bold),
+      ),
+      leading: IconButton(
+        color: AppColors.float,
+        onPressed: () {
+          Navigator.pop(context);
+        },
+        icon: Icon(Icons.arrow_back),
       ),
     );
   }

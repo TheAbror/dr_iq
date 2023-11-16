@@ -84,168 +84,187 @@ class _PrimaryBottomSheetState extends State<PrimaryBottomSheet> {
 
   @override
   Widget build(BuildContext context) {
-    return DefaultBottomSheet(
-      title: widget.title,
-      heightRatio: 0.6,
-      actionText: 'Save',
-      isConfirmationNeeded: true,
-      action: () {},
-      child: Column(
-        children: [
-          const Divider(),
-          Padding(
-            padding: EdgeInsets.symmetric(horizontal: 8.w),
-            child: Column(
-              children: [
-                SizedBox(height: 5.h),
+    return Container(
+      decoration: BoxDecoration(
+        color: AppColors.float,
+        borderRadius: BorderRadius.only(
+          topLeft: Radius.circular(20.r),
+          topRight: Radius.circular(20.r),
+        ),
+      ),
+      child: DefaultBottomSheet(
+        title: widget.title,
+        heightRatio: 0.6,
+        actionText: 'Save',
+        isConfirmationNeeded: true,
+        action: () {},
+        child: Column(
+          children: [
+            const Divider(),
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: 8.w),
+              child: Column(
+                children: [
+                  SizedBox(height: 5.h),
 
-                TextFormField(
-                  controller: _controllerName,
-                  decoration: InputDecoration(
-                    filled: true,
-                    border: InputBorder.none, // Remove border color
-                    enabledBorder: OutlineInputBorder(
-                      borderSide: BorderSide(color: AppColors.stroke, width: 0.5.w),
-                      borderRadius: BorderRadius.circular(12.r),
-                    ),
-                    focusedBorder: OutlineInputBorder(
-                      borderSide: BorderSide(color: AppColors.primary, width: 0.5.w),
-                      borderRadius: BorderRadius.circular(12.r),
-                    ),
-                    errorBorder: OutlineInputBorder(
-                      borderSide: BorderSide(color: AppColors.stroke, width: 0.5.w),
-                      borderRadius: BorderRadius.circular(12.r),
-                    ),
-                    focusedErrorBorder: OutlineInputBorder(
-                      borderSide: BorderSide(color: AppColors.stroke, width: 0.5.w),
-                      borderRadius: BorderRadius.circular(12.r),
-                    ),
-                    fillColor: Theme.of(context).colorScheme.surfaceTint,
-                    hintStyle: const TextStyle(color: AppColors.textSecondary),
-                  ),
-                  textInputAction: TextInputAction.next,
-                  onChanged: (value) {},
-                  validator: (value) {
-                    if (value == null || value.isEmpty) {
-                      return 'Please enter your email';
-                    }
-                    if (!RegExp(
-                            r'^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$')
-                        .hasMatch(value)) {
-                      return 'Please enter a valid email';
-                    }
-                    return null;
-                  },
-                ),
-                SizedBox(height: 4.h),
+                  TextFormField(
+                    controller: _controllerName,
+                    decoration: InputDecoration(
+                      filled: true,
 
-                TextFormField(
-                  controller: _controllerAge,
-                  decoration: InputDecoration(
-                    filled: true,
-                    border: InputBorder.none, // Remove border color
-                    enabledBorder: OutlineInputBorder(
-                      borderSide: BorderSide(color: AppColors.stroke, width: 0.5.w),
-                      borderRadius: BorderRadius.circular(12.r),
+                      border: InputBorder.none, // Remove border color
+                      enabledBorder: OutlineInputBorder(
+                        borderSide: BorderSide(color: AppColors.stroke, width: 0.5.w),
+                        borderRadius: BorderRadius.circular(12.r),
+                      ),
+                      focusedBorder: OutlineInputBorder(
+                        borderSide: BorderSide(color: AppColors.primary, width: 0.5.w),
+                        borderRadius: BorderRadius.circular(12.r),
+                      ),
+                      errorBorder: OutlineInputBorder(
+                        borderSide: BorderSide(color: AppColors.stroke, width: 0.5.w),
+                        borderRadius: BorderRadius.circular(12.r),
+                      ),
+                      focusedErrorBorder: OutlineInputBorder(
+                        borderSide: BorderSide(color: AppColors.stroke, width: 0.5.w),
+                        borderRadius: BorderRadius.circular(12.r),
+                      ),
+                      fillColor: AppColors.background,
+                      labelText: 'Name',
+                      labelStyle: TextStyle(color: AppColors.textMain, fontWeight: FontWeight.bold),
+                      hintText: 'dsfd',
+                      hintStyle: const TextStyle(color: AppColors.textSecondary),
                     ),
-                    focusedBorder: OutlineInputBorder(
-                      borderSide: BorderSide(color: AppColors.primary, width: 0.5.w),
-                      borderRadius: BorderRadius.circular(12.r),
-                    ),
-                    errorBorder: OutlineInputBorder(
-                      borderSide: BorderSide(color: AppColors.stroke, width: 0.5.w),
-                      borderRadius: BorderRadius.circular(12.r),
-                    ),
-                    focusedErrorBorder: OutlineInputBorder(
-                      borderSide: BorderSide(color: AppColors.stroke, width: 0.5.w),
-                      borderRadius: BorderRadius.circular(12.r),
-                    ),
-                    fillColor: Theme.of(context).colorScheme.surfaceTint,
-                    hintStyle: const TextStyle(color: AppColors.textSecondary),
-                  ),
-                  textInputAction: TextInputAction.next,
-                  onChanged: (value) {},
-                  validator: (value) {
-                    if (value == null || value.isEmpty) {
-                      return 'Please enter value';
-                    }
-                    return null;
-                  },
-                ),
-                SizedBox(height: 4.h),
+                    textInputAction: TextInputAction.next,
+                    onChanged: (value) {},
+                    validator: (value) {
+                      if (value == null || value.isEmpty) {
+                        return 'Please enter your email';
+                      }
 
-                TextFormField(
-                  controller: _controllerPhone,
-                  decoration: InputDecoration(
-                    filled: true,
-                    border: InputBorder.none, // Remove border color
-                    enabledBorder: OutlineInputBorder(
-                      borderSide: BorderSide(color: AppColors.stroke, width: 0.5.w),
-                      borderRadius: BorderRadius.circular(12.r),
-                    ),
-                    focusedBorder: OutlineInputBorder(
-                      borderSide: BorderSide(color: AppColors.primary, width: 0.5.w),
-                      borderRadius: BorderRadius.circular(12.r),
-                    ),
-                    errorBorder: OutlineInputBorder(
-                      borderSide: BorderSide(color: AppColors.stroke, width: 0.5.w),
-                      borderRadius: BorderRadius.circular(12.r),
-                    ),
-                    focusedErrorBorder: OutlineInputBorder(
-                      borderSide: BorderSide(color: AppColors.stroke, width: 0.5.w),
-                      borderRadius: BorderRadius.circular(12.r),
-                    ),
-                    fillColor: Theme.of(context).colorScheme.surfaceTint,
-                    hintStyle: const TextStyle(color: AppColors.textSecondary),
+                      return null;
+                    },
                   ),
-                  onChanged: (value) {},
-                  validator: (value) {
-                    if (value == null || value.isEmpty) {
-                      return 'Please enter value';
-                    }
-                    return null;
-                  },
-                ),
-                SizedBox(height: 4.h),
+                  SizedBox(height: 4.h),
 
-                TextFormField(
-                  controller: _controllerEmail,
-                  decoration: InputDecoration(
-                    filled: true,
-                    border: InputBorder.none, // Remove border color
-                    enabledBorder: OutlineInputBorder(
-                      borderSide: BorderSide(color: AppColors.stroke, width: 0.5.w),
-                      borderRadius: BorderRadius.circular(12.r),
+                  TextFormField(
+                    controller: _controllerAge,
+                    decoration: InputDecoration(
+                      filled: true,
+                      border: InputBorder.none, // Remove border color
+                      enabledBorder: OutlineInputBorder(
+                        borderSide: BorderSide(color: AppColors.stroke, width: 0.5.w),
+                        borderRadius: BorderRadius.circular(12.r),
+                      ),
+                      focusedBorder: OutlineInputBorder(
+                        borderSide: BorderSide(color: AppColors.primary, width: 0.5.w),
+                        borderRadius: BorderRadius.circular(12.r),
+                      ),
+                      errorBorder: OutlineInputBorder(
+                        borderSide: BorderSide(color: AppColors.stroke, width: 0.5.w),
+                        borderRadius: BorderRadius.circular(12.r),
+                      ),
+                      focusedErrorBorder: OutlineInputBorder(
+                        borderSide: BorderSide(color: AppColors.stroke, width: 0.5.w),
+                        borderRadius: BorderRadius.circular(12.r),
+                      ),
+                      fillColor: AppColors.background,
+                      labelText: 'Age',
+                      labelStyle: TextStyle(color: AppColors.textMain, fontWeight: FontWeight.bold),
+                      hintText: 'dsfd',
+                      hintStyle: const TextStyle(color: AppColors.textSecondary),
                     ),
-                    focusedBorder: OutlineInputBorder(
-                      borderSide: BorderSide(color: AppColors.primary, width: 0.5.w),
-                      borderRadius: BorderRadius.circular(12.r),
-                    ),
-                    errorBorder: OutlineInputBorder(
-                      borderSide: BorderSide(color: AppColors.stroke, width: 0.5.w),
-                      borderRadius: BorderRadius.circular(12.r),
-                    ),
-                    focusedErrorBorder: OutlineInputBorder(
-                      borderSide: BorderSide(color: AppColors.stroke, width: 0.5.w),
-                      borderRadius: BorderRadius.circular(12.r),
-                    ),
-                    fillColor: Theme.of(context).colorScheme.surfaceTint,
-                    hintStyle: const TextStyle(color: AppColors.textSecondary),
+                    textInputAction: TextInputAction.next,
+                    onChanged: (value) {},
+                    validator: (value) {
+                      if (value == null || value.isEmpty) {
+                        return 'Please enter value';
+                      }
+                      return null;
+                    },
                   ),
-                  onChanged: (value) {},
-                  validator: (value) {
-                    if (value == null || value.isEmpty) {
-                      return 'Please enter value';
-                    }
-                    return null;
-                  },
-                ),
-                // INFO: Always needed for Scrollable Bottom sheets
-                SizedBox(height: 24.h),
-              ],
+                  SizedBox(height: 4.h),
+
+                  TextFormField(
+                    controller: _controllerPhone,
+                    decoration: InputDecoration(
+                      filled: true,
+                      border: InputBorder.none, // Remove border color
+                      enabledBorder: OutlineInputBorder(
+                        borderSide: BorderSide(color: AppColors.stroke, width: 0.5.w),
+                        borderRadius: BorderRadius.circular(12.r),
+                      ),
+                      focusedBorder: OutlineInputBorder(
+                        borderSide: BorderSide(color: AppColors.primary, width: 0.5.w),
+                        borderRadius: BorderRadius.circular(12.r),
+                      ),
+                      errorBorder: OutlineInputBorder(
+                        borderSide: BorderSide(color: AppColors.stroke, width: 0.5.w),
+                        borderRadius: BorderRadius.circular(12.r),
+                      ),
+                      focusedErrorBorder: OutlineInputBorder(
+                        borderSide: BorderSide(color: AppColors.stroke, width: 0.5.w),
+                        borderRadius: BorderRadius.circular(12.r),
+                      ),
+                      fillColor: AppColors.background,
+                      labelText: 'Phone',
+                      labelStyle: TextStyle(color: AppColors.textMain, fontWeight: FontWeight.bold),
+                      hintText: 'dsfd',
+                      hintStyle: const TextStyle(color: AppColors.textSecondary),
+                    ),
+                    onChanged: (value) {},
+                    validator: (value) {
+                      if (value == null || value.isEmpty) {
+                        return 'Please enter value';
+                      }
+                      return null;
+                    },
+                  ),
+                  SizedBox(height: 4.h),
+
+                  TextFormField(
+                    controller: _controllerEmail,
+                    decoration: InputDecoration(
+                      filled: true,
+                      border: InputBorder.none, // Remove border color
+                      enabledBorder: OutlineInputBorder(
+                        borderSide: BorderSide(color: AppColors.stroke, width: 0.5.w),
+                        borderRadius: BorderRadius.circular(12.r),
+                      ),
+                      focusedBorder: OutlineInputBorder(
+                        borderSide: BorderSide(color: AppColors.primary, width: 0.5.w),
+                        borderRadius: BorderRadius.circular(12.r),
+                      ),
+                      errorBorder: OutlineInputBorder(
+                        borderSide: BorderSide(color: AppColors.stroke, width: 0.5.w),
+                        borderRadius: BorderRadius.circular(12.r),
+                      ),
+                      focusedErrorBorder: OutlineInputBorder(
+                        borderSide: BorderSide(color: AppColors.stroke, width: 0.5.w),
+                        borderRadius: BorderRadius.circular(12.r),
+                      ),
+                      labelText: 'Email',
+                      labelStyle: TextStyle(color: AppColors.textMain, fontWeight: FontWeight.bold),
+                      hintText: 'dsfd',
+                      fillColor: AppColors.background,
+
+                      hintStyle: const TextStyle(color: AppColors.textSecondary),
+                    ),
+                    onChanged: (value) {},
+                    validator: (value) {
+                      if (value == null || value.isEmpty) {
+                        return 'Please enter value';
+                      }
+                      return null;
+                    },
+                  ),
+                  // INFO: Always needed for Scrollable Bottom sheets
+                  SizedBox(height: 24.h),
+                ],
+              ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }

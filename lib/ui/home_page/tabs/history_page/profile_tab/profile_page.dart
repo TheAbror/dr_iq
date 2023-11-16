@@ -147,8 +147,14 @@ class _Body extends StatelessWidget {
         ),
         Positioned(
           top: 60.h,
-          left: 20.w,
-          child: BackButton(color: AppColors.profileColor),
+          left: 12.w,
+          child: GestureDetector(
+            onTap: () => Navigator.pop(context),
+            child: Icon(
+              Icons.arrow_back,
+              color: AppColors.profileColor,
+            ),
+          ),
         ),
       ],
     );
