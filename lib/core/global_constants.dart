@@ -114,18 +114,18 @@ class GlobalConstants {
         {"option_text": "Circle", "is_correct": false},
         {"option_text": "Triangle", "is_correct": false},
         {"option_text": "Square", "is_correct": false},
-        {"option_text": "Rectangle", "is_correct": true}
+        {"option_text": "Rectangle", "is_correct": true},
       ],
       "question_text":
-          "All circles are triangles. All triangles are squares. What can be inferred from these statements?"
+          "All circles are triangles. All triangles are squares. What can be inferred from these ssatements?"
     },
     {
       "id": 72,
       "options": [
         {"option_text": "Elephant", "is_correct": false},
         {"option_text": "Lion", "is_correct": false},
+        {"option_text": "Penguin", "is_correct": true},
         {"option_text": "Zebra", "is_correct": false},
-        {"option_text": "Penguin", "is_correct": true}
       ],
       "question_text":
           "In a group of animals, some are elephants, some are lions, and some are zebras. All zebras are black and white. What can be concluded?"
@@ -134,9 +134,9 @@ class GlobalConstants {
       "id": 73,
       "options": [
         {"option_text": "Green", "is_correct": false},
+        {"option_text": "Red", "is_correct": true},
         {"option_text": "Blue", "is_correct": false},
         {"option_text": "Yellow", "is_correct": false},
-        {"option_text": "Red", "is_correct": true}
       ],
       "question_text":
           "If all green apples are red and some apples in the basket are green, what can be inferred about those apples?"
@@ -146,8 +146,8 @@ class GlobalConstants {
       "options": [
         {"option_text": "Cats", "is_correct": false},
         {"option_text": "Dogs", "is_correct": false},
+        {"option_text": "Penguins", "is_correct": true},
         {"option_text": "Fish", "is_correct": false},
-        {"option_text": "Penguins", "is_correct": true}
       ],
       "question_text":
           "In a zoo, there are cats, dogs, and fish. Some animals swim, and penguins are birds that swim. What can be concluded?"
@@ -155,10 +155,10 @@ class GlobalConstants {
     {
       "id": 75,
       "options": [
+        {"option_text": "Circle", "is_correct": true},
         {"option_text": "Blue", "is_correct": false},
         {"option_text": "Square", "is_correct": false},
         {"option_text": "Triangle", "is_correct": false},
-        {"option_text": "Circle", "is_correct": true}
       ],
       "question_text":
           "All blue shapes are circles. Some shapes in the set are blue. What can be inferred about those shapes?"
@@ -169,7 +169,7 @@ class GlobalConstants {
         {"option_text": "Apples", "is_correct": false},
         {"option_text": "Oranges", "is_correct": false},
         {"option_text": "Bananas", "is_correct": false},
-        {"option_text": "Fruits", "is_correct": true}
+        {"option_text": "Fruits", "is_correct": true},
       ],
       "question_text": "Some fruits are oranges. All oranges are bananas. What can be inferred about fruits in general?"
     },
@@ -177,9 +177,9 @@ class GlobalConstants {
       "id": 77,
       "options": [
         {"option_text": "Rectangle", "is_correct": false},
+        {"option_text": "Circle", "is_correct": true},
         {"option_text": "Square", "is_correct": false},
         {"option_text": "Triangle", "is_correct": false},
-        {"option_text": "Circle", "is_correct": true}
       ],
       "question_text":
           "All rectangles are squares. No squares are circles. What can be inferred about rectangles and circles?"
@@ -190,7 +190,7 @@ class GlobalConstants {
         {"option_text": "Blue", "is_correct": false},
         {"option_text": "Square", "is_correct": false},
         {"option_text": "Triangle", "is_correct": false},
-        {"option_text": "Circle", "is_correct": true}
+        {"option_text": "Circle", "is_correct": true},
       ],
       "question_text":
           "All blue shapes are circles. Some shapes in the set are blue. What can be inferred about those shapes?"
@@ -198,10 +198,10 @@ class GlobalConstants {
     {
       "id": 79,
       "options": [
+        {"option_text": "Penguins", "is_correct": true},
         {"option_text": "Birds", "is_correct": false},
         {"option_text": "Fish", "is_correct": false},
         {"option_text": "Mammals", "is_correct": false},
-        {"option_text": "Penguins", "is_correct": true}
       ],
       "question_text": "All penguins are birds. Some birds can fly. What can be concluded about penguins and flying?"
     },
@@ -210,8 +210,8 @@ class GlobalConstants {
       "options": [
         {"option_text": "Red", "is_correct": false},
         {"option_text": "Blue", "is_correct": false},
+        {"option_text": "Yellow", "is_correct": true},
         {"option_text": "Green", "is_correct": false},
-        {"option_text": "Yellow", "is_correct": true}
       ],
       "question_text":
           "If no yellow apples are red, and some apples in the basket are red, what can be inferred about those apples?"
@@ -299,6 +299,26 @@ class GlobalConstants {
         {"option_text": "Pear", "is_correct": true}
       ],
       "question_text": "Which fruit does not belong to the group? Peach, Plum, Cherry, Pear, Banana?"
+    },
+    {
+      "id": 9,
+      "options": [
+        {"option_text": "Football", "is_correct": false},
+        {"option_text": "Basketball", "is_correct": false},
+        {"option_text": "Tennis", "is_correct": true},
+        {"option_text": "Baseball", "is_correct": false}
+      ],
+      "question_text": "Which sport is played with a racket and a ball? Football, Basketball, Tennis, Baseball?"
+    },
+    {
+      "id": 10,
+      "options": [
+        {"option_text": "Elephant", "is_correct": false},
+        {"option_text": "Lion", "is_correct": false},
+        {"option_text": "Giraffe", "is_correct": true},
+        {"option_text": "Kangaroo", "is_correct": false}
+      ],
+      "question_text": "Which animal has a long neck? Elephant, Lion, Giraffe, Kangaroo?"
     }
   ];
 
@@ -515,34 +535,34 @@ class GlobalConstants {
     {
       "id": 21,
       "options": [
-        {"option_text": "Mercury", "is_correct": false},
-        {"option_text": "Venus", "is_correct": false},
+        {"option_text": "Pluto", "is_correct": false},
+        {"option_text": "Saturn", "is_correct": false},
         {"option_text": "Square", "is_correct": true},
-        {"option_text": "Earth", "is_correct": false},
+        {"option_text": "Mars", "is_correct": false}
       ],
-      "question_text": "Which is not a planet in our solar system? Mercury, Venus, Earth, Square, Mars?"
+      "question_text": "Which is not a planet in our solar system? Pluto, Saturn, Mars, Square, Jupiter?"
     },
     {
       "id": 22,
       "options": [
-        {"option_text": "Circle", "is_correct": true},
+        {"option_text": "Rhombus", "is_correct": false},
         {"option_text": "Hydrogen", "is_correct": false},
-        {"option_text": "Oxygen", "is_correct": false},
-        {"option_text": "Carbon", "is_correct": false},
+        {"option_text": "Helium", "is_correct": false},
+        {"option_text": "Circle", "is_correct": true}
       ],
       "question_text":
-          "Which is not a primary element in the composition of water? Hydrogen, Oxygen, Carbon, Circle, Nitrogen?"
+          "Which is not a primary element in the composition of water? Rhombus, Hydrogen, Helium, Circle, Nitrogen?"
     },
     {
       "id": 23,
       "options": [
-        {"option_text": "Photosynthesis", "is_correct": false},
+        {"option_text": "Photosynthesis", "is_correct": true},
         {"option_text": "Respiration", "is_correct": false},
         {"option_text": "Circulation", "is_correct": false},
-        {"option_text": "Triangle", "is_correct": true},
+        {"option_text": "Trapezoid", "is_correct": false}
       ],
       "question_text":
-          "Which process is responsible for the conversion of sunlight into energy in plants? Photosynthesis, Respiration, Circulation, Triangle, Transpiration?"
+          "Which process is responsible for the conversion of sunlight into energy in plants? Photosynthesis, Respiration, Circulation, Trapezoid, Transpiration?"
     },
     {
       "id": 24,
@@ -550,7 +570,7 @@ class GlobalConstants {
         {"option_text": "Newton", "is_correct": false},
         {"option_text": "Einstein", "is_correct": false},
         {"option_text": "Galileo", "is_correct": false},
-        {"option_text": "Rectangle", "is_correct": true},
+        {"option_text": "Rectangle", "is_correct": true}
       ],
       "question_text":
           "Who is known for his laws of motion and universal gravitation? Newton, Einstein, Galileo, Rectangle, Tesla?"
@@ -561,7 +581,7 @@ class GlobalConstants {
         {"option_text": "Solar System", "is_correct": false},
         {"option_text": "Human Body", "is_correct": false},
         {"option_text": "Hexagon", "is_correct": true},
-        {"option_text": "Computer Science", "is_correct": false},
+        {"option_text": "Computer Science", "is_correct": false}
       ],
       "question_text":
           "Which subject does not belong to the group? Solar System, Human Body, Computer Science, Hexagon, Chemistry?"
@@ -572,7 +592,7 @@ class GlobalConstants {
         {"option_text": "Celsius", "is_correct": false},
         {"option_text": "Fahrenheit", "is_correct": false},
         {"option_text": "Pentagon", "is_correct": true},
-        {"option_text": "Kelvin", "is_correct": false},
+        {"option_text": "Kelvin", "is_correct": false}
       ],
       "question_text": "Which is not a unit of temperature measurement? Celsius, Fahrenheit, Kelvin, Pentagon, Rankine?"
     },
@@ -582,7 +602,7 @@ class GlobalConstants {
         {"option_text": "Mars", "is_correct": false},
         {"option_text": "Saturn", "is_correct": false},
         {"option_text": "Jupiter", "is_correct": false},
-        {"option_text": "Triangle", "is_correct": true},
+        {"option_text": "Triangle", "is_correct": true}
       ],
       "question_text": "Which is not a gas giant in our solar system? Mars, Saturn, Jupiter, Triangle, Neptune?"
     },
@@ -592,7 +612,7 @@ class GlobalConstants {
         {"option_text": "Evaporation", "is_correct": false},
         {"option_text": "Condensation", "is_correct": false},
         {"option_text": "Sublimation", "is_correct": false},
-        {"option_text": "Square", "is_correct": true},
+        {"option_text": "Square", "is_correct": true}
       ],
       "question_text":
           "Which is not a phase of the water cycle? Evaporation, Condensation, Sublimation, Square, Precipitation?"
@@ -603,7 +623,7 @@ class GlobalConstants {
         {"option_text": "Rectangle", "is_correct": true},
         {"option_text": "Nucleus", "is_correct": false},
         {"option_text": "Electron", "is_correct": false},
-        {"option_text": "Proton", "is_correct": false},
+        {"option_text": "Proton", "is_correct": false}
       ],
       "question_text": "Which is not a subatomic particle? Nucleus, Electron, Proton, Rectangle, Neutron?"
     },
@@ -612,11 +632,10 @@ class GlobalConstants {
       "options": [
         {"option_text": "Red Blood Cells", "is_correct": false},
         {"option_text": "White Blood Cells", "is_correct": false},
-        {"option_text": "Hexagon", "is_correct": true},
         {"option_text": "Platelets", "is_correct": false},
+        {"option_text": "Plasma", "is_correct": false}
       ],
-      "question_text":
-          "Which component is not found in blood? Red Blood Cells, White Blood Cells, Platelets, Hexagon, Plasma?"
+      "question_text": "Which component is not found in blood? Red Blood Cells, White Blood Cells, Platelets, Plasma?"
     }
   ];
 
@@ -626,40 +645,40 @@ class GlobalConstants {
       "options": [
         {"option_text": "Brazil", "is_correct": false},
         {"option_text": "India", "is_correct": false},
-        {"option_text": "Square", "is_correct": true},
         {"option_text": "Canada", "is_correct": false},
+        {"option_text": "Australia", "is_correct": true}
       ],
-      "question_text": "Which is not a country? Brazil, India, Canada, Square, Australia?"
+      "question_text": "Which is not a country? Brazil, India, Canada, Australia?"
     },
     {
       "id": 32,
       "options": [
-        {"option_text": "Triangle", "is_correct": true},
         {"option_text": "Paris", "is_correct": false},
         {"option_text": "Rome", "is_correct": false},
         {"option_text": "Berlin", "is_correct": false},
+        {"option_text": "Madrid", "is_correct": true}
       ],
-      "question_text": "Which is not a capital city? Paris, Rome, Berlin, Triangle, Madrid?"
+      "question_text": "Which is not a capital city? Paris, Rome, Berlin, Madrid?"
     },
     {
       "id": 33,
       "options": [
         {"option_text": "Japan", "is_correct": false},
-        {"option_text": "Hexagon", "is_correct": true},
         {"option_text": "China", "is_correct": false},
         {"option_text": "Russia", "is_correct": false},
+        {"option_text": "Australia", "is_correct": true}
       ],
-      "question_text": "Which is not a country in Asia? Japan, China, Russia, Hexagon, Australia?"
+      "question_text": "Which is not a country in Asia? Japan, China, Russia, Australia?"
     },
     {
       "id": 34,
       "options": [
         {"option_text": "Africa", "is_correct": false},
         {"option_text": "Asia", "is_correct": false},
-        {"option_text": "Square", "is_correct": true},
         {"option_text": "Europe", "is_correct": false},
+        {"option_text": "Antarctica", "is_correct": true}
       ],
-      "question_text": "Which is not a continent? Africa, Asia, Europe, Square, Antarctica?"
+      "question_text": "Which is not a continent? Africa, Asia, Europe, Antarctica?"
     },
     {
       "id": 35,
@@ -667,19 +686,19 @@ class GlobalConstants {
         {"option_text": "Mexico", "is_correct": false},
         {"option_text": "Canada", "is_correct": false},
         {"option_text": "United States", "is_correct": false},
-        {"option_text": "Pentagon", "is_correct": true},
+        {"option_text": "Brazil", "is_correct": true}
       ],
-      "question_text": "Which is not in North America? Mexico, Canada, United States, Pentagon, Brazil?"
+      "question_text": "Which is not in North America? Mexico, Canada, United States, Brazil?"
     },
     {
       "id": 36,
       "options": [
         {"option_text": "Australia", "is_correct": false},
-        {"option_text": "Rectangle", "is_correct": true},
         {"option_text": "Brazil", "is_correct": false},
         {"option_text": "Canada", "is_correct": false},
+        {"option_text": "South Africa", "is_correct": true}
       ],
-      "question_text": "Which is not in the Southern Hemisphere? Australia, Brazil, Canada, Rectangle, South Africa?"
+      "question_text": "Which is not in the Southern Hemisphere? Australia, Brazil, Canada, South Africa?"
     },
     {
       "id": 37,
@@ -687,19 +706,19 @@ class GlobalConstants {
         {"option_text": "Tokyo", "is_correct": false},
         {"option_text": "Seoul", "is_correct": false},
         {"option_text": "Beijing", "is_correct": false},
-        {"option_text": "Circle", "is_correct": true},
+        {"option_text": "Moscow", "is_correct": true}
       ],
-      "question_text": "Which is not an Asian capital city? Tokyo, Seoul, Beijing, Circle, Moscow?"
+      "question_text": "Which is not an Asian capital city? Tokyo, Seoul, Beijing, Moscow?"
     },
     {
       "id": 38,
       "options": [
-        {"option_text": "Pentagon", "is_correct": true},
         {"option_text": "Germany", "is_correct": false},
         {"option_text": "Italy", "is_correct": false},
         {"option_text": "France", "is_correct": false},
+        {"option_text": "Poland", "is_correct": true}
       ],
-      "question_text": "Which is not in Western Europe? Germany, Italy, France, Pentagon, Poland?"
+      "question_text": "Which is not in Western Europe? Germany, Italy, France, Poland?"
     },
     {
       "id": 39,
@@ -707,19 +726,19 @@ class GlobalConstants {
         {"option_text": "Argentina", "is_correct": false},
         {"option_text": "Chile", "is_correct": false},
         {"option_text": "Peru", "is_correct": false},
-        {"option_text": "Hexagon", "is_correct": true},
+        {"option_text": "Australia", "is_correct": true}
       ],
-      "question_text": "Which is not in South America? Argentina, Chile, Peru, Hexagon, Australia?"
+      "question_text": "Which is not in South America? Argentina, Chile, Peru, Australia?"
     },
     {
       "id": 40,
       "options": [
         {"option_text": "Egypt", "is_correct": false},
         {"option_text": "Kenya", "is_correct": false},
-        {"option_text": "Rectangle", "is_correct": true},
         {"option_text": "Nigeria", "is_correct": false},
+        {"option_text": "Bangladesh", "is_correct": true}
       ],
-      "question_text": "Which is not in Africa? Egypt, Kenya, Nigeria, Rectangle, Bangladesh?"
+      "question_text": "Which is not in Africa? Egypt, Kenya, Nigeria, Bangladesh?"
     }
   ];
 
@@ -730,64 +749,61 @@ class GlobalConstants {
         {"option_text": "An egg", "is_correct": false},
         {"option_text": "A clock", "is_correct": false},
         {"option_text": "A mirror", "is_correct": false},
-        {"option_text": "Square", "is_correct": true},
+        {"option_text": "Echo", "is_correct": true}
       ],
       "question_text":
-          "I speak without a mouth and hear without ears. I have no body, but I come alive with the wind. What am I? An egg, A clock, A mirror, Square, Echo?"
+          "I speak without a mouth and hear without ears. I have no body, but I come alive with the wind. What am I?"
     },
     {
       "id": 42,
       "options": [
         {"option_text": "The beginning", "is_correct": false},
         {"option_text": "The end", "is_correct": false},
-        {"option_text": "Pentagon", "is_correct": true},
         {"option_text": "The present", "is_correct": false},
+        {"option_text": "The letter 'M'", "is_correct": true}
       ],
-      "question_text":
-          "What comes once in a minute, twice in a moment, but never in a thousand years? The beginning, The end, The present, Pentagon, The letter 'M'?"
+      "question_text": "What comes once in a minute, twice in a moment, but never in a thousand years?"
     },
     {
       "id": 43,
       "options": [
         {"option_text": "A candle", "is_correct": false},
-        {"option_text": "Circle", "is_correct": true},
         {"option_text": "A matchstick", "is_correct": false},
         {"option_text": "A flashlight", "is_correct": false},
+        {"option_text": "Footsteps", "is_correct": true}
       ],
-      "question_text":
-          "The more you take, the more you leave behind. What am I? A candle, A matchstick, A flashlight, Circle, Footsteps?"
+      "question_text": "The more you take, the more you leave behind. What am I? "
     },
     {
       "id": 44,
       "options": [
-        {"option_text": "Triangle", "is_correct": true},
         {"option_text": "Tomorrow", "is_correct": false},
         {"option_text": "Yesterday", "is_correct": false},
         {"option_text": "Today", "is_correct": false},
+        {"option_text": "The letter 'A'", "is_correct": true}
       ],
-      "question_text": "What always comes but never arrives? Tomorrow, Yesterday, Today, Triangle, The letter 'A'?"
+      "question_text": "What always comes but never arrives? "
     },
     {
       "id": 45,
       "options": [
         {"option_text": "A glove", "is_correct": false},
         {"option_text": "A hat", "is_correct": false},
-        {"option_text": "Hexagon", "is_correct": true},
         {"option_text": "A shirt", "is_correct": false},
+        {"option_text": "A keyboard", "is_correct": true}
       ],
       "question_text":
-          "I have keys but no locks. I have space but no room. You can enter, but you can't go inside. What am I? A glove, A hat, A shirt, Hexagon, A keyboard?"
+          "I have keys but no locks. I have space but no room. You can enter, but you can't go inside. What am I? "
     },
     {
       "id": 46,
       "options": [
         {"option_text": "The letter 'H'", "is_correct": false},
-        {"option_text": "Rectangle", "is_correct": true},
         {"option_text": "The letter 'A'", "is_correct": false},
         {"option_text": "The letter 'B'", "is_correct": false},
+        {"option_text": "The letter 'O'", "is_correct": true}
       ],
-      "question_text":
-          "What comes once in a year, twice in a month, but never in a week? The letter 'H', The letter 'A', The letter 'B', Rectangle, The letter 'O'?"
+      "question_text": "What comes once in a year, twice in a month, but never in a week? "
     },
     {
       "id": 47,
@@ -795,152 +811,144 @@ class GlobalConstants {
         {"option_text": "A river", "is_correct": false},
         {"option_text": "A mountain", "is_correct": false},
         {"option_text": "A bridge", "is_correct": false},
-        {"option_text": "Circle", "is_correct": true},
+        {"option_text": "Clouds", "is_correct": true}
       ],
-      "question_text":
-          "I can fly without wings. I can cry without eyes. Wherever I go, darkness follows me. What am I? A river, A mountain, A bridge, Circle, Clouds?"
+      "question_text": "I can fly without wings. I can cry without eyes. Wherever I go, darkness follows me. What am I?"
     },
     {
       "id": 48,
       "options": [
         {"option_text": "A secret", "is_correct": false},
         {"option_text": "A riddle", "is_correct": false},
-        {"option_text": "Pentagon", "is_correct": true},
         {"option_text": "A mystery", "is_correct": false},
+        {"option_text": "Footsteps", "is_correct": true}
       ],
-      "question_text":
-          "The more you take, the more you leave behind. What am I? A secret, A riddle, A mystery, Pentagon, Footsteps?"
+      "question_text": "The more you take, the more you leave behind. What am I? "
     },
     {
       "id": 49,
       "options": [
-        {"option_text": "Triangle", "is_correct": true},
         {"option_text": "A shoe", "is_correct": false},
         {"option_text": "A hat", "is_correct": false},
         {"option_text": "A shirt", "is_correct": false},
+        {"option_text": "A bottle", "is_correct": true}
       ],
-      "question_text": "What has a neck but no head? A shoe, A hat, A shirt, Triangle, A bottle?"
+      "question_text": "What has a neck but no head? "
     },
     {
       "id": 50,
       "options": [
         {"option_text": "A candle", "is_correct": false},
         {"option_text": "A flashlight", "is_correct": false},
-        {"option_text": "Rectangle", "is_correct": true},
         {"option_text": "A bonfire", "is_correct": false},
+        {"option_text": "A plant", "is_correct": true}
       ],
-      "question_text":
-          "The more you feed it, the more it grows. What is it? A candle, A flashlight, A bonfire, Rectangle, A plant?"
+      "question_text": "The more you feed it, the more it grows. What is it?"
     }
   ];
 
   static final List<Map<String, dynamic>> moreTrickyQuestions = [
     {
-      "id": 51,
+      "id": 61,
       "options": [
-        {"option_text": "A towel", "is_correct": false},
-        {"option_text": "A sponge", "is_correct": false},
-        {"option_text": "Circle", "is_correct": true},
-        {"option_text": "A cloud", "is_correct": false},
+        {"option_text": "A symphony", "is_correct": false},
+        {"option_text": "A dream", "is_correct": false},
+        {"option_text": "A memory", "is_correct": false},
+        {"option_text": "A coin", "is_correct": true}
       ],
       "question_text":
-          "I can be cracked, made, told, and played. What am I? A towel, A sponge, A cloud, Circle, A joke?"
+          "I carry tales of the past, yet I'm not alive. People often flip me to make decisions. What am I?"
     },
     {
-      "id": 52,
+      "id": 62,
       "options": [
-        {"option_text": "Pentagon", "is_correct": true},
-        {"option_text": "A needle", "is_correct": false},
-        {"option_text": "A compass", "is_correct": false},
-        {"option_text": "A ruler", "is_correct": false},
-      ],
-      "question_text": "I have a head, a tail, but no body. What am I? A needle, A compass, A ruler, Pentagon, A coin?"
-    },
-    {
-      "id": 53,
-      "options": [
-        {"option_text": "A calendar", "is_correct": false},
-        {"option_text": "A clock", "is_correct": false},
-        {"option_text": "A mirror", "is_correct": false},
-        {"option_text": "Triangle", "is_correct": true},
-      ],
-      "question_text":
-          "I have keys but no locks. I have space but no room. You can enter, but you can't go inside. What am I? A calendar, A clock, A mirror, Triangle, A keyboard?"
-    },
-    {
-      "id": 54,
-      "options": [
-        {"option_text": "A snake", "is_correct": false},
-        {"option_text": "A ladder", "is_correct": false},
-        {"option_text": "Rectangle", "is_correct": true},
-        {"option_text": "A hose", "is_correct": false},
-      ],
-      "question_text": "I have a head, a tail, but no body. What am I? A snake, A ladder, A hose, Rectangle, A coin?"
-    },
-    {
-      "id": 55,
-      "options": [
-        {"option_text": "A river", "is_correct": false},
-        {"option_text": "Circle", "is_correct": true},
         {"option_text": "A mountain", "is_correct": false},
-        {"option_text": "A bridge", "is_correct": false},
+        {"option_text": "A valley", "is_correct": false},
+        {"option_text": "A canyon", "is_correct": false},
+        {"option_text": "A coin", "is_correct": true}
       ],
-      "question_text":
-          "I can fly without wings. I can cry without eyes. Wherever I go, darkness follows me. What am I? A river, A mountain, A bridge, Circle, Clouds?"
+      "question_text": "I have peaks and valleys but no unevenness. What am I?"
     },
     {
-      "id": 56,
+      "id": 63,
       "options": [
-        {"option_text": "Pentagon", "is_correct": true},
-        {"option_text": "A candle", "is_correct": false},
-        {"option_text": "A flashlight", "is_correct": false},
-        {"option_text": "A bonfire", "is_correct": false},
+        {"option_text": "A comet", "is_correct": false},
+        {"option_text": "A planet", "is_correct": false},
+        {"option_text": "A galaxy", "is_correct": false},
+        {"option_text": "A coin", "is_correct": true}
       ],
-      "question_text":
-          "The more you feed it, the more it grows. What is it? A candle, A flashlight, A bonfire, Pentagon, A plant?"
+      "question_text": "I wander through space, always looking for a place. What am I?"
     },
     {
-      "id": 57,
+      "id": 64,
       "options": [
-        {"option_text": "An echo", "is_correct": false},
-        {"option_text": "A shadow", "is_correct": false},
-        {"option_text": "A mirror", "is_correct": false},
-        {"option_text": "Rectangle", "is_correct": true},
-      ],
-      "question_text":
-          "I speak without a mouth and hear without ears. I have no body, but I come alive with the wind. What am I? An echo, A shadow, A mirror, Rectangle, A reflection?"
-    },
-    {
-      "id": 58,
-      "options": [
-        {"option_text": "A towel", "is_correct": false},
-        {"option_text": "A sponge", "is_correct": false},
-        {"option_text": "Hexagon", "is_correct": true},
+        {"option_text": "A rainbow", "is_correct": false},
         {"option_text": "A cloud", "is_correct": false},
+        {"option_text": "A star", "is_correct": false},
+        {"option_text": "A coin", "is_correct": true}
       ],
-      "question_text":
-          "I can be filled with holes and still hold water. What am I? A towel, A sponge, A cloud, Hexagon, A bucket?"
+      "question_text": "I'm born in the sky but fall to the ground. What am I?"
     },
     {
-      "id": 59,
+      "id": 65,
       "options": [
-        {"option_text": "Pentagon", "is_correct": true},
+        {"option_text": "Alive", "is_correct": false},
+        {"option_text": "Dead", "is_correct": false},
+        {"option_text": "Square", "is_correct": true},
+        {"option_text": "Unknown", "is_correct": false}
+      ],
+      "question_text":
+          "I speak without a mouth and hear without ears. I have no body, but I come alive with the wind. What am I?"
+    },
+    {
+      "id": 66,
+      "options": [
+        {"option_text": "A matchstick", "is_correct": false},
+        {"option_text": "A candle", "is_correct": false},
+        {"option_text": "A torch", "is_correct": false},
+        {"option_text": "A sunflower", "is_correct": true}
+      ],
+      "question_text": "The more you take, the more you leave behind. What am I?"
+    },
+    {
+      "id": 67,
+      "options": [
+        {"option_text": "A secret", "is_correct": false},
+        {"option_text": "A story", "is_correct": false},
+        {"option_text": "A puzzle", "is_correct": false},
+        {"option_text": "A coin", "is_correct": true}
+      ],
+      "question_text": "I can be kept, unfolded, solved, and tossed. What am I?"
+    },
+    {
+      "id": 68,
+      "options": [
         {"option_text": "A needle", "is_correct": false},
         {"option_text": "A compass", "is_correct": false},
         {"option_text": "A ruler", "is_correct": false},
+        {"option_text": "A coin", "is_correct": true}
       ],
-      "question_text": "I have a head, a tail, but no body. What am I? A needle, A compass, A ruler, Pentagon, A coin?"
+      "question_text": "I have no physical form, yet I can be spent. What am I?"
     },
     {
-      "id": 60,
+      "id": 69,
       "options": [
-        {"option_text": "A calendar", "is_correct": false},
-        {"option_text": "A clock", "is_correct": false},
-        {"option_text": "Hexagon", "is_correct": true},
-        {"option_text": "A mirror", "is_correct": false},
+        {"option_text": "A towel", "is_correct": false},
+        {"option_text": "A sponge", "is_correct": false},
+        {"option_text": "A bucket", "is_correct": true},
+        {"option_text": "A cloud", "is_correct": false}
       ],
-      "question_text":
-          "I have keys but no locks. I have space but no room. You can enter, but you can't go inside. What am I? A calendar, A clock, A mirror, Hexagon, A keyboard?"
+      "question_text": "I can be filled with holes and still hold water. What am I?"
+    },
+    {
+      "id": 70,
+      "options": [
+        {"option_text": "A joke", "is_correct": true},
+        {"option_text": "A riddle", "is_correct": false},
+        {"option_text": "A mystery", "is_correct": false},
+        {"option_text": "A coin", "is_correct": false}
+      ],
+      "question_text": "I can be cracked, made, told, and played. What am I?"
     }
   ];
 
@@ -953,7 +961,7 @@ class GlobalConstants {
         {"option_text": "Rectangle", "is_correct": true},
         {"option_text": "Triangle", "is_correct": false}
       ],
-      "question_text": "Which shape does not belong to the group? Square, Circle, Rectangle, Triangle, Oval?"
+      "question_text": "Which shape does not belong to the group?"
     },
     {
       "id": 2,
@@ -963,7 +971,7 @@ class GlobalConstants {
         {"option_text": "Joyful", "is_correct": false},
         {"option_text": "Pleasant", "is_correct": false},
       ],
-      "question_text": "Which word does not belong to the group? Happy, Joyful, Pleasant, Sad, Content?"
+      "question_text": "Which word does not belong to the group?"
     },
     {
       "id": 3,
@@ -973,7 +981,7 @@ class GlobalConstants {
         {"option_text": "Dog", "is_correct": false},
         {"option_text": "Lion", "is_correct": false},
       ],
-      "question_text": "Which word does not belong to the group? Cat, Dog, Lion, Table, Elephant?"
+      "question_text": "Which word does not belong to the group? "
     },
     {
       "id": 4,
@@ -983,7 +991,7 @@ class GlobalConstants {
         {"option_text": "Square", "is_correct": true},
         {"option_text": "Spring", "is_correct": false},
       ],
-      "question_text": "Which word does not belong to the group? Summer, Winter, Spring, Square, Autumn?"
+      "question_text": "Which word does not belong to the group? "
     },
     {
       "id": 5,
@@ -993,7 +1001,7 @@ class GlobalConstants {
         {"option_text": "Pencil", "is_correct": false},
         {"option_text": "Book", "is_correct": false},
       ],
-      "question_text": "Which word does not belong to the group? Pen, Pencil, Book, Mango, Eraser?"
+      "question_text": "Which word does not belong to the group?"
     },
     {
       "id": 6,
@@ -1003,27 +1011,27 @@ class GlobalConstants {
         {"option_text": "Oval", "is_correct": true},
         {"option_text": "Moon", "is_correct": false},
       ],
-      "question_text": "Which word does not belong to the group? Earth, Mars, Moon, Oval, Venus?"
+      "question_text": "Which word does not belong to the group?"
     },
     {
       "id": 7,
       "options": [
         {"option_text": "Carpet", "is_correct": false},
-        {"option_text": "Lamp", "is_correct": false},
-        {"option_text": "Triangle", "is_correct": true},
+        {"option_text": "Clothes", "is_correct": false},
+        {"option_text": "Table", "is_correct": true},
         {"option_text": "Rug", "is_correct": false},
       ],
-      "question_text": "Which word does not belong to the group? Rug, Carpet, Lamp, Triangle, Sofa?"
+      "question_text": "Which word does not belong to the group?"
     },
     {
       "id": 8,
       "options": [
-        {"option_text": "Laptop", "is_correct": false},
-        {"option_text": "Desktop", "is_correct": false},
-        {"option_text": "Mouse", "is_correct": false},
-        {"option_text": "Cow", "is_correct": true}
+        {"option_text": "Lion", "is_correct": false},
+        {"option_text": "Elephant", "is_correct": false},
+        {"option_text": "Giraffe", "is_correct": false},
+        {"option_text": "Mouse", "is_correct": true}
       ],
-      "question_text": "Which word does not belong to the group? Laptop, Desktop, Mouse, Cow, Tablet?"
+      "question_text": "Which animal does not belong to the group?"
     },
     {
       "id": 9,
@@ -1033,17 +1041,17 @@ class GlobalConstants {
         {"option_text": "Pineapple", "is_correct": true},
         {"option_text": "Pear", "is_correct": false},
       ],
-      "question_text": "Which word does not belong to the group? Orange, Grape, Pear, Pineapple, Apple?"
+      "question_text": "Which word does not belong to the group?"
     },
     {
       "id": 10,
       "options": [
-        {"option_text": "Happy", "is_correct": false},
-        {"option_text": "Circle", "is_correct": true},
-        {"option_text": "Sad", "is_correct": false},
-        {"option_text": "Angry", "is_correct": false},
+        {"option_text": "Piano", "is_correct": false},
+        {"option_text": "Guitar", "is_correct": false},
+        {"option_text": "Trumpet", "is_correct": false},
+        {"option_text": "Flute", "is_correct": true}
       ],
-      "question_text": "Which word does not belong to the group? Happy, Sad, Angry, Circle, Excited?"
+      "question_text": "Which musical instrument does not belong to the group? "
     }
   ];
 
