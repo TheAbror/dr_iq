@@ -12,9 +12,10 @@ import 'package:rive/rive.dart';
 
 Future<dynamic> finishDialog(BuildContext context, QuestionsState state) {
   var questionsLength = GlobalConstants.testQuestions.length;
-  //TODO make it only close on close button
+
   return showDialog(
     context: context,
+    barrierDismissible: false,
     builder: (BuildContext dialogContext) {
       return AlertDialog(
         content: Column(

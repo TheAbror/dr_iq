@@ -33,7 +33,6 @@ class QuestionsBloc extends Cubit<QuestionsState> {
 
   void isCorrect() {
     var stateIcons = List<Icon>.from(state.icons);
-    var stateResults = state.result;
     stateIcons.add(
       Icon(
         Icons.done,
@@ -41,9 +40,8 @@ class QuestionsBloc extends Cubit<QuestionsState> {
         size: 37.sp,
       ),
     );
-    var result = stateResults + 1;
 
-    emit(state.copyWith(icons: stateIcons, result: result));
+    emit(state.copyWith(icons: stateIcons));
   }
 
   void isInCorrect() {
