@@ -22,6 +22,26 @@ class PreferencesServices {
     return preferences.setString(ShPrefKeys.age, age);
   }
 
+  static Future<String?> getPhone() async {
+    final preferences = await SharedPreferences.getInstance();
+    return preferences.getString(ShPrefKeys.phone);
+  }
+
+  static Future<bool> savePhone(String phone) async {
+    final preferences = await SharedPreferences.getInstance();
+    return preferences.setString(ShPrefKeys.phone, phone);
+  }
+
+  static Future<String?> getEmail() async {
+    final preferences = await SharedPreferences.getInstance();
+    return preferences.getString(ShPrefKeys.email);
+  }
+
+  static Future<bool> saveEmail(String email) async {
+    final preferences = await SharedPreferences.getInstance();
+    return preferences.setString(ShPrefKeys.email, email);
+  }
+
   static Future<bool> clearAll() async {
     final preferences = await SharedPreferences.getInstance();
     return await preferences.clear();

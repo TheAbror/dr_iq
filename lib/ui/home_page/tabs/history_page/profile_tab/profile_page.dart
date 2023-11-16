@@ -11,36 +11,22 @@ class ProfilePage extends StatefulWidget {
 }
 
 class _ProfilePageState extends State<ProfilePage> {
-  late String name;
-  late String age;
-  late String phone;
-  late String email;
+  late String name = 'User';
+  late String age = 'Not Given';
+  late String phone = 'Not Given';
+  late String email = 'Not Given';
 
   void callDB() async {
     String? nameD = await PreferencesServices.getName();
     String? ageD = await PreferencesServices.getAge();
+    String? phoneD = await PreferencesServices.getPhone();
+    String? emailD = await PreferencesServices.getEmail();
 
-    if (nameD != null) {
-      name = nameD;
-    }
-    if (ageD != null) {
-      age = ageD;
-    }
-
-    /// Assign Not Given ///
-    if (name == '') {
-      name = 'User';
-    }
-    if (age == '') {
-      age = 'Not Given';
-    }
-    if (phone == '') {
-      phone = 'Not Given';
-    }
-
-    if (email == '') {
-      email = 'Not Given';
-    }
+// Assign retrieved values or default values if null
+    name = nameD != null && nameD.isNotEmpty ? nameD : 'User';
+    age = ageD != null && ageD.isNotEmpty ? ageD : 'Not Given';
+    phone = phoneD != null && phoneD.isNotEmpty ? phoneD : 'Not Given';
+    email = emailD != null && emailD.isNotEmpty ? emailD : 'Not Given';
 
     setState(() {});
   }
