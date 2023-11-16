@@ -1,4 +1,6 @@
+import 'package:dr_iq/core/bottom_sheet/primary_bottom_sheet.dart';
 import 'package:dr_iq/core/preference_services/preference_services.dart';
+import 'package:dr_iq/ui/home_page/tabs/history_page/profile_tab/widgets/profile_body_item.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:dr_iq/core/colors/app_colors.dart';
@@ -95,23 +97,35 @@ class _Body extends StatelessWidget {
             ProfileBodyItem(text: phone, icons: Icons.phone),
             ProfileBodyItem(text: email, icons: Icons.email),
             Spacer(flex: 2),
-            Container(
-              width: double.infinity,
-              margin: EdgeInsets.only(left: 16.w, right: 16.w),
-              padding: EdgeInsets.symmetric(vertical: 15.h),
-              decoration: BoxDecoration(
-                color: AppColors.float,
-                borderRadius: BorderRadius.circular(8.r),
-                border: Border.all(
+            GestureDetector(
+              onTap: () async {
+                final result = await PrimaryBottomSheet.show(context,
+                    title: 'Edit', name: name, age: age, phone: phone, email: email);
+
+                print(result);
+
+                // if (result != null) {
+                //   context.read<DashboardBloc>().getDashboardStudent();
+                // }
+              },
+              child: Container(
+                width: double.infinity,
+                margin: EdgeInsets.only(left: 16.w, right: 16.w),
+                padding: EdgeInsets.symmetric(vertical: 15.h),
+                decoration: BoxDecoration(
                   color: AppColors.float,
-                  width: 0.5.w,
+                  borderRadius: BorderRadius.circular(8.r),
+                  border: Border.all(
+                    color: AppColors.float,
+                    width: 0.5.w,
+                  ),
                 ),
-              ),
-              child: Center(
-                child: Text(
-                  'Edit Account',
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
+                child: Center(
+                  child: Text(
+                    'Edit Account',
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
                 ),
               ),
@@ -135,54 +149,6 @@ class _Body extends StatelessWidget {
           top: 60.h,
           left: 20.w,
           child: BackButton(color: AppColors.profileColor),
-        ),
-      ],
-    );
-  }
-}
-
-class ProfileBodyItem extends StatelessWidget {
-  final IconData icons;
-  final String text;
-
-  const ProfileBodyItem({
-    Key? key,
-    required this.icons,
-    required this.text,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Container(
-          padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 10),
-          child: Column(
-            children: [
-              Row(
-                children: [
-                  Icon(
-                    icons,
-                    color: AppColors.float,
-                    size: 29.sp,
-                  ),
-                  SizedBox(width: 30.w),
-                  Text(
-                    text,
-                    style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      color: AppColors.float,
-                      fontSize: 20.sp,
-                    ),
-                  ),
-                ],
-              ),
-            ],
-          ),
-        ),
-        Divider(
-          color: AppColors.float,
-          thickness: 1.h,
         ),
       ],
     );

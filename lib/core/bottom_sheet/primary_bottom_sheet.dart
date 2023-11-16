@@ -1,36 +1,31 @@
-import 'package:dr_iq/core/bloc_progress/bloc_progress.dart';
-import 'package:dr_iq/core/bottom_sheet/bloc/bottom_sheet_data_bloc.dart';
-import 'package:dr_iq/core/bottom_sheet/bottom_sheet_list_single_choice_item.dart';
 import 'package:dr_iq/core/bottom_sheet/default_bottom_sheet.dart';
-import 'package:dr_iq/core/bottom_sheet/search_input.dart';
 import 'package:dr_iq/core/colors/app_colors.dart';
-import 'package:dr_iq/core/constants/primary_loader.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class PrimaryBottomSheet extends StatelessWidget {
+class PrimaryBottomSheet extends StatefulWidget {
   final String title;
-  final bool isSearchNeeded;
-  final bool? isConfirmationNeeded;
-  final double heightRatio;
+  final String name;
+  final String age;
+  final String phone;
+  final String email;
 
   const PrimaryBottomSheet({
     super.key,
     required this.title,
-    required this.isSearchNeeded,
-    required this.heightRatio,
-    required this.isConfirmationNeeded,
+    required this.name,
+    required this.age,
+    required this.phone,
+    required this.email,
   });
 
   static Future<String?> show(
     BuildContext parentContext, {
     required String title,
-    required bool isConfirmationNeeded,
-    required bool isSearchNeeded,
-    required double heightRatio,
-    required String selectedValue,
-    required List<String> initialList,
+    required String name,
+    required String age,
+    required String phone,
+    required String email,
   }) async {
     return showModalBottomSheet<String>(
       backgroundColor: Theme.of(parentContext).colorScheme.background,
@@ -43,140 +38,215 @@ class PrimaryBottomSheet extends StatelessWidget {
       ),
       isScrollControlled: true,
       builder: (context) {
-        return BlocProvider(
-          create: (context) => BottomSheetDataBloc(
-            initialValue: selectedValue,
-            initialList: initialList,
-          ),
-          child: PrimaryBottomSheet(
-            title: title,
-            isSearchNeeded: isSearchNeeded,
-            isConfirmationNeeded: isConfirmationNeeded,
-            heightRatio: heightRatio,
-          ),
-        );
-      },
-    );
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return BlocBuilder<BottomSheetDataBloc, BottomSheetDataState>(
-      builder: (context, state) {
-        return DefaultBottomSheet(
+        return PrimaryBottomSheet(
           title: title,
-          heightRatio: heightRatio,
-          isActionEnabled: state.isButtonEnabled,
-          actionText: 'Select',
-          action: () {
-            if (state.isButtonEnabled) {
-              Navigator.pop(context, state.selectedValue);
-            }
-          },
-          child: BlocBuilder<BottomSheetDataBloc, BottomSheetDataState>(
-            builder: (context, state) {
-              if (state.blocProgress == BlocProgress.IS_LOADING) {
-                return const PrimaryBottomSheetLoader();
-              }
-
-              return _Body(isSearchNeeded: isSearchNeeded);
-            },
-          ),
+          name: name,
+          age: age,
+          phone: phone,
+          email: email,
         );
       },
     );
   }
-}
-
-class _Body extends StatefulWidget {
-  final bool isSearchNeeded;
-
-  const _Body({
-    required this.isSearchNeeded,
-  });
 
   @override
-  State<_Body> createState() => _BodyState();
+  State<PrimaryBottomSheet> createState() => _PrimaryBottomSheetState();
 }
 
-class _BodyState extends State<_Body> {
-  final searchController = TextEditingController();
+class _PrimaryBottomSheetState extends State<PrimaryBottomSheet> {
+  late final TextEditingController _controllerName;
+  late final TextEditingController _controllerAge;
+  late final TextEditingController _controllerPhone;
+  late final TextEditingController _controllerEmail;
+
+  @override
+  void initState() {
+    super.initState();
+
+    _controllerName = TextEditingController();
+    _controllerAge = TextEditingController();
+    _controllerPhone = TextEditingController();
+    _controllerEmail = TextEditingController();
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
+    disposeTextEditingControllers();
+  }
+
+  void disposeTextEditingControllers() {
+    _controllerName.dispose();
+    _controllerAge.dispose();
+    _controllerPhone.dispose();
+    _controllerEmail.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
-    return BlocBuilder<BottomSheetDataBloc, BottomSheetDataState>(
-      builder: (context, state) {
-        return Column(
-          children: [
-            Divider(
-              color: AppColors.stroke,
-              height: 0.h,
-              thickness: 1.h,
-            ),
+    return DefaultBottomSheet(
+      title: widget.title,
+      heightRatio: 0.6,
+      actionText: 'Save',
+      isConfirmationNeeded: true,
+      action: () {},
+      child: Column(
+        children: [
+          const Divider(),
+          Padding(
+            padding: EdgeInsets.symmetric(horizontal: 8.w),
+            child: Column(
+              children: [
+                SizedBox(height: 5.h),
 
-            if (widget.isSearchNeeded == true)
-              Container(
-                margin: EdgeInsets.symmetric(horizontal: 10.w, vertical: 12.h),
-                child: SearchInput(
-                  fillColor: Theme.of(context).colorScheme.surfaceTint,
-                  width: double.infinity,
-                  hintText: 'Search',
-                  prefixIcon: const Icon(Icons.search, color: AppColors.primary),
-                  controller: searchController,
-                  onChanged: (val) {
-                    context.read<BottomSheetDataBloc>().search(val);
+                TextFormField(
+                  controller: _controllerName,
+                  decoration: InputDecoration(
+                    filled: true,
+                    border: InputBorder.none, // Remove border color
+                    enabledBorder: OutlineInputBorder(
+                      borderSide: BorderSide(color: AppColors.stroke, width: 0.5.w),
+                      borderRadius: BorderRadius.circular(12.r),
+                    ),
+                    focusedBorder: OutlineInputBorder(
+                      borderSide: BorderSide(color: AppColors.primary, width: 0.5.w),
+                      borderRadius: BorderRadius.circular(12.r),
+                    ),
+                    errorBorder: OutlineInputBorder(
+                      borderSide: BorderSide(color: AppColors.stroke, width: 0.5.w),
+                      borderRadius: BorderRadius.circular(12.r),
+                    ),
+                    focusedErrorBorder: OutlineInputBorder(
+                      borderSide: BorderSide(color: AppColors.stroke, width: 0.5.w),
+                      borderRadius: BorderRadius.circular(12.r),
+                    ),
+                    fillColor: Theme.of(context).colorScheme.surfaceTint,
+                    hintStyle: const TextStyle(color: AppColors.textSecondary),
+                  ),
+                  textInputAction: TextInputAction.next,
+                  onChanged: (value) {},
+                  validator: (value) {
+                    if (value == null || value.isEmpty) {
+                      return 'Please enter your email';
+                    }
+                    if (!RegExp(
+                            r'^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$')
+                        .hasMatch(value)) {
+                      return 'Please enter a valid email';
+                    }
+                    return null;
                   },
                 ),
-              ),
+                SizedBox(height: 4.h),
 
-            Expanded(
-              child: BlocBuilder<BottomSheetDataBloc, BottomSheetDataState>(
-                builder: (context, state) {
-                  if (state.blocProgress == BlocProgress.IS_LOADING) {
-                    return const PrimaryLoader();
-                  } else if (state.searchedList.isEmpty) {
-                    return Padding(
-                      padding: EdgeInsets.only(top: 24.h),
-                      child: const Text(
-                        'No Results',
-                      ),
-                    );
-                  } else if (state.searchedList.length == 1 && state.searchedList.first.isEmpty) {
-                    return Padding(
-                      padding: EdgeInsets.only(top: 24.h),
-                      child: const Text(
-                        'No Results',
-                      ),
-                    );
-                  }
-
-                  return Container(
-                    padding: EdgeInsets.only(top: 10.h),
-                    child: ListView.builder(
-                      physics: const BouncingScrollPhysics(),
-                      shrinkWrap: true,
-                      itemCount: state.searchedList.length,
-                      itemBuilder: (BuildContext context, int index) {
-                        return BottomSheetListSingleChoiceItem<String>(
-                          itemTitle: state.searchedList[index].toString(),
-                          value: state.searchedList[index].toString(),
-                          groupValue: state.selectedValue.toString(),
-                          onChanged: (value) {
-                            context.read<BottomSheetDataBloc>().choose(value);
-                            Navigator.pop(context, value);
-                          },
-                        );
-                      },
+                TextFormField(
+                  controller: _controllerAge,
+                  decoration: InputDecoration(
+                    filled: true,
+                    border: InputBorder.none, // Remove border color
+                    enabledBorder: OutlineInputBorder(
+                      borderSide: BorderSide(color: AppColors.stroke, width: 0.5.w),
+                      borderRadius: BorderRadius.circular(12.r),
                     ),
-                  );
-                },
-              ),
+                    focusedBorder: OutlineInputBorder(
+                      borderSide: BorderSide(color: AppColors.primary, width: 0.5.w),
+                      borderRadius: BorderRadius.circular(12.r),
+                    ),
+                    errorBorder: OutlineInputBorder(
+                      borderSide: BorderSide(color: AppColors.stroke, width: 0.5.w),
+                      borderRadius: BorderRadius.circular(12.r),
+                    ),
+                    focusedErrorBorder: OutlineInputBorder(
+                      borderSide: BorderSide(color: AppColors.stroke, width: 0.5.w),
+                      borderRadius: BorderRadius.circular(12.r),
+                    ),
+                    fillColor: Theme.of(context).colorScheme.surfaceTint,
+                    hintStyle: const TextStyle(color: AppColors.textSecondary),
+                  ),
+                  textInputAction: TextInputAction.next,
+                  onChanged: (value) {},
+                  validator: (value) {
+                    if (value == null || value.isEmpty) {
+                      return 'Please enter value';
+                    }
+                    return null;
+                  },
+                ),
+                SizedBox(height: 4.h),
+
+                TextFormField(
+                  controller: _controllerPhone,
+                  decoration: InputDecoration(
+                    filled: true,
+                    border: InputBorder.none, // Remove border color
+                    enabledBorder: OutlineInputBorder(
+                      borderSide: BorderSide(color: AppColors.stroke, width: 0.5.w),
+                      borderRadius: BorderRadius.circular(12.r),
+                    ),
+                    focusedBorder: OutlineInputBorder(
+                      borderSide: BorderSide(color: AppColors.primary, width: 0.5.w),
+                      borderRadius: BorderRadius.circular(12.r),
+                    ),
+                    errorBorder: OutlineInputBorder(
+                      borderSide: BorderSide(color: AppColors.stroke, width: 0.5.w),
+                      borderRadius: BorderRadius.circular(12.r),
+                    ),
+                    focusedErrorBorder: OutlineInputBorder(
+                      borderSide: BorderSide(color: AppColors.stroke, width: 0.5.w),
+                      borderRadius: BorderRadius.circular(12.r),
+                    ),
+                    fillColor: Theme.of(context).colorScheme.surfaceTint,
+                    hintStyle: const TextStyle(color: AppColors.textSecondary),
+                  ),
+                  onChanged: (value) {},
+                  validator: (value) {
+                    if (value == null || value.isEmpty) {
+                      return 'Please enter value';
+                    }
+                    return null;
+                  },
+                ),
+                SizedBox(height: 4.h),
+
+                TextFormField(
+                  controller: _controllerEmail,
+                  decoration: InputDecoration(
+                    filled: true,
+                    border: InputBorder.none, // Remove border color
+                    enabledBorder: OutlineInputBorder(
+                      borderSide: BorderSide(color: AppColors.stroke, width: 0.5.w),
+                      borderRadius: BorderRadius.circular(12.r),
+                    ),
+                    focusedBorder: OutlineInputBorder(
+                      borderSide: BorderSide(color: AppColors.primary, width: 0.5.w),
+                      borderRadius: BorderRadius.circular(12.r),
+                    ),
+                    errorBorder: OutlineInputBorder(
+                      borderSide: BorderSide(color: AppColors.stroke, width: 0.5.w),
+                      borderRadius: BorderRadius.circular(12.r),
+                    ),
+                    focusedErrorBorder: OutlineInputBorder(
+                      borderSide: BorderSide(color: AppColors.stroke, width: 0.5.w),
+                      borderRadius: BorderRadius.circular(12.r),
+                    ),
+                    fillColor: Theme.of(context).colorScheme.surfaceTint,
+                    hintStyle: const TextStyle(color: AppColors.textSecondary),
+                  ),
+                  onChanged: (value) {},
+                  validator: (value) {
+                    if (value == null || value.isEmpty) {
+                      return 'Please enter value';
+                    }
+                    return null;
+                  },
+                ),
+                // INFO: Always needed for Scrollable Bottom sheets
+                SizedBox(height: 24.h),
+              ],
             ),
-            // INFO: Always needed for Scrollable Bottom sheets
-            SizedBox(height: 24.h),
-          ],
-        );
-      },
+          ),
+        ],
+      ),
     );
   }
 }

@@ -83,9 +83,8 @@ class DefaultBottomSheet extends StatelessWidget {
                                       actionText,
                                       style: TextStyle(
                                         fontSize: 15.sp,
-                                        color: isActionEnabled
-                                            ? AppColors.primary
-                                            : Theme.of(context).colorScheme.onSecondary,
+                                        color: AppColors.textMain,
+                                        fontWeight: FontWeight.bold,
                                       ),
                                     ),
                                   ),
