@@ -25,38 +25,37 @@ class QuestionsBloc extends Cubit<QuestionsState> {
   void resultOfTest() {
     if (questionsLength >= state.questionCounter + 1) {
       emit(state.copyWith(result: state.result + 1));
+
+      print('Result :' '${state.result}');
     }
-    print('Result :' '${state.result}');
+    isCorrect();
   }
 
-  void isCorrect(int counter, int questionCounter) {
+  void isCorrect() {
     var stateIcons = List<Icon>.from(state.icons);
     var stateResults = state.result;
-    if ((counter + 1) < questionCounter) {
-      stateIcons.add(
-        Icon(
-          Icons.done,
-          color: AppColors.success,
-          size: 40.sp,
-        ),
-      );
-    }
+    stateIcons.add(
+      Icon(
+        Icons.done,
+        color: AppColors.success,
+        size: 37.sp,
+      ),
+    );
     var result = stateResults + 1;
 
     emit(state.copyWith(icons: stateIcons, result: result));
   }
 
-  void isInCorrect(int counter, int questionCounter) {
+  void isInCorrect() {
     var stateIcons = List<Icon>.from(state.icons);
-    if ((counter + 1) < questionCounter) {
-      stateIcons.add(
-        Icon(
-          Icons.error,
-          color: AppColors.error,
-          size: 40.sp,
-        ),
-      );
-    }
+    stateIcons.add(
+      Icon(
+        Icons.error,
+        color: AppColors.error,
+        size: 37.sp,
+      ),
+    );
+
     emit(state.copyWith(icons: stateIcons));
   }
 }

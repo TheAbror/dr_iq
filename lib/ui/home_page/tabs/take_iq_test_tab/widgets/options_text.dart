@@ -34,6 +34,8 @@ class OptionsText extends StatelessWidget {
                 print('Is Correct: $isCorrect');
                 if (isCorrect == true) {
                   context.read<QuestionsBloc>().resultOfTest();
+                } else {
+                  context.read<QuestionsBloc>().isInCorrect();
                 }
               },
               child: Container(

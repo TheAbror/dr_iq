@@ -21,15 +21,17 @@ class QuestionText extends StatelessWidget {
         borderRadius: BorderRadius.circular(8.r),
         border: Border.all(),
       ),
-      child: Center(
-        child: Text(
-          textQuestion,
-          style: TextStyle(
-            color: AppColors.float,
-            fontWeight: FontWeight.bold,
-            fontSize: 24.sp,
+      child: SingleChildScrollView(
+        child: Center(
+          child: Text(
+            textQuestion,
+            style: TextStyle(
+              color: AppColors.float,
+              fontWeight: FontWeight.bold,
+              fontSize: 24.sp,
+            ),
+            textAlign: TextAlign.center,
           ),
-          textAlign: TextAlign.center,
         ),
       ),
     );

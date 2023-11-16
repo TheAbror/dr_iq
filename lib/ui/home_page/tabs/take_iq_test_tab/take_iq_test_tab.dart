@@ -36,6 +36,7 @@ class TakeIQTest extends StatelessWidget {
                 }
               },
               builder: (context, state) {
+                final iconsList = state.icons;
                 return Column(
                   children: [
                     SizedBox(height: 20.h),
@@ -60,6 +61,10 @@ class TakeIQTest extends StatelessWidget {
                         },
                       ),
                     ),
+                    Row(
+                      crossAxisAlignment: CrossAxisAlignment.end,
+                      children: iconsList,
+                    ),
                   ],
                 );
               },
@@ -82,13 +87,3 @@ class TakeIQTest extends StatelessWidget {
     );
   }
 }
-
-// if (state.blocProgress == BlocProgress.IS_LOADING) {
-//   return const PrimaryLoader();
-// }// if (state.blocProgress == BlocProgress.FAILED) {
-//   return const SomethingWentWrong();
-// }// final counter = state.counter;
-// final iconsList = state.icons; // Row(
-    //   crossAxisAlignment: CrossAxisAlignment.end,
-    //   children: iconsList,
-    // ),

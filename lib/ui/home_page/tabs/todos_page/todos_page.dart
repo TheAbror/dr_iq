@@ -82,7 +82,8 @@ class _ReorderableListViewExampleState extends State<ReorderableExample> {
                       ),
                   ],
                 ),
-              )
+              ),
+              SizedBox(height: 40.h),
             ],
           ),
         ),
@@ -193,65 +194,34 @@ class _ReorderableListViewExampleState extends State<ReorderableExample> {
   }
 
   Widget searchBox() {
-    return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 15),
-      decoration: BoxDecoration(
-        color: Colors.white,
-        borderRadius: BorderRadius.circular(20),
-      ),
-      child: TextField(
-        onChanged: (value) => _runFilter(value),
-        decoration: const InputDecoration(
-          contentPadding: EdgeInsets.all(0),
-          prefixIcon: Icon(
-            Icons.search,
-            color: tdBlack,
-            size: 20,
-          ),
-          prefixIconConstraints: BoxConstraints(
-            maxHeight: 20,
-            minWidth: 25,
-          ),
-          border: InputBorder.none,
-          hintText: 'Search',
-          hintStyle: TextStyle(
-            fontWeight: FontWeight.w500,
-            color: tdGrey,
-          ),
+    return TextField(
+      onChanged: (value) => _runFilter(value),
+      decoration: InputDecoration(
+        contentPadding: EdgeInsets.symmetric(horizontal: 15),
+        focusedBorder: OutlineInputBorder(
+          borderSide: BorderSide(color: AppColors.textMain, width: 0.33.w),
+          borderRadius: BorderRadius.circular(12),
+        ),
+        enabledBorder: OutlineInputBorder(
+          borderSide: BorderSide(color: AppColors.stroke, width: 0.33.w),
+          borderRadius: BorderRadius.circular(12),
+        ),
+        prefixIcon: Icon(
+          Icons.search,
+          color: tdBlack,
+          size: 20,
+        ),
+        prefixIconConstraints: BoxConstraints(
+          maxHeight: 20,
+          minWidth: 25,
+        ),
+        border: InputBorder.none,
+        hintText: 'Search',
+        hintStyle: TextStyle(
+          fontWeight: FontWeight.w500,
+          color: tdGrey,
         ),
       ),
     );
   }
 }
-
-
-
-
-  // @override
-  // Widget build(BuildContext context) {
-  //   return ReorderableListView(
-  //     padding: EdgeInsets.symmetric(horizontal: 16.w),
-  //     children: <Widget>[
-  //       for (int index = 0; index < _items.length; index += 1)
-  //         ListTile(
-  //           key: Key('$index'),
-  //           tileColor: AppColors.float,
-  //           title: Text(
-  //             'Item ${_items[index]}',
-  //             style: TextStyle(fontWeight: FontWeight.bold),
-  //           ),
-  //           ),
-  //         ),
-  //     ],
-  //     onReorder: (int oldIndex, int newIndex) {
-  //       setState(() {
-  //         if (oldIndex < newIndex) {
-  //           newIndex -= 1;
-  //         }
-  //         final int item = _items.removeAt(oldIndex);
-  //         _items.insert(newIndex, item);
-  //       });
-  //     },
-  //   );
-  // }
-
