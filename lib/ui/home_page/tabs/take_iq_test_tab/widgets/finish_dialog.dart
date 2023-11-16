@@ -1,4 +1,4 @@
-// ignore_for_file: avoid_print, unnecessary_null_comparison
+// ignore_for_file: avoid_print, unnecessary_null_comparison, use_build_context_synchronously
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -51,9 +51,6 @@ Future<dynamic> finishDialog(BuildContext context, QuestionsState state) {
             const SizedBox(height: 35),
             TextButton(
               onPressed: () async {
-                Navigator.pop(dialogContext);
-                Navigator.pop(dialogContext);
-                Navigator.pop(dialogContext);
                 // Navigator.pop(context);
                 var resultOfTest = ((state.result / questionsLength) * 100).toString();
                 final dateFormatter = DateFormat('dd-MM-yyyy, HH:mm');
@@ -79,6 +76,10 @@ Future<dynamic> finishDialog(BuildContext context, QuestionsState state) {
                 }
                 await preferencesServices.saveStringList(existingResultsList);
                 await preferencesServices.saveDatesList(existingDateList);
+
+                Navigator.pop(dialogContext);
+                Navigator.pop(dialogContext);
+                Navigator.pop(dialogContext);
               },
               style: ButtonStyle(
                 backgroundColor: MaterialStateProperty.all(
