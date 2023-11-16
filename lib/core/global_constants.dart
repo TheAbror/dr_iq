@@ -643,10 +643,10 @@ class GlobalConstants {
     {
       "id": 31,
       "options": [
+        {"option_text": "Australia", "is_correct": true},
         {"option_text": "Brazil", "is_correct": false},
         {"option_text": "India", "is_correct": false},
         {"option_text": "Canada", "is_correct": false},
-        {"option_text": "Australia", "is_correct": true}
       ],
       "question_text": "Which is not a country? Brazil, India, Canada, Australia?"
     },
@@ -654,9 +654,9 @@ class GlobalConstants {
       "id": 32,
       "options": [
         {"option_text": "Paris", "is_correct": false},
+        {"option_text": "Madrid", "is_correct": true},
         {"option_text": "Rome", "is_correct": false},
         {"option_text": "Berlin", "is_correct": false},
-        {"option_text": "Madrid", "is_correct": true}
       ],
       "question_text": "Which is not a capital city? Paris, Rome, Berlin, Madrid?"
     },
@@ -665,8 +665,8 @@ class GlobalConstants {
       "options": [
         {"option_text": "Japan", "is_correct": false},
         {"option_text": "China", "is_correct": false},
+        {"option_text": "Australia", "is_correct": true},
         {"option_text": "Russia", "is_correct": false},
-        {"option_text": "Australia", "is_correct": true}
       ],
       "question_text": "Which is not a country in Asia? Japan, China, Russia, Australia?"
     },
@@ -676,17 +676,17 @@ class GlobalConstants {
         {"option_text": "Africa", "is_correct": false},
         {"option_text": "Asia", "is_correct": false},
         {"option_text": "Europe", "is_correct": false},
-        {"option_text": "Antarctica", "is_correct": true}
+        {"option_text": "Antarctica", "is_correct": true},
       ],
       "question_text": "Which is not a continent? Africa, Asia, Europe, Antarctica?"
     },
     {
       "id": 35,
       "options": [
+        {"option_text": "Brazil", "is_correct": true},
         {"option_text": "Mexico", "is_correct": false},
         {"option_text": "Canada", "is_correct": false},
         {"option_text": "United States", "is_correct": false},
-        {"option_text": "Brazil", "is_correct": true}
       ],
       "question_text": "Which is not in North America? Mexico, Canada, United States, Brazil?"
     },
@@ -695,8 +695,8 @@ class GlobalConstants {
       "options": [
         {"option_text": "Australia", "is_correct": false},
         {"option_text": "Brazil", "is_correct": false},
+        {"option_text": "South Africa", "is_correct": true},
         {"option_text": "Canada", "is_correct": false},
-        {"option_text": "South Africa", "is_correct": true}
       ],
       "question_text": "Which is not in the Southern Hemisphere? Australia, Brazil, Canada, South Africa?"
     },
@@ -706,7 +706,7 @@ class GlobalConstants {
         {"option_text": "Tokyo", "is_correct": false},
         {"option_text": "Seoul", "is_correct": false},
         {"option_text": "Beijing", "is_correct": false},
-        {"option_text": "Moscow", "is_correct": true}
+        {"option_text": "Moscow", "is_correct": true},
       ],
       "question_text": "Which is not an Asian capital city? Tokyo, Seoul, Beijing, Moscow?"
     },
@@ -716,7 +716,7 @@ class GlobalConstants {
         {"option_text": "Germany", "is_correct": false},
         {"option_text": "Italy", "is_correct": false},
         {"option_text": "France", "is_correct": false},
-        {"option_text": "Poland", "is_correct": true}
+        {"option_text": "Poland", "is_correct": true},
       ],
       "question_text": "Which is not in Western Europe? Germany, Italy, France, Poland?"
     },
@@ -724,19 +724,19 @@ class GlobalConstants {
       "id": 39,
       "options": [
         {"option_text": "Argentina", "is_correct": false},
+        {"option_text": "Australia", "is_correct": true},
         {"option_text": "Chile", "is_correct": false},
         {"option_text": "Peru", "is_correct": false},
-        {"option_text": "Australia", "is_correct": true}
       ],
       "question_text": "Which is not in South America? Argentina, Chile, Peru, Australia?"
     },
     {
       "id": 40,
       "options": [
+        {"option_text": "Bangladesh", "is_correct": true},
         {"option_text": "Egypt", "is_correct": false},
         {"option_text": "Kenya", "is_correct": false},
         {"option_text": "Nigeria", "is_correct": false},
-        {"option_text": "Bangladesh", "is_correct": true}
       ],
       "question_text": "Which is not in Africa? Egypt, Kenya, Nigeria, Bangladesh?"
     }

@@ -53,6 +53,7 @@ Future<dynamic> finishDialog(BuildContext context, QuestionsState state) {
               onPressed: () async {
                 Navigator.pop(dialogContext);
                 Navigator.pop(dialogContext);
+                Navigator.pop(dialogContext);
                 // Navigator.pop(context);
                 var resultOfTest = ((state.result / questionsLength) * 100).toString();
                 final dateFormatter = DateFormat('dd-MM-yyyy, HH:mm');
