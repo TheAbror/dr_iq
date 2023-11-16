@@ -3,8 +3,8 @@ import 'package:equatable/equatable.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:dr_iq/core/app_colors.dart';
-import 'package:dr_iq/core/global_constants.dart';
+import 'package:dr_iq/core/colors/app_colors.dart';
+import 'package:dr_iq/core/constants/global_constants.dart';
 
 part 'questions_state.dart';
 

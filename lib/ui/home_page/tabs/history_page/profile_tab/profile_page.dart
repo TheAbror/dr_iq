@@ -1,35 +1,82 @@
+import 'package:dr_iq/core/preference_services/preference_services.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:dr_iq/core/app_colors.dart';
+import 'package:dr_iq/core/colors/app_colors.dart';
 
-class ProfilePage extends StatelessWidget {
+class ProfilePage extends StatefulWidget {
   const ProfilePage({super.key});
+
+  @override
+  State<ProfilePage> createState() => _ProfilePageState();
+}
+
+class _ProfilePageState extends State<ProfilePage> {
+  late String name;
+  late String age;
+  late String phone;
+  late String email;
+
+  void callDB() async {
+    String? nameD = await PreferencesServices.getName();
+    String? ageD = await PreferencesServices.getAge();
+
+    if (nameD != null) {
+      name = nameD;
+    }
+    if (ageD != null) {
+      age = ageD;
+    }
+
+    /// Assign Not Given ///
+    if (name == '') {
+      name = 'User';
+    }
+    if (age == '') {
+      age = 'Not Given';
+    }
+    if (phone == '') {
+      phone = 'Not Given';
+    }
+
+    if (email == '') {
+      email = 'Not Given';
+    }
+
+    setState(() {});
+  }
+
+  @override
+  void initState() {
+    callDB();
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: AppColors.float,
-      // appBar: AppBar(
-      //   backgroundColor: AppColors.float,
-      //   elevation: 0,
-      //   leading: const BackButton(color: AppColors.textMain),
-      //   title: const Text(
-      //     '',
-      //     // 'Profile',
-      //     style: TextStyle(
-      //       color: AppColors.textMain,
-      //       fontWeight: FontWeight.bold,
-      //     ),
-      //   ),
-      // ),
-      body: _Body(),
+      body: _Body(
+        name: name,
+        age: age,
+        phone: phone,
+        email: email,
+      ),
     );
   }
 }
 
 class _Body extends StatelessWidget {
+  final String name;
+  final String age;
+  final String phone;
+  final String email;
+
   const _Body({
     Key? key,
+    required this.name,
+    required this.age,
+    required this.phone,
+    required this.email,
   }) : super(key: key);
 
   @override
@@ -57,12 +104,11 @@ class _Body extends StatelessWidget {
         Column(
           children: [
             SizedBox(height: 350.h),
-            ProfileBodyItem(text: 'Abror Shamuradov', icons: Icons.person),
-            ProfileBodyItem(text: 'Birthday', icons: Icons.calendar_month),
-            ProfileBodyItem(text: 'Phone', icons: Icons.phone),
-            ProfileBodyItem(text: 'Email', icons: Icons.email),
-            ProfileBodyItem(text: 'Facebook account', icons: Icons.facebook),
-            SizedBox(height: 100.h),
+            ProfileBodyItem(text: name, icons: Icons.person),
+            ProfileBodyItem(text: age, icons: Icons.calendar_month),
+            ProfileBodyItem(text: phone, icons: Icons.phone),
+            ProfileBodyItem(text: email, icons: Icons.email),
+            Spacer(flex: 2),
             Container(
               width: double.infinity,
               margin: EdgeInsets.only(left: 16.w, right: 16.w),
@@ -84,6 +130,7 @@ class _Body extends StatelessWidget {
                 ),
               ),
             ),
+            Spacer(),
           ],
         ),
         Positioned(

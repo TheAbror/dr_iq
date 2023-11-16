@@ -5,7 +5,7 @@ import 'package:dr_iq/ui/home_page/tabs/todos_page/model/todo_model.dart';
 import 'package:dr_iq/ui/home_page/tabs/todos_page/widgets/todo_item.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:dr_iq/core/app_colors.dart';
+import 'package:dr_iq/core/colors/app_colors.dart';
 
 class ToDosPage extends StatelessWidget {
   const ToDosPage({super.key});

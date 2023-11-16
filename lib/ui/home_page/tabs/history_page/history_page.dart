@@ -3,8 +3,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:dr_iq/core/primary_loader.dart';
-import 'package:dr_iq/core/something_went_wrong.dart';
+import 'package:dr_iq/core/constants/primary_loader.dart';
+import 'package:dr_iq/core/constants/something_went_wrong.dart';
 import 'package:dr_iq/core/bloc_progress/bloc_progress.dart';
 import 'package:dr_iq/ui/home_page/tabs/history_page/bloc/history_bloc.dart';
 import 'package:dr_iq/ui/home_page/tabs/history_page/history_body_item.dart';

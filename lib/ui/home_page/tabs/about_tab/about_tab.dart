@@ -1,4 +1,4 @@
-import 'package:dr_iq/core/app_colors.dart';
+import 'package:dr_iq/core/colors/app_colors.dart';
 import 'package:dr_iq/ui/home_page/tabs/about_tab/widgets/bold_text.dart';
 import 'package:dr_iq/ui/home_page/tabs/about_tab/widgets/rich_text.dart';
 import 'package:dr_iq/ui/home_page/tabs/about_tab/widgets/small_text.dart';

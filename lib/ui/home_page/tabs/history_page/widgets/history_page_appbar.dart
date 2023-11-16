@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:dr_iq/core/app_colors.dart';
+import 'package:dr_iq/core/colors/app_colors.dart';
 import 'package:dr_iq/ui/home_page/tabs/history_page/clear_history_dialog.dart';
 
 AppBar historyPageAppBar(BuildContext context) {

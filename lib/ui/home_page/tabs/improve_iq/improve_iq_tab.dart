@@ -1,5 +1,5 @@
-import 'package:dr_iq/core/app_colors.dart';
-import 'package:dr_iq/core/global_constants.dart';
+import 'package:dr_iq/core/colors/app_colors.dart';
+import 'package:dr_iq/core/constants/global_constants.dart';
 import 'package:dr_iq/core/roots/app_routes.dart';
 import 'package:dr_iq/ui/home_page/tabs/improve_iq/widgets/improve_iq_app_bar.dart';
 import 'package:dr_iq/ui/home_page/tabs/improve_iq/widgets/my_card.dart';
