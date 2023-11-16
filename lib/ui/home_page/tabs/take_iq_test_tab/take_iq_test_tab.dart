@@ -55,7 +55,7 @@ class TakeIQTest extends StatelessWidget {
                               ),
                               MySpacer(),
                               OptionsText(optionText: myValue, options: questions),
-                              SizedBox(height: 100.h),
+                              Spacer(),
                             ],
                           );
                         },
