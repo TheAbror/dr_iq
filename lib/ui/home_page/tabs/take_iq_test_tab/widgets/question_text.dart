@@ -21,8 +21,8 @@ class QuestionText extends StatelessWidget {
         borderRadius: BorderRadius.circular(8.r),
         border: Border.all(),
       ),
-      child: SingleChildScrollView(
-        child: Center(
+      child: Center(
+        child: SingleChildScrollView(
           child: Text(
             textQuestion,
             style: TextStyle(
