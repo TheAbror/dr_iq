@@ -32,7 +32,6 @@ class MyLineChart extends StatelessWidget {
         gridData: gridData,
         titlesData: titlesData2,
         borderData: borderData,
-        lineBarsData: lineBarsData2,
         minX: 0,
         maxX: 14,
         maxY: 6,
@@ -63,8 +62,6 @@ class MyLineChart extends StatelessWidget {
 
   List<LineChartBarData> get lineBarsData1 => [
         lineChartBarData1_1,
-        lineChartBarData1_2,
-        lineChartBarData1_3,
       ];
 
   LineTouchData get lineTouchData2 => const LineTouchData(
@@ -85,12 +82,6 @@ class MyLineChart extends StatelessWidget {
           sideTitles: leftTitles(),
         ),
       );
-
-  List<LineChartBarData> get lineBarsData2 => [
-        lineChartBarData2_1,
-        lineChartBarData2_2,
-        lineChartBarData2_3,
-      ];
 
   Widget leftTitleWidgets(double value, TitleMeta meta) {
     const style = TextStyle(
@@ -177,7 +168,7 @@ class MyLineChart extends StatelessWidget {
 
   LineChartBarData get lineChartBarData1_1 => LineChartBarData(
         isCurved: true,
-        color: AppColors.primary,
+        color: AppColors.textMain,
         barWidth: 8,
         isStrokeCapRound: true,
         dotData: const FlDotData(show: false),
@@ -190,98 +181,6 @@ class MyLineChart extends StatelessWidget {
           FlSpot(10, 2),
           FlSpot(12, 2.2),
           FlSpot(13, 1.8),
-        ],
-      );
-
-  LineChartBarData get lineChartBarData1_2 => LineChartBarData(
-        isCurved: true,
-        color: AppColors.primary,
-        barWidth: 8,
-        isStrokeCapRound: true,
-        dotData: const FlDotData(show: false),
-        belowBarData: BarAreaData(
-          show: false,
-          color: AppColors.primary.withOpacity(0),
-        ),
-        spots: const [
-          FlSpot(1, 1),
-          FlSpot(3, 2.8),
-          FlSpot(7, 1.2),
-          FlSpot(10, 2.8),
-          FlSpot(12, 2.6),
-          FlSpot(13, 3.9),
-        ],
-      );
-
-  LineChartBarData get lineChartBarData1_3 => LineChartBarData(
-        isCurved: true,
-        color: AppColors.primary,
-        barWidth: 8,
-        isStrokeCapRound: true,
-        dotData: const FlDotData(show: false),
-        belowBarData: BarAreaData(show: false),
-        spots: const [
-          FlSpot(1, 2.8),
-          FlSpot(3, 1.9),
-          FlSpot(6, 3),
-          FlSpot(10, 1.3),
-          FlSpot(13, 2.5),
-        ],
-      );
-
-  LineChartBarData get lineChartBarData2_1 => LineChartBarData(
-        isCurved: true,
-        curveSmoothness: 0,
-        color: AppColors.primary.withOpacity(0.5),
-        barWidth: 4,
-        isStrokeCapRound: true,
-        dotData: const FlDotData(show: false),
-        belowBarData: BarAreaData(show: false),
-        spots: const [
-          FlSpot(1, 1),
-          FlSpot(3, 4),
-          FlSpot(5, 1.8),
-          FlSpot(7, 5),
-          FlSpot(10, 2),
-          FlSpot(12, 2.2),
-          FlSpot(13, 1.8),
-        ],
-      );
-
-  LineChartBarData get lineChartBarData2_2 => LineChartBarData(
-        isCurved: true,
-        color: AppColors.primary.withOpacity(0.5),
-        barWidth: 4,
-        isStrokeCapRound: true,
-        dotData: const FlDotData(show: false),
-        belowBarData: BarAreaData(
-          show: true,
-          color: AppColors.primary.withOpacity(0.2),
-        ),
-        spots: const [
-          FlSpot(1, 1),
-          FlSpot(3, 2.8),
-          FlSpot(7, 1.2),
-          FlSpot(10, 2.8),
-          FlSpot(12, 2.6),
-          FlSpot(13, 3.9),
-        ],
-      );
-
-  LineChartBarData get lineChartBarData2_3 => LineChartBarData(
-        isCurved: true,
-        curveSmoothness: 0,
-        color: AppColors.primary.withOpacity(0.5),
-        barWidth: 2,
-        isStrokeCapRound: true,
-        dotData: const FlDotData(show: true),
-        belowBarData: BarAreaData(show: false),
-        spots: const [
-          FlSpot(1, 3.8),
-          FlSpot(3, 1.9),
-          FlSpot(6, 5),
-          FlSpot(10, 3.3),
-          FlSpot(13, 4.5),
         ],
       );
 }
@@ -306,49 +205,26 @@ class LineChartSample1State extends State<LineChartSample1> {
   Widget build(BuildContext context) {
     return AspectRatio(
       aspectRatio: 1.23,
-      child: Stack(
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <Widget>[
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: <Widget>[
-              const SizedBox(
-                height: 37,
-              ),
-              const Text(
-                'Monthly Sales',
-                style: TextStyle(
-                  color: AppColors.primary,
-                  fontSize: 32,
-                  fontWeight: FontWeight.bold,
-                  letterSpacing: 2,
-                ),
-                textAlign: TextAlign.center,
-              ),
-              const SizedBox(
-                height: 37,
-              ),
-              Expanded(
-                child: Padding(
-                  padding: const EdgeInsets.only(right: 16, left: 6),
-                  child: MyLineChart(isShowingMainData: isShowingMainData),
-                ),
-              ),
-              const SizedBox(
-                height: 10,
-              ),
-            ],
-          ),
-          IconButton(
-            icon: Icon(
-              Icons.refresh,
-              color: Colors.white.withOpacity(isShowingMainData ? 1.0 : 0.5),
+          const Text(
+            'Monthly Sales',
+            style: TextStyle(
+              color: AppColors.primary,
+              fontSize: 32,
+              fontWeight: FontWeight.bold,
+              letterSpacing: 2,
             ),
-            onPressed: () {
-              setState(() {
-                isShowingMainData = !isShowingMainData;
-              });
-            },
-          )
+            textAlign: TextAlign.center,
+          ),
+          const SizedBox(height: 37),
+          Expanded(
+            child: Padding(
+              padding: const EdgeInsets.only(right: 16, left: 6),
+              child: MyLineChart(isShowingMainData: isShowingMainData),
+            ),
+          ),
         ],
       ),
     );
