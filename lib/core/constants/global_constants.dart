@@ -944,8 +944,8 @@ class GlobalConstants {
       "options": [
         {"option_text": "February", "is_correct": false},
         {"option_text": "April", "is_correct": false},
+        {"option_text": "August", "is_correct": true},
         {"option_text": "June", "is_correct": false},
-        {"option_text": "August", "is_correct": true}
       ],
       "question_text": "Which month does not have 28 days?"
     }
@@ -958,7 +958,7 @@ class GlobalConstants {
         {"option_text": "An egg", "is_correct": false},
         {"option_text": "A clock", "is_correct": false},
         {"option_text": "A mirror", "is_correct": false},
-        {"option_text": "Echo", "is_correct": true}
+        {"option_text": "Echo", "is_correct": true},
       ],
       "question_text":
           "I speak without a mouth and hear without ears. I have no body, but I come alive with the wind. What am I?"
@@ -969,7 +969,7 @@ class GlobalConstants {
         {"option_text": "The beginning", "is_correct": false},
         {"option_text": "The end", "is_correct": false},
         {"option_text": "The present", "is_correct": false},
-        {"option_text": "The letter 'M'", "is_correct": true}
+        {"option_text": "The letter 'M'", "is_correct": true},
       ],
       "question_text": "What comes once in a minute, twice in a moment, but never in a thousand years?"
     },
@@ -978,18 +978,18 @@ class GlobalConstants {
       "options": [
         {"option_text": "A candle", "is_correct": false},
         {"option_text": "A matchstick", "is_correct": false},
+        {"option_text": "Footsteps", "is_correct": true},
         {"option_text": "A flashlight", "is_correct": false},
-        {"option_text": "Footsteps", "is_correct": true}
       ],
       "question_text": "The more you take, the more you leave behind. What am I? "
     },
     {
       "id": 44,
       "options": [
+        {"option_text": "The letter 'A'", "is_correct": true},
         {"option_text": "Tomorrow", "is_correct": false},
         {"option_text": "Yesterday", "is_correct": false},
         {"option_text": "Today", "is_correct": false},
-        {"option_text": "The letter 'A'", "is_correct": true}
       ],
       "question_text": "What always comes but never arrives? "
     },
@@ -998,8 +998,8 @@ class GlobalConstants {
       "options": [
         {"option_text": "A glove", "is_correct": false},
         {"option_text": "A hat", "is_correct": false},
+        {"option_text": "A keyboard", "is_correct": true},
         {"option_text": "A shirt", "is_correct": false},
-        {"option_text": "A keyboard", "is_correct": true}
       ],
       "question_text":
           "I have keys but no locks. I have space but no room. You can enter, but you can't go inside. What am I? "
@@ -1007,10 +1007,10 @@ class GlobalConstants {
     {
       "id": 46,
       "options": [
+        {"option_text": "The letter 'O'", "is_correct": true},
         {"option_text": "The letter 'H'", "is_correct": false},
         {"option_text": "The letter 'A'", "is_correct": false},
         {"option_text": "The letter 'B'", "is_correct": false},
-        {"option_text": "The letter 'O'", "is_correct": true}
       ],
       "question_text": "What comes once in a year, twice in a month, but never in a week? "
     },
@@ -1019,18 +1019,18 @@ class GlobalConstants {
       "options": [
         {"option_text": "A river", "is_correct": false},
         {"option_text": "A mountain", "is_correct": false},
+        {"option_text": "Clouds", "is_correct": true},
         {"option_text": "A bridge", "is_correct": false},
-        {"option_text": "Clouds", "is_correct": true}
       ],
       "question_text": "I can fly without wings. I can cry without eyes. Wherever I go, darkness follows me. What am I?"
     },
     {
       "id": 48,
       "options": [
+        {"option_text": "Footsteps", "is_correct": true},
         {"option_text": "A secret", "is_correct": false},
         {"option_text": "A riddle", "is_correct": false},
         {"option_text": "A mystery", "is_correct": false},
-        {"option_text": "Footsteps", "is_correct": true}
       ],
       "question_text": "The more you take, the more you leave behind. What am I? "
     },
@@ -1038,19 +1038,19 @@ class GlobalConstants {
       "id": 49,
       "options": [
         {"option_text": "A shoe", "is_correct": false},
+        {"option_text": "A bottle", "is_correct": true},
         {"option_text": "A hat", "is_correct": false},
         {"option_text": "A shirt", "is_correct": false},
-        {"option_text": "A bottle", "is_correct": true}
       ],
       "question_text": "What has a neck but no head? "
     },
     {
       "id": 50,
       "options": [
+        {"option_text": "A plant", "is_correct": true},
         {"option_text": "A candle", "is_correct": false},
         {"option_text": "A flashlight", "is_correct": false},
         {"option_text": "A bonfire", "is_correct": false},
-        {"option_text": "A plant", "is_correct": true}
       ],
       "question_text": "The more you feed it, the more it grows. What is it?"
     }
@@ -1062,8 +1062,8 @@ class GlobalConstants {
       "options": [
         {"option_text": "A symphony", "is_correct": false},
         {"option_text": "A dream", "is_correct": false},
+        {"option_text": "A coin", "is_correct": true},
         {"option_text": "A memory", "is_correct": false},
-        {"option_text": "A coin", "is_correct": true}
       ],
       "question_text":
           "I carry tales of the past, yet I'm not alive. People often flip me to make decisions. What am I?"
@@ -1072,19 +1072,19 @@ class GlobalConstants {
       "id": 62,
       "options": [
         {"option_text": "A mountain", "is_correct": false},
+        {"option_text": "A coin", "is_correct": true},
         {"option_text": "A valley", "is_correct": false},
         {"option_text": "A canyon", "is_correct": false},
-        {"option_text": "A coin", "is_correct": true}
       ],
       "question_text": "I have peaks and valleys but no unevenness. What am I?"
     },
     {
       "id": 63,
       "options": [
+        {"option_text": "A coin", "is_correct": true},
         {"option_text": "A comet", "is_correct": false},
         {"option_text": "A planet", "is_correct": false},
         {"option_text": "A galaxy", "is_correct": false},
-        {"option_text": "A coin", "is_correct": true}
       ],
       "question_text": "I wander through space, always looking for a place. What am I?"
     },
@@ -1114,18 +1114,18 @@ class GlobalConstants {
       "options": [
         {"option_text": "A matchstick", "is_correct": false},
         {"option_text": "A candle", "is_correct": false},
+        {"option_text": "A sunflower", "is_correct": true},
         {"option_text": "A torch", "is_correct": false},
-        {"option_text": "A sunflower", "is_correct": true}
       ],
       "question_text": "The more you take, the more you leave behind. What am I?"
     },
     {
       "id": 67,
       "options": [
+        {"option_text": "A coin", "is_correct": true},
         {"option_text": "A secret", "is_correct": false},
         {"option_text": "A story", "is_correct": false},
         {"option_text": "A puzzle", "is_correct": false},
-        {"option_text": "A coin", "is_correct": true}
       ],
       "question_text": "I can be kept, unfolded, solved, and tossed. What am I?"
     },
@@ -1134,8 +1134,8 @@ class GlobalConstants {
       "options": [
         {"option_text": "A needle", "is_correct": false},
         {"option_text": "A compass", "is_correct": false},
+        {"option_text": "A coin", "is_correct": true},
         {"option_text": "A ruler", "is_correct": false},
-        {"option_text": "A coin", "is_correct": true}
       ],
       "question_text": "I have no physical form, yet I can be spent. What am I?"
     },
