@@ -47,7 +47,7 @@ class MyLineChart extends StatelessWidget {
 
   FlTitlesData get titlesData1 => FlTitlesData(
         bottomTitles: AxisTitles(
-          sideTitles: bottomTitles,
+          sideTitles: SideTitles(showTitles: false),
         ),
         rightTitles: const AxisTitles(
           sideTitles: SideTitles(showTitles: false),
@@ -69,9 +69,9 @@ class MyLineChart extends StatelessWidget {
       );
 
   FlTitlesData get titlesData2 => FlTitlesData(
-        bottomTitles: AxisTitles(
-          sideTitles: bottomTitles,
-        ),
+        // bottomTitles: AxisTitles(
+        //   sideTitles: bottomTitles,
+        // ),
         rightTitles: const AxisTitles(
           sideTitles: SideTitles(showTitles: false),
         ),
@@ -117,41 +117,6 @@ class MyLineChart extends StatelessWidget {
         showTitles: true,
         interval: 1,
         reservedSize: 40,
-      );
-
-  Widget bottomTitleWidgets(double value, TitleMeta meta) {
-    const style = TextStyle(
-      fontWeight: FontWeight.bold,
-      fontSize: 16,
-    );
-    Widget text;
-    switch (value.toInt()) {
-      case 2:
-        text = const Text('SEPT', style: style);
-        break;
-      case 7:
-        text = const Text('OCT', style: style);
-        break;
-      case 12:
-        text = const Text('DEC', style: style);
-        break;
-      default:
-        text = const Text('');
-        break;
-    }
-
-    return SideTitleWidget(
-      axisSide: meta.axisSide,
-      space: 10,
-      child: text,
-    );
-  }
-
-  SideTitles get bottomTitles => SideTitles(
-        showTitles: true,
-        reservedSize: 32,
-        interval: 1,
-        getTitlesWidget: bottomTitleWidgets,
       );
 
   FlGridData get gridData => const FlGridData(show: false);
@@ -205,27 +170,11 @@ class LineChartSample1State extends State<LineChartSample1> {
   Widget build(BuildContext context) {
     return AspectRatio(
       aspectRatio: 1.23,
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.stretch,
-        children: <Widget>[
-          const Text(
-            'Monthly Sales',
-            style: TextStyle(
-              color: AppColors.primary,
-              fontSize: 32,
-              fontWeight: FontWeight.bold,
-              letterSpacing: 2,
-            ),
-            textAlign: TextAlign.center,
-          ),
-          const SizedBox(height: 37),
-          Expanded(
-            child: Padding(
-              padding: const EdgeInsets.only(right: 16, left: 6),
-              child: MyLineChart(isShowingMainData: isShowingMainData),
-            ),
-          ),
-        ],
+      child: Expanded(
+        child: Padding(
+          padding: const EdgeInsets.only(right: 16, left: 6),
+          child: MyLineChart(isShowingMainData: isShowingMainData),
+        ),
       ),
     );
   }
