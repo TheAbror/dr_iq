@@ -16,6 +16,8 @@ dependencies:
 
   flutter_screenutil: ^5.9.0
 
+  fl_chart: ^0.64.0
+
   equatable: ^2.0.5
 
   flutter_bloc: ^8.1.3

@@ -1,5 +1,4 @@
-// ignore_for_file: prefer_is_empty
-
+import 'package:dr_iq/ui/home_page/tabs/history_page/line_chart.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -30,23 +29,34 @@ class HistoryPage extends StatelessWidget {
             if (state.resultList.isEmpty) {
               return const NoRecordsFound();
             }
-            return ListView.separated(
-              itemCount: state.dateList.length,
-              itemBuilder: (context, index) {
-                var date = state.dateList[index];
-                return HistoryBodyItem(
-                  index: (index + 1).toString(),
-                  date: date.substring(0, date.indexOf('2023') + 4),
-                  time: '\n${date.substring(date.indexOf(',') + 1)}',
-                  score: state.resultList[index],
-                );
-              },
-              separatorBuilder: (context, index) {
-                return Divider(
-                  thickness: 1,
-                  height: 1.h,
-                );
-              },
+
+            return SingleChildScrollView(
+              child: Column(
+                children: [
+                  SizedBox(height: 20.h),
+                  SizedBox(height: 300.h, child: MyLineChart(isShowingMainData: true)),
+                  ListView.separated(
+                    shrinkWrap: true,
+                    physics: BouncingScrollPhysics(),
+                    itemCount: state.dateList.length,
+                    itemBuilder: (context, index) {
+                      var date = state.dateList[index];
+                      return HistoryBodyItem(
+                        index: (index + 1).toString(),
+                        date: date.substring(0, date.indexOf('2023') + 4),
+                        time: '\n${date.substring(date.indexOf(',') + 1)}',
+                        score: state.resultList[index],
+                      );
+                    },
+                    separatorBuilder: (context, index) {
+                      return Divider(
+                        thickness: 1,
+                        height: 1.h,
+                      );
+                    },
+                  ),
+                ],
+              ),
             );
           },
         ),

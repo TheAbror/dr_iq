@@ -1,6 +1,7 @@
 import 'dart:math';
 
 import 'package:dr_iq/core/constants/global_constants.dart';
+import 'package:dr_iq/ui/home_page/tabs/history_page/line_chart.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
@@ -234,6 +235,14 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                   text: 'History',
                   color: AppColors.historyPageColor,
                   onTap: () {
+                    // Navigator.push(
+                    //   context,
+                    //   MaterialPageRoute(
+                    //     builder: (context) => MyLineChart(
+                    //       isShowingMainData: true,
+                    //     ),
+                    //   ),
+                    // );
                     Navigator.pushNamed(context, AppRoutes.historyPage);
                   },
                 ),
