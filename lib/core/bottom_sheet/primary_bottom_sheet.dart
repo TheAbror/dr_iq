@@ -1,6 +1,8 @@
 import 'package:dr_iq/core/bottom_sheet/default_bottom_sheet.dart';
 import 'package:dr_iq/core/colors/app_colors.dart';
+import 'package:dr_iq/ui/home_page/tabs/profile_tab/bloc/profile_bloc.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class PrimaryBottomSheet extends StatefulWidget {
@@ -97,7 +99,16 @@ class _PrimaryBottomSheetState extends State<PrimaryBottomSheet> {
         heightRatio: 0.6,
         actionText: 'Save',
         isConfirmationNeeded: true,
-        action: () {},
+        action: () {
+          // Navigator.pop(
+          //     context,
+          //     context.read<ProfileBloc>().changeProfileInfo(
+          //           _controllerName.text,
+          //           _controllerAge.text,
+          //           _controllerPhone.text,
+          //           _controllerEmail.text,
+          //         ));
+        },
         child: Column(
           children: [
             const Divider(),
@@ -111,7 +122,6 @@ class _PrimaryBottomSheetState extends State<PrimaryBottomSheet> {
                     controller: _controllerName,
                     decoration: InputDecoration(
                       filled: true,
-
                       border: InputBorder.none, // Remove border color
                       enabledBorder: OutlineInputBorder(
                         borderSide: BorderSide(color: AppColors.stroke, width: 0.5.w),

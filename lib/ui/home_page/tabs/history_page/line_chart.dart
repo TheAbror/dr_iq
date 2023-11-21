@@ -52,11 +52,8 @@ class MyLineChart extends StatelessWidget {
         leftTitles: AxisTitles(
           sideTitles: SideTitles(
             showTitles: true,
-            interval: 10, // Show titles at intervals of 10
+            interval: 10,
             reservedSize: 40,
-            // getTitles: (value) {
-            //   return value.toInt().toString();
-            // },
           ),
         ),
       );
@@ -64,32 +61,6 @@ class MyLineChart extends StatelessWidget {
   List<LineChartBarData> get lineBarsData1 => [
         lineChartBarData1_1,
       ];
-
-  // Widget leftTitleWidgets(double value, TitleMeta meta) {
-  //   const style = TextStyle(
-  //     fontWeight: FontWeight.bold,
-  //     fontSize: 14,
-  //   );
-  //   String text;
-  //   switch (value.toInt()) {
-  //     // case 1:
-  //     //   text = '1m';
-  //     //   break;
-  //     // case 2:
-  //     //   text = '2m';
-  //     //   break;
-  //     // case 3:
-  //     //   text = '3m';
-  //     //   break;
-  //     // case 4:
-  //     //   text = '5m';
-  //     //   break;
-  //     default:
-  //       return Container();
-  //   }
-
-  //   // return Text(text, style: style, textAlign: TextAlign.center);
-  // }
 
   SideTitles leftTitles() => SideTitles(
         // getTitlesWidget: leftTitleWidgets,
