@@ -31,16 +31,26 @@ class HistoryPage extends StatelessWidget {
             }
 
             return SingleChildScrollView(
+              scrollDirection: Axis.vertical,
               child: Column(
                 children: [
                   SizedBox(height: 20.h),
-                  SizedBox(height: 300.h, child: MyLineChart(isShowingMainData: true)),
+                  Container(
+                    padding: EdgeInsets.only(right: 20.w),
+                    height: 300.h,
+                    child: MyLineChart(
+                      isShowingMainData: true,
+                      results: state.resultList,
+                    ),
+                  ),
+                  SizedBox(height: 10.h),
                   ListView.separated(
                     shrinkWrap: true,
                     physics: BouncingScrollPhysics(),
                     itemCount: state.dateList.length,
                     itemBuilder: (context, index) {
                       var date = state.dateList[index];
+
                       return HistoryBodyItem(
                         index: (index + 1).toString(),
                         date: date.substring(0, date.indexOf('2023') + 4),
@@ -48,12 +58,7 @@ class HistoryPage extends StatelessWidget {
                         score: state.resultList[index],
                       );
                     },
-                    separatorBuilder: (context, index) {
-                      return Divider(
-                        thickness: 1,
-                        height: 1.h,
-                      );
-                    },
+                    separatorBuilder: (context, index) => Divider(),
                   ),
                 ],
               ),

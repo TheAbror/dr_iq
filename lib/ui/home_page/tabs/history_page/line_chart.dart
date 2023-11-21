@@ -3,9 +3,14 @@ import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 
 class MyLineChart extends StatelessWidget {
-  const MyLineChart({super.key, required this.isShowingMainData});
-
+  final List<String> results;
   final bool isShowingMainData;
+
+  const MyLineChart({
+    super.key,
+    required this.results,
+    required this.isShowingMainData,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -21,22 +26,11 @@ class MyLineChart extends StatelessWidget {
         titlesData: titlesData1,
         borderData: borderData,
         lineBarsData: lineBarsData1,
-        minX: 0,
-        maxX: 14,
-        maxY: 4,
         minY: 0,
+        maxY: 100, // Adjusted maxY value to 100
       );
 
-  LineChartData get sampleData2 => LineChartData(
-        lineTouchData: lineTouchData2,
-        gridData: gridData,
-        titlesData: titlesData2,
-        borderData: borderData,
-        minX: 0,
-        maxX: 14,
-        maxY: 6,
-        minY: 0,
-      );
+  LineChartData get sampleData2 => LineChartData();
 
   LineTouchData get lineTouchData1 => LineTouchData(
         handleBuiltInTouches: true,
@@ -56,7 +50,14 @@ class MyLineChart extends StatelessWidget {
           sideTitles: SideTitles(showTitles: false),
         ),
         leftTitles: AxisTitles(
-          sideTitles: leftTitles(),
+          sideTitles: SideTitles(
+            showTitles: true,
+            interval: 10, // Show titles at intervals of 10
+            reservedSize: 40,
+            // getTitles: (value) {
+            //   return value.toInt().toString();
+            // },
+          ),
         ),
       );
 
@@ -64,56 +65,34 @@ class MyLineChart extends StatelessWidget {
         lineChartBarData1_1,
       ];
 
-  LineTouchData get lineTouchData2 => const LineTouchData(
-        enabled: false,
-      );
+  // Widget leftTitleWidgets(double value, TitleMeta meta) {
+  //   const style = TextStyle(
+  //     fontWeight: FontWeight.bold,
+  //     fontSize: 14,
+  //   );
+  //   String text;
+  //   switch (value.toInt()) {
+  //     // case 1:
+  //     //   text = '1m';
+  //     //   break;
+  //     // case 2:
+  //     //   text = '2m';
+  //     //   break;
+  //     // case 3:
+  //     //   text = '3m';
+  //     //   break;
+  //     // case 4:
+  //     //   text = '5m';
+  //     //   break;
+  //     default:
+  //       return Container();
+  //   }
 
-  FlTitlesData get titlesData2 => FlTitlesData(
-        // bottomTitles: AxisTitles(
-        //   sideTitles: bottomTitles,
-        // ),
-        rightTitles: const AxisTitles(
-          sideTitles: SideTitles(showTitles: false),
-        ),
-        topTitles: const AxisTitles(
-          sideTitles: SideTitles(showTitles: false),
-        ),
-        leftTitles: AxisTitles(
-          sideTitles: leftTitles(),
-        ),
-      );
-
-  Widget leftTitleWidgets(double value, TitleMeta meta) {
-    const style = TextStyle(
-      fontWeight: FontWeight.bold,
-      fontSize: 14,
-    );
-    String text;
-    switch (value.toInt()) {
-      case 1:
-        text = '1m';
-        break;
-      case 2:
-        text = '2m';
-        break;
-      case 3:
-        text = '3m';
-        break;
-      case 4:
-        text = '5m';
-        break;
-      case 5:
-        text = '6m';
-        break;
-      default:
-        return Container();
-    }
-
-    return Text(text, style: style, textAlign: TextAlign.center);
-  }
+  //   // return Text(text, style: style, textAlign: TextAlign.center);
+  // }
 
   SideTitles leftTitles() => SideTitles(
-        getTitlesWidget: leftTitleWidgets,
+        // getTitlesWidget: leftTitleWidgets,
         showTitles: true,
         interval: 1,
         reservedSize: 40,
@@ -138,20 +117,17 @@ class MyLineChart extends StatelessWidget {
         isStrokeCapRound: true,
         dotData: const FlDotData(show: false),
         belowBarData: BarAreaData(show: false),
-        spots: const [
-          FlSpot(1, 1),
-          FlSpot(3, 1.5),
-          FlSpot(5, 1.4),
-          FlSpot(7, 3.4),
-          FlSpot(10, 2),
-          FlSpot(12, 2.2),
-          FlSpot(13, 1.8),
-        ],
+        spots: results.asMap().entries.map((entry) {
+          double yValue = double.tryParse(entry.value) ?? 0.0;
+          return FlSpot(entry.key.toDouble() + 1, yValue);
+        }).toList(),
       );
 }
 
 class LineChartSample1 extends StatefulWidget {
-  const LineChartSample1({super.key});
+  final List<String> result;
+
+  const LineChartSample1({super.key, required this.result});
 
   @override
   State<StatefulWidget> createState() => LineChartSample1State();
@@ -173,7 +149,10 @@ class LineChartSample1State extends State<LineChartSample1> {
       child: Expanded(
         child: Padding(
           padding: const EdgeInsets.only(right: 16, left: 6),
-          child: MyLineChart(isShowingMainData: isShowingMainData),
+          child: MyLineChart(
+            isShowingMainData: isShowingMainData,
+            results: widget.result,
+          ),
         ),
       ),
     );
