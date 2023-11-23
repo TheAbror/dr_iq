@@ -1,7 +1,6 @@
 // ignore_for_file: unused_field
 
 import 'dart:convert';
-
 import 'package:dr_iq/core/preference_services/preference_services.dart';
 import 'package:dr_iq/ui/home_page/tabs/todos_page/colors/todo_colors.dart';
 import 'package:dr_iq/ui/home_page/tabs/todos_page/model/todo_model.dart';
@@ -30,7 +29,7 @@ class ToDosPage extends StatelessWidget {
           icon: Icon(Icons.arrow_back),
         ),
       ),
-      body: const ReorderableExample(),
+      body: ReorderableExample(),
     );
   }
 }
@@ -50,17 +49,22 @@ class _ReorderableListViewExampleState extends State<ReorderableExample> {
   @override
   void initState() {
     super.initState();
-    // Load ToDo list from SharedPreferences
     _loadToDoList();
   }
 
   Future<void> _loadToDoList() async {
-    List<String> loadedTodoStrings = await PreferencesServices().getToDoList();
-    List<ToDo> loadedTodos = loadedTodoStrings.map((todoString) => ToDo.fromJson(jsonDecode(todoString))).toList();
-    setState(() {
-      todosList.addAll(loadedTodos);
-      _foundToDo = todosList;
-    });
+    try {
+      List<String> loadedTodoStrings = await PreferencesServices().getToDoList();
+      List<ToDo> loadedTodos = loadedTodoStrings.map((todoString) => ToDo.fromJson(jsonDecode(todoString))).toList();
+      setState(() {
+        todosList.addAll(loadedTodos);
+        _foundToDo = todosList;
+      });
+    } catch (e) {
+      // Handle error
+      // ignore: avoid_print
+      print("Error loading ToDo list: $e");
+    }
   }
 
   @override
@@ -75,97 +79,20 @@ class _ReorderableListViewExampleState extends State<ReorderableExample> {
           child: Column(
             children: [
               SizedBox(height: 20.h),
-              searchBox(),
+              SearchBox(onSearch: _runFilter),
               Expanded(
-                child: ListView(
-                  children: [
-                    Container(
-                      margin: const EdgeInsets.only(
-                        top: 40,
-                        bottom: 20,
-                      ),
-                      child: const Text(
-                        'All ToDos',
-                        style: TextStyle(
-                          fontSize: 30,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                    ),
-                    for (ToDo todoo in _foundToDo.reversed)
-                      ToDoItem(
-                        todo: todoo,
-                        onToDoChanged: _handleToDoChange,
-                        onDeleteItem: _deleteToDoItem,
-                      ),
-                  ],
+                child: ToDoList(
+                  todos: _foundToDo.reversed.toList(),
+                  onToDoChanged: _handleToDoChange,
+                  onDeleteItem: _deleteToDoItem,
                 ),
               ),
               SizedBox(height: 40.h),
             ],
           ),
         ),
-        addNewToDo(),
+        AddNewToDo(onAddToDo: _addToDoItem, controller: _todoController),
       ],
-    );
-  }
-
-  Align addNewToDo() {
-    return Align(
-      alignment: Alignment.bottomCenter,
-      child: Row(children: [
-        Expanded(
-          child: Container(
-            margin: EdgeInsets.only(
-              bottom: 35.h,
-              right: 20,
-              left: 20,
-            ),
-            padding: EdgeInsets.symmetric(
-              horizontal: 20.w,
-              vertical: 5.w,
-            ),
-            decoration: BoxDecoration(
-              color: Colors.white,
-              boxShadow: const [
-                BoxShadow(
-                  color: Colors.grey,
-                  offset: Offset(0.0, 0.0),
-                  blurRadius: 5,
-                  spreadRadius: 0.0,
-                ),
-              ],
-              borderRadius: BorderRadius.circular(10),
-            ),
-            child: TextField(
-              style: const TextStyle(fontWeight: FontWeight.bold),
-              controller: _todoController,
-              decoration: const InputDecoration(
-                hintText: 'Add a new todo item',
-                border: InputBorder.none,
-                hintStyle: TextStyle(fontWeight: FontWeight.bold),
-              ),
-            ),
-          ),
-        ),
-        Container(
-          margin: EdgeInsets.only(
-            bottom: 35.h,
-            right: 20,
-          ),
-          child: ElevatedButton(
-            onPressed: () {
-              _addToDoItem(_todoController.text);
-            },
-            style: ElevatedButton.styleFrom(
-                backgroundColor: tdBlue, minimumSize: const Size(60, 60), elevation: 5, padding: EdgeInsets.zero),
-            child: Text(
-              '+',
-              style: TextStyle(fontSize: 50.sp),
-            ),
-          ),
-        ),
-      ]),
     );
   }
 
@@ -178,6 +105,12 @@ class _ReorderableListViewExampleState extends State<ReorderableExample> {
   void _deleteToDoItem(String id) {
     setState(() {
       todosList.removeWhere((item) => item.id == id);
+
+      // Convert the List<ToDo> to List<String>
+      List<String> todoStrings = todosList.map((todo) => jsonEncode(todo.toJson())).toList();
+
+      // Save updated ToDo list to SharedPreferences
+      PreferencesServices().saveToDoList(todoStrings);
     });
   }
 
@@ -216,10 +149,17 @@ class _ReorderableListViewExampleState extends State<ReorderableExample> {
       _foundToDo = results;
     });
   }
+}
 
-  Widget searchBox() {
+class SearchBox extends StatelessWidget {
+  final Function(String) onSearch;
+
+  const SearchBox({Key? key, required this.onSearch}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
     return TextField(
-      onChanged: (value) => _runFilter(value),
+      onChanged: onSearch,
       decoration: InputDecoration(
         contentPadding: EdgeInsets.symmetric(horizontal: 15),
         focusedBorder: OutlineInputBorder(
@@ -246,6 +186,112 @@ class _ReorderableListViewExampleState extends State<ReorderableExample> {
           color: tdGrey,
         ),
       ),
+    );
+  }
+}
+
+class AddNewToDo extends StatelessWidget {
+  final Function(String) onAddToDo;
+  final TextEditingController controller;
+
+  const AddNewToDo({
+    Key? key,
+    required this.onAddToDo,
+    required this.controller,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Align(
+      alignment: Alignment.bottomCenter,
+      child: Row(children: [
+        Expanded(
+          child: Container(
+            margin: EdgeInsets.only(
+              bottom: 35.h,
+              right: 20,
+              left: 20,
+            ),
+            padding: EdgeInsets.symmetric(
+              horizontal: 20.w,
+              vertical: 5.w,
+            ),
+            decoration: BoxDecoration(
+              color: Colors.white,
+              boxShadow: const [
+                BoxShadow(
+                  color: Colors.grey,
+                  offset: Offset(0.0, 0.0),
+                  blurRadius: 5,
+                  spreadRadius: 0.0,
+                ),
+              ],
+              borderRadius: BorderRadius.circular(10),
+            ),
+            child: TextField(
+              style: const TextStyle(fontWeight: FontWeight.bold),
+              controller: controller,
+              decoration: const InputDecoration(
+                hintText: 'Add a new todo item',
+                border: InputBorder.none,
+                hintStyle: TextStyle(fontWeight: FontWeight.bold),
+              ),
+            ),
+          ),
+        ),
+        Container(
+          margin: EdgeInsets.only(
+            bottom: 35.h,
+            right: 20,
+          ),
+          child: ElevatedButton(
+            onPressed: () {
+              onAddToDo(controller.text);
+            },
+            style: ElevatedButton.styleFrom(
+                backgroundColor: tdBlue, minimumSize: const Size(60, 60), elevation: 5, padding: EdgeInsets.zero),
+            child: Text(
+              '+',
+              style: TextStyle(fontSize: 50.sp),
+            ),
+          ),
+        ),
+      ]),
+    );
+  }
+}
+
+class ToDoList extends StatelessWidget {
+  final List<ToDo> todos;
+  final Function(ToDo) onToDoChanged;
+  final Function(String) onDeleteItem;
+
+  const ToDoList({
+    Key? key,
+    required this.todos,
+    required this.onToDoChanged,
+    required this.onDeleteItem,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return ListView(
+      children: [
+        Container(
+          margin: const EdgeInsets.only(
+            top: 40,
+            bottom: 20,
+          ),
+          child: const Text(
+            'All ToDos',
+            style: TextStyle(
+              fontSize: 30,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+        ),
+        for (ToDo todo in todos) ToDoItem(todo: todo, onToDoChanged: onToDoChanged, onDeleteItem: onDeleteItem),
+      ],
     );
   }
 }
