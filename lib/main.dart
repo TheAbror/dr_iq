@@ -1,3 +1,4 @@
+import 'package:dr_iq/ui/home_page/tabs/profile_tab/bloc/profile_bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -22,6 +23,7 @@ void main() {
       runApp(
         MultiBlocProvider(
           providers: [
+            BlocProvider(create: (context) => ProfileBloc()),
             BlocProvider(create: (context) => SplashBloc()),
           ],
           child: const MyApp(),

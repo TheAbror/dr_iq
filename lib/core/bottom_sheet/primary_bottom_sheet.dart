@@ -1,7 +1,9 @@
 import 'package:dr_iq/core/bottom_sheet/default_bottom_sheet.dart';
 import 'package:dr_iq/core/colors/app_colors.dart';
 import 'package:dr_iq/core/preference_services/preference_services.dart';
+import 'package:dr_iq/ui/home_page/tabs/profile_tab/bloc/profile_bloc.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class PrimaryBottomSheet extends StatefulWidget {
@@ -85,10 +87,6 @@ class _PrimaryBottomSheetState extends State<PrimaryBottomSheet> {
 
   @override
   Widget build(BuildContext context) {
-    if (_controllerPhone == 'Not Given') {
-      _controllerPhone.text = '';
-    }
-
     return Container(
       decoration: BoxDecoration(
         color: AppColors.float,
@@ -112,6 +110,7 @@ class _PrimaryBottomSheetState extends State<PrimaryBottomSheet> {
           await PreferencesServices.savePhone(phone);
           await PreferencesServices.saveEmail(email);
           Navigator.pop(context);
+          context.read<ProfileBloc>().loadData();
         },
         child: Column(
           children: [
@@ -124,7 +123,7 @@ class _PrimaryBottomSheetState extends State<PrimaryBottomSheet> {
 
                   TextFormField(
                     controller: _controllerName,
-                    decoration: profileTextfieldDecoration(),
+                    decoration: profileTextfieldDecoration('Name'),
                     textInputAction: TextInputAction.next,
                     style: TextStyle(fontWeight: FontWeight.bold),
                     onChanged: (value) {},
@@ -133,7 +132,7 @@ class _PrimaryBottomSheetState extends State<PrimaryBottomSheet> {
 
                   TextFormField(
                     controller: _controllerAge,
-                    decoration: profileTextfieldDecoration(),
+                    decoration: profileTextfieldDecoration('Age'),
                     textInputAction: TextInputAction.next,
                     style: TextStyle(fontWeight: FontWeight.bold),
                     onChanged: (value) {},
@@ -142,7 +141,7 @@ class _PrimaryBottomSheetState extends State<PrimaryBottomSheet> {
 
                   TextFormField(
                     controller: _controllerPhone,
-                    decoration: profileTextfieldDecoration(),
+                    decoration: profileTextfieldDecoration('Phone'),
                     textInputAction: TextInputAction.next,
                     style: TextStyle(fontWeight: FontWeight.bold),
                     onChanged: (value) {},
@@ -151,7 +150,7 @@ class _PrimaryBottomSheetState extends State<PrimaryBottomSheet> {
 
                   TextFormField(
                     controller: _controllerEmail,
-                    decoration: profileTextfieldDecoration(),
+                    decoration: profileTextfieldDecoration('Email'),
                     style: TextStyle(fontWeight: FontWeight.bold),
                     onChanged: (value) {},
                   ),
@@ -166,7 +165,7 @@ class _PrimaryBottomSheetState extends State<PrimaryBottomSheet> {
     );
   }
 
-  InputDecoration profileTextfieldDecoration() {
+  InputDecoration profileTextfieldDecoration(String labelText) {
     return InputDecoration(
       filled: true,
       border: InputBorder.none, // Remove border color
@@ -187,7 +186,7 @@ class _PrimaryBottomSheetState extends State<PrimaryBottomSheet> {
         borderRadius: BorderRadius.circular(12.r),
       ),
       fillColor: AppColors.background,
-      labelText: 'Phone',
+      labelText: labelText,
       labelStyle: TextStyle(color: AppColors.textMain, fontWeight: FontWeight.bold),
       hintStyle: const TextStyle(color: AppColors.textSecondary),
     );
