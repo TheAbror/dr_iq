@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_final_fields
+
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:dr_iq/core/colors/app_colors.dart';
@@ -13,16 +15,35 @@ class SignInPage extends StatefulWidget {
 }
 
 class _SignInPageState extends State<SignInPage> {
-  @override
-  void initState() {
-    Future.delayed(Duration.zero, () {
-      // _showMyDialog();
-    });
-    super.initState();
+  late String name = 'User';
+  late String age = 'Not Given';
+  late String phone = 'Not Given';
+  late String email = 'Not Given';
+
+  late TextEditingController _nameController = TextEditingController();
+  late TextEditingController _ageController = TextEditingController();
+
+  void callDB() async {
+    String? nameD = await PreferencesServices.getName();
+    String? ageD = await PreferencesServices.getAge();
+    String? phoneD = await PreferencesServices.getPhone();
+    String? emailD = await PreferencesServices.getEmail();
+
+    // Assign retrieved values or default values if null
+    name = nameD != null && nameD.isNotEmpty ? nameD : 'User';
+    age = ageD != null && ageD.isNotEmpty ? ageD : 'Not Given';
+    phone = phoneD != null && phoneD.isNotEmpty ? phoneD : 'Not Given';
+    email = emailD != null && emailD.isNotEmpty ? emailD : 'Not Given';
+
+    _nameController.text = name;
+    _ageController.text = age;
   }
 
-  final TextEditingController _nameController = TextEditingController();
-  final TextEditingController _ageController = TextEditingController();
+  @override
+  void initState() {
+    callDB();
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -88,7 +109,7 @@ class _SignInPageState extends State<SignInPage> {
                   ),
                   child: Center(
                     child: Text(
-                      'Save',
+                      'Continue',
                       style: TextStyle(
                         color: AppColors.float,
                         fontWeight: FontWeight.bold,

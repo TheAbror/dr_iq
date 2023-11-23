@@ -62,12 +62,12 @@ class _PrimaryBottomSheetState extends State<PrimaryBottomSheet> {
 
   @override
   void initState() {
-    super.initState();
-
     _controllerName = TextEditingController(text: widget.name);
     _controllerAge = TextEditingController(text: widget.age);
     _controllerPhone = TextEditingController(text: widget.phone);
     _controllerEmail = TextEditingController(text: widget.email);
+
+    super.initState();
   }
 
   @override
@@ -85,6 +85,10 @@ class _PrimaryBottomSheetState extends State<PrimaryBottomSheet> {
 
   @override
   Widget build(BuildContext context) {
+    if (_controllerPhone == 'Not Given') {
+      _controllerPhone.text = '';
+    }
+
     return Container(
       decoration: BoxDecoration(
         color: AppColors.float,
@@ -142,8 +146,6 @@ class _PrimaryBottomSheetState extends State<PrimaryBottomSheet> {
                     onChanged: (value) {},
                   ),
                   SizedBox(height: 8.h),
-
-                  //TODO onchanged
 
                   TextFormField(
                     controller: _controllerPhone,
