@@ -79,4 +79,15 @@ class PreferencesServices {
     List<String> todoList = prefs.getStringList(ShPrefKeys.todos) ?? [];
     return todoList;
   }
+
+  Future<void> saveToDoList(List<String> todoList) async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    await prefs.setStringList(ShPrefKeys.todoList, todoList);
+  }
+
+  Future<List<String>> getToDoList() async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    List<String> todoList = prefs.getStringList(ShPrefKeys.todoList) ?? [];
+    return todoList;
+  }
 }

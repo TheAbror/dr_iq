@@ -1,5 +1,8 @@
 // ignore_for_file: unused_field
 
+import 'dart:convert';
+
+import 'package:dr_iq/core/preference_services/preference_services.dart';
 import 'package:dr_iq/ui/home_page/tabs/todos_page/colors/todo_colors.dart';
 import 'package:dr_iq/ui/home_page/tabs/todos_page/model/todo_model.dart';
 import 'package:dr_iq/ui/home_page/tabs/todos_page/widgets/todo_item.dart';
@@ -40,16 +43,24 @@ class ReorderableExample extends StatefulWidget {
 }
 
 class _ReorderableListViewExampleState extends State<ReorderableExample> {
-  final List<int> _items = List<int>.generate(50, (int index) => index);
-
-  final todosList = ToDo.todoList();
+  final List<ToDo> todosList = [];
   List<ToDo> _foundToDo = [];
   final _todoController = TextEditingController();
 
   @override
   void initState() {
-    _foundToDo = todosList;
     super.initState();
+    // Load ToDo list from SharedPreferences
+    _loadToDoList();
+  }
+
+  Future<void> _loadToDoList() async {
+    List<String> loadedTodoStrings = await PreferencesServices().getToDoList();
+    List<ToDo> loadedTodos = loadedTodoStrings.map((todoString) => ToDo.fromJson(jsonDecode(todoString))).toList();
+    setState(() {
+      todosList.addAll(loadedTodos);
+      _foundToDo = todosList;
+    });
   }
 
   @override
@@ -127,9 +138,7 @@ class _ReorderableListViewExampleState extends State<ReorderableExample> {
               borderRadius: BorderRadius.circular(10),
             ),
             child: TextField(
-              style: const TextStyle(
-                fontWeight: FontWeight.bold,
-              ),
+              style: const TextStyle(fontWeight: FontWeight.bold),
               controller: _todoController,
               decoration: const InputDecoration(
                 hintText: 'Add a new todo item',
@@ -172,14 +181,27 @@ class _ReorderableListViewExampleState extends State<ReorderableExample> {
     });
   }
 
-  void _addToDoItem(String toDo) {
+  void _addToDoItem(String todoText) {
     setState(() {
-      todosList.add(ToDo(
-        id: DateTime.now().millisecondsSinceEpoch.toString(),
-        todoText: toDo,
-      ));
+      // Add the new ToDo item
+      ToDo newTodo = ToDo(
+        id: UniqueKey().toString(),
+        todoText: todoText,
+        isDone: false,
+      );
+
+      todosList.add(newTodo);
+      _foundToDo = todosList;
+
+      // Convert the List<ToDo> to List<String>
+      List<String> todoStrings = todosList.map((todo) => jsonEncode(todo.toJson())).toList();
+
+      // Save updated ToDo list to SharedPreferences
+      PreferencesServices().saveToDoList(todoStrings);
+
+      // Clear the text field
+      _todoController.clear();
     });
-    _todoController.clear();
   }
 
   void _runFilter(String enteredKeyword) {
