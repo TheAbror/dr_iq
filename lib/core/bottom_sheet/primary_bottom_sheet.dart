@@ -1,5 +1,6 @@
 import 'package:dr_iq/core/bottom_sheet/default_bottom_sheet.dart';
 import 'package:dr_iq/core/colors/app_colors.dart';
+import 'package:dr_iq/core/preference_services/preference_services.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -97,7 +98,15 @@ class _PrimaryBottomSheetState extends State<PrimaryBottomSheet> {
         heightRatio: 0.6,
         actionText: 'Save',
         isConfirmationNeeded: true,
-        action: () {
+        action: () async {
+          final name = _controllerName.text.trim();
+          final age = _controllerAge.text.trim();
+          final phone = _controllerPhone.text.trim();
+          final email = _controllerEmail.text.trim();
+          await PreferencesServices.saveName(name);
+          await PreferencesServices.saveAge(age);
+          await PreferencesServices.savePhone(phone);
+          await PreferencesServices.saveEmail(email);
           // Navigator.pop(
           //     context,
           //     context.read<ProfileBloc>().changeProfileInfo(
@@ -120,14 +129,8 @@ class _PrimaryBottomSheetState extends State<PrimaryBottomSheet> {
                     controller: _controllerName,
                     decoration: profileTextfieldDecoration(),
                     textInputAction: TextInputAction.next,
+                    style: TextStyle(fontWeight: FontWeight.bold),
                     onChanged: (value) {},
-                    validator: (value) {
-                      if (value == null || value.isEmpty) {
-                        return 'Please enter your email';
-                      }
-
-                      return null;
-                    },
                   ),
                   SizedBox(height: 8.h),
 
@@ -135,13 +138,8 @@ class _PrimaryBottomSheetState extends State<PrimaryBottomSheet> {
                     controller: _controllerAge,
                     decoration: profileTextfieldDecoration(),
                     textInputAction: TextInputAction.next,
+                    style: TextStyle(fontWeight: FontWeight.bold),
                     onChanged: (value) {},
-                    validator: (value) {
-                      if (value == null || value.isEmpty) {
-                        return 'Please enter value';
-                      }
-                      return null;
-                    },
                   ),
                   SizedBox(height: 8.h),
 
@@ -150,26 +148,17 @@ class _PrimaryBottomSheetState extends State<PrimaryBottomSheet> {
                   TextFormField(
                     controller: _controllerPhone,
                     decoration: profileTextfieldDecoration(),
+                    textInputAction: TextInputAction.next,
+                    style: TextStyle(fontWeight: FontWeight.bold),
                     onChanged: (value) {},
-                    validator: (value) {
-                      if (value == null || value.isEmpty) {
-                        return 'Please enter value';
-                      }
-                      return null;
-                    },
                   ),
                   SizedBox(height: 8.h),
 
                   TextFormField(
                     controller: _controllerEmail,
                     decoration: profileTextfieldDecoration(),
+                    style: TextStyle(fontWeight: FontWeight.bold),
                     onChanged: (value) {},
-                    validator: (value) {
-                      if (value == null || value.isEmpty) {
-                        return 'Please enter value';
-                      }
-                      return null;
-                    },
                   ),
                   // INFO: Always needed for Scrollable Bottom sheets
                   SizedBox(height: 24.h),

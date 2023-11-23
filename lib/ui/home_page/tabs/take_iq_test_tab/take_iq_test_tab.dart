@@ -80,7 +80,6 @@ class TakeIQTest extends StatelessWidget {
       backgroundColor: AppColors.textMain,
       centerTitle: true,
       title: Text(
-        //TODO change this to real value
         'Test',
         style: TextStyle(fontSize: 24.sp, fontWeight: FontWeight.bold),
       ),
