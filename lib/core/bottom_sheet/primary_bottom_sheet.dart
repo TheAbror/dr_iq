@@ -1,8 +1,6 @@
 import 'package:dr_iq/core/bottom_sheet/default_bottom_sheet.dart';
 import 'package:dr_iq/core/colors/app_colors.dart';
-import 'package:dr_iq/ui/home_page/tabs/profile_tab/bloc/profile_bloc.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class PrimaryBottomSheet extends StatefulWidget {
@@ -65,10 +63,10 @@ class _PrimaryBottomSheetState extends State<PrimaryBottomSheet> {
   void initState() {
     super.initState();
 
-    _controllerName = TextEditingController();
-    _controllerAge = TextEditingController();
-    _controllerPhone = TextEditingController();
-    _controllerEmail = TextEditingController();
+    _controllerName = TextEditingController(text: widget.name);
+    _controllerAge = TextEditingController(text: widget.age);
+    _controllerPhone = TextEditingController(text: widget.phone);
+    _controllerEmail = TextEditingController(text: widget.email);
   }
 
   @override
@@ -120,31 +118,7 @@ class _PrimaryBottomSheetState extends State<PrimaryBottomSheet> {
 
                   TextFormField(
                     controller: _controllerName,
-                    decoration: InputDecoration(
-                      filled: true,
-                      border: InputBorder.none, // Remove border color
-                      enabledBorder: OutlineInputBorder(
-                        borderSide: BorderSide(color: AppColors.stroke, width: 0.5.w),
-                        borderRadius: BorderRadius.circular(12.r),
-                      ),
-                      focusedBorder: OutlineInputBorder(
-                        borderSide: BorderSide(color: AppColors.primary, width: 0.5.w),
-                        borderRadius: BorderRadius.circular(12.r),
-                      ),
-                      errorBorder: OutlineInputBorder(
-                        borderSide: BorderSide(color: AppColors.stroke, width: 0.5.w),
-                        borderRadius: BorderRadius.circular(12.r),
-                      ),
-                      focusedErrorBorder: OutlineInputBorder(
-                        borderSide: BorderSide(color: AppColors.stroke, width: 0.5.w),
-                        borderRadius: BorderRadius.circular(12.r),
-                      ),
-                      fillColor: AppColors.background,
-                      labelText: 'Name',
-                      labelStyle: TextStyle(color: AppColors.textMain, fontWeight: FontWeight.bold),
-                      hintText: 'dsfd',
-                      hintStyle: const TextStyle(color: AppColors.textSecondary),
-                    ),
+                    decoration: profileTextfieldDecoration(),
                     textInputAction: TextInputAction.next,
                     onChanged: (value) {},
                     validator: (value) {
@@ -155,35 +129,11 @@ class _PrimaryBottomSheetState extends State<PrimaryBottomSheet> {
                       return null;
                     },
                   ),
-                  SizedBox(height: 4.h),
+                  SizedBox(height: 8.h),
 
                   TextFormField(
                     controller: _controllerAge,
-                    decoration: InputDecoration(
-                      filled: true,
-                      border: InputBorder.none, // Remove border color
-                      enabledBorder: OutlineInputBorder(
-                        borderSide: BorderSide(color: AppColors.stroke, width: 0.5.w),
-                        borderRadius: BorderRadius.circular(12.r),
-                      ),
-                      focusedBorder: OutlineInputBorder(
-                        borderSide: BorderSide(color: AppColors.primary, width: 0.5.w),
-                        borderRadius: BorderRadius.circular(12.r),
-                      ),
-                      errorBorder: OutlineInputBorder(
-                        borderSide: BorderSide(color: AppColors.stroke, width: 0.5.w),
-                        borderRadius: BorderRadius.circular(12.r),
-                      ),
-                      focusedErrorBorder: OutlineInputBorder(
-                        borderSide: BorderSide(color: AppColors.stroke, width: 0.5.w),
-                        borderRadius: BorderRadius.circular(12.r),
-                      ),
-                      fillColor: AppColors.background,
-                      labelText: 'Age',
-                      labelStyle: TextStyle(color: AppColors.textMain, fontWeight: FontWeight.bold),
-                      hintText: 'dsfd',
-                      hintStyle: const TextStyle(color: AppColors.textSecondary),
-                    ),
+                    decoration: profileTextfieldDecoration(),
                     textInputAction: TextInputAction.next,
                     onChanged: (value) {},
                     validator: (value) {
@@ -193,35 +143,13 @@ class _PrimaryBottomSheetState extends State<PrimaryBottomSheet> {
                       return null;
                     },
                   ),
-                  SizedBox(height: 4.h),
+                  SizedBox(height: 8.h),
+
+                  //TODO onchanged
 
                   TextFormField(
                     controller: _controllerPhone,
-                    decoration: InputDecoration(
-                      filled: true,
-                      border: InputBorder.none, // Remove border color
-                      enabledBorder: OutlineInputBorder(
-                        borderSide: BorderSide(color: AppColors.stroke, width: 0.5.w),
-                        borderRadius: BorderRadius.circular(12.r),
-                      ),
-                      focusedBorder: OutlineInputBorder(
-                        borderSide: BorderSide(color: AppColors.primary, width: 0.5.w),
-                        borderRadius: BorderRadius.circular(12.r),
-                      ),
-                      errorBorder: OutlineInputBorder(
-                        borderSide: BorderSide(color: AppColors.stroke, width: 0.5.w),
-                        borderRadius: BorderRadius.circular(12.r),
-                      ),
-                      focusedErrorBorder: OutlineInputBorder(
-                        borderSide: BorderSide(color: AppColors.stroke, width: 0.5.w),
-                        borderRadius: BorderRadius.circular(12.r),
-                      ),
-                      fillColor: AppColors.background,
-                      labelText: 'Phone',
-                      labelStyle: TextStyle(color: AppColors.textMain, fontWeight: FontWeight.bold),
-                      hintText: 'dsfd',
-                      hintStyle: const TextStyle(color: AppColors.textSecondary),
-                    ),
+                    decoration: profileTextfieldDecoration(),
                     onChanged: (value) {},
                     validator: (value) {
                       if (value == null || value.isEmpty) {
@@ -230,36 +158,11 @@ class _PrimaryBottomSheetState extends State<PrimaryBottomSheet> {
                       return null;
                     },
                   ),
-                  SizedBox(height: 4.h),
+                  SizedBox(height: 8.h),
 
                   TextFormField(
                     controller: _controllerEmail,
-                    decoration: InputDecoration(
-                      filled: true,
-                      border: InputBorder.none, // Remove border color
-                      enabledBorder: OutlineInputBorder(
-                        borderSide: BorderSide(color: AppColors.stroke, width: 0.5.w),
-                        borderRadius: BorderRadius.circular(12.r),
-                      ),
-                      focusedBorder: OutlineInputBorder(
-                        borderSide: BorderSide(color: AppColors.primary, width: 0.5.w),
-                        borderRadius: BorderRadius.circular(12.r),
-                      ),
-                      errorBorder: OutlineInputBorder(
-                        borderSide: BorderSide(color: AppColors.stroke, width: 0.5.w),
-                        borderRadius: BorderRadius.circular(12.r),
-                      ),
-                      focusedErrorBorder: OutlineInputBorder(
-                        borderSide: BorderSide(color: AppColors.stroke, width: 0.5.w),
-                        borderRadius: BorderRadius.circular(12.r),
-                      ),
-                      labelText: 'Email',
-                      labelStyle: TextStyle(color: AppColors.textMain, fontWeight: FontWeight.bold),
-                      hintText: 'dsfd',
-                      fillColor: AppColors.background,
-
-                      hintStyle: const TextStyle(color: AppColors.textSecondary),
-                    ),
+                    decoration: profileTextfieldDecoration(),
                     onChanged: (value) {},
                     validator: (value) {
                       if (value == null || value.isEmpty) {
@@ -276,6 +179,33 @@ class _PrimaryBottomSheetState extends State<PrimaryBottomSheet> {
           ],
         ),
       ),
+    );
+  }
+
+  InputDecoration profileTextfieldDecoration() {
+    return InputDecoration(
+      filled: true,
+      border: InputBorder.none, // Remove border color
+      enabledBorder: OutlineInputBorder(
+        borderSide: BorderSide(color: AppColors.stroke, width: 0.5.w),
+        borderRadius: BorderRadius.circular(12.r),
+      ),
+      focusedBorder: OutlineInputBorder(
+        borderSide: BorderSide(color: AppColors.primary, width: 0.5.w),
+        borderRadius: BorderRadius.circular(12.r),
+      ),
+      errorBorder: OutlineInputBorder(
+        borderSide: BorderSide(color: AppColors.stroke, width: 0.5.w),
+        borderRadius: BorderRadius.circular(12.r),
+      ),
+      focusedErrorBorder: OutlineInputBorder(
+        borderSide: BorderSide(color: AppColors.stroke, width: 0.5.w),
+        borderRadius: BorderRadius.circular(12.r),
+      ),
+      fillColor: AppColors.background,
+      labelText: 'Phone',
+      labelStyle: TextStyle(color: AppColors.textMain, fontWeight: FontWeight.bold),
+      hintStyle: const TextStyle(color: AppColors.textSecondary),
     );
   }
 }
