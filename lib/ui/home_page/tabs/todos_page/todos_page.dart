@@ -149,15 +149,10 @@ class _ReorderableListViewExampleState extends State<ReorderableExample> {
               _addToDoItem(_todoController.text);
             },
             style: ElevatedButton.styleFrom(
-              backgroundColor: tdBlue,
-              minimumSize: const Size(60, 60),
-              elevation: 5,
-            ),
-            child: const Text(
+                backgroundColor: tdBlue, minimumSize: const Size(60, 60), elevation: 5, padding: EdgeInsets.zero),
+            child: Text(
               '+',
-              style: TextStyle(
-                fontSize: 40,
-              ),
+              style: TextStyle(fontSize: 50.sp),
             ),
           ),
         ),

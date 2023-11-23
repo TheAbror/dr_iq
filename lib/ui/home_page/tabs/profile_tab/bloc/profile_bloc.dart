@@ -24,18 +24,20 @@ class ProfileBloc extends Cubit<ProfileState> {
       String? phoneD = await PreferencesServices.getPhone();
       String? emailD = await PreferencesServices.getEmail();
 
-// Assign retrieved values or default values if null
+      // Assign retrieved values or default values if null
       name = nameD != null && nameD.isNotEmpty ? nameD : 'User';
       age = ageD != null && ageD.isNotEmpty ? ageD : 'Not Given';
       phone = phoneD != null && phoneD.isNotEmpty ? phoneD : 'Not Given';
       email = emailD != null && emailD.isNotEmpty ? emailD : 'Not Given';
 
-      emit(state.copyWith(
-        name: nameD,
-        age: ageD,
-        phone: phoneD,
-        email: emailD,
-      ));
+      emit(
+        state.copyWith(
+          name: nameD,
+          age: ageD,
+          phone: phoneD,
+          email: emailD,
+        ),
+      );
     }
 
     callDB();

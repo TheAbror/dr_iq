@@ -88,6 +88,7 @@ class _Body extends StatelessWidget {
                 Spacer(flex: 2),
                 GestureDetector(
                   onTap: () async {
+                    // ignore: unused_local_variable
                     final result = await PrimaryBottomSheet.show(
                       context,
                       title: 'Edit',
@@ -97,7 +98,7 @@ class _Body extends StatelessWidget {
                       email: email,
                     );
 
-                    print(result);
+                    // ignore: use_build_context_synchronously
                     context.read<ProfileBloc>().loadData();
                   },
                   child: EditProfileInfoButton(),
