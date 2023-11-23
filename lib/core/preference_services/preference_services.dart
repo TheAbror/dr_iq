@@ -1,4 +1,7 @@
+import 'dart:convert';
+
 import 'package:dr_iq/core/preference_services/shpref_keys.dart';
+import 'package:dr_iq/ui/home_page/tabs/todos_page/model/todo_model.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class PreferencesServices {
@@ -80,14 +83,19 @@ class PreferencesServices {
     return todoList;
   }
 
-  Future<void> saveToDoList(List<String> todoList) async {
+  Future<void> saveToDoList(List<ToDo> todos) async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
-    await prefs.setStringList(ShPrefKeys.todoList, todoList);
+    List<String> todoStrings = todos.map((todo) => jsonEncode(todo.toJson())).toList();
+    await prefs.setStringList(ShPrefKeys.todoList, todoStrings);
   }
 
-  Future<List<String>> getToDoList() async {
+  Future<List<ToDo>> getToDoList() async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
-    List<String> todoList = prefs.getStringList(ShPrefKeys.todoList) ?? [];
-    return todoList;
+    List<String> todoStrings = prefs.getStringList(ShPrefKeys.todoList) ?? [];
+    List<ToDo> todos = todoStrings.map((todoString) {
+      Map<String, dynamic> json = jsonDecode(todoString);
+      return ToDo.fromJson(json);
+    }).toList();
+    return todos;
   }
 }
