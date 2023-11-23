@@ -32,8 +32,6 @@ class _ProfilePageState extends State<ProfilePage> {
     age = ageD != null && ageD.isNotEmpty ? ageD : 'Not Given';
     phone = phoneD != null && phoneD.isNotEmpty ? phoneD : 'Not Given';
     email = emailD != null && emailD.isNotEmpty ? emailD : 'Not Given';
-
-    setState(() {});
   }
 
   @override

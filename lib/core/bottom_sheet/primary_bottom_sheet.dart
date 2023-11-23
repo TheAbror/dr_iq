@@ -111,14 +111,7 @@ class _PrimaryBottomSheetState extends State<PrimaryBottomSheet> {
           await PreferencesServices.saveAge(age);
           await PreferencesServices.savePhone(phone);
           await PreferencesServices.saveEmail(email);
-          // Navigator.pop(
-          //     context,
-          //     context.read<ProfileBloc>().changeProfileInfo(
-          //           _controllerName.text,
-          //           _controllerAge.text,
-          //           _controllerPhone.text,
-          //           _controllerEmail.text,
-          //         ));
+          Navigator.pop(context);
         },
         child: Column(
           children: [
