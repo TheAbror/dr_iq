@@ -65,10 +65,7 @@ class _ReorderableListViewExampleState extends State<ReorderableExample> {
     return Stack(
       children: [
         Container(
-          padding: const EdgeInsets.symmetric(
-            horizontal: 20,
-            vertical: 15,
-          ),
+          padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 15),
           child: Column(
             children: [
               SizedBox(height: 20.h),
@@ -109,7 +106,11 @@ class _ReorderableListViewExampleState extends State<ReorderableExample> {
     if (enteredKeyword.isEmpty) {
       results = todosList;
     } else {
-      results = todosList.where((item) => item.todoText!.toLowerCase().contains(enteredKeyword.toLowerCase())).toList();
+      results = todosList
+          .where((item) => item.todoText!.toLowerCase().contains(
+                enteredKeyword.toLowerCase(),
+              ))
+          .toList();
     }
 
     setState(() {
