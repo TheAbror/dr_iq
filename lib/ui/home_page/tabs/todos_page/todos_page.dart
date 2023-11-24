@@ -1,5 +1,4 @@
 // ignore_for_file: unused_field
-import 'dart:convert';
 import 'package:dr_iq/core/preference_services/preference_services.dart';
 import 'package:dr_iq/ui/home_page/tabs/todos_page/model/todo_model.dart';
 import 'package:dr_iq/ui/home_page/tabs/todos_page/widgets/add_new_todo.dart';
@@ -49,22 +48,16 @@ class _ReorderableListViewExampleState extends State<ReorderableExample> {
   @override
   void initState() {
     super.initState();
+    // Load ToDo list from SharedPreferences
     _loadToDoList();
   }
 
   Future<void> _loadToDoList() async {
-    try {
-      List<String> loadedTodoStrings = (await PreferencesServices().getToDoList()).cast<String>();
-      List<ToDo> loadedTodos = loadedTodoStrings.map((todoString) => ToDo.fromJson(jsonDecode(todoString))).toList();
-      setState(() {
-        todosList.addAll(loadedTodos);
-        _foundToDo = [...todosList]; // Update this line
-      });
-    } catch (e) {
-      // Handle error
-      // ignore: avoid_print
-      print("Error loading ToDo list: $e");
-    }
+    List<ToDo> loadedTodos = await PreferencesServices().getToDoList();
+    setState(() {
+      todosList.addAll(loadedTodos);
+      _foundToDo = todosList;
+    });
   }
 
   @override
