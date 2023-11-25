@@ -432,22 +432,22 @@ class GlobalConstants {
     {
       "id": 61,
       "options": [
-        {"option_text": "24", "is_correct": true},
-        {"option_text": "15", "is_correct": false},
-        {"option_text": "18", "is_correct": false},
-        {"option_text": "21", "is_correct": false},
+        {"option_text": "30%", "is_correct": false},
+        {"option_text": "15%", "is_correct": false},
+        {"option_text": "20%", "is_correct": true},
+        {"option_text": "10%", "is_correct": false}
       ],
-      "question_text": "If 3x + 6 = 18, what is the value of x?"
+      "question_text": "If a book originally costs \$50 and is on sale for \$40, what is the percentage discount?"
     },
     {
       "id": 62,
       "options": [
         {"option_text": "12", "is_correct": false},
-        {"option_text": "21", "is_correct": true},
-        {"option_text": "15", "is_correct": false},
-        {"option_text": "18", "is_correct": false},
+        {"option_text": "61", "is_correct": true},
+        {"option_text": "48", "is_correct": false},
+        {"option_text": "64", "is_correct": false},
       ],
-      "question_text": "If 5y - 3 = 12, what is the value of y?"
+      "question_text": "(7 x 9) - (3 x 4) + 10=?"
     },
     {
       "id": 63,
@@ -462,42 +462,43 @@ class GlobalConstants {
     {
       "id": 64,
       "options": [
-        {"option_text": "7", "is_correct": false},
-        {"option_text": "9", "is_correct": false},
-        {"option_text": "11", "is_correct": false},
-        {"option_text": "13", "is_correct": true}
+        {"option_text": "\$25", "is_correct": false},
+        {"option_text": "\$22", "is_correct": false},
+        {"option_text": "\$26.67", "is_correct": true},
+        {"option_text": "\$30", "is_correct": false},
       ],
-      "question_text": "If 2a - 5 = 3, what is the value of a?"
+      "question_text": "If a shirt costs \$20 after a 25% discount, what was its original price?"
     },
     {
       "id": 65,
       "options": [
-        {"option_text": "35", "is_correct": false},
-        {"option_text": "45", "is_correct": false},
-        {"option_text": "55", "is_correct": false},
-        {"option_text": "65", "is_correct": true},
+        {"option_text": "\$0.05", "is_correct": true},
+        {"option_text": "\$0.10", "is_correct": false},
+        {"option_text": "\$0.50", "is_correct": false},
+        {"option_text": "\$1.00", "is_correct": false},
       ],
-      "question_text": "If 4b + 15 = 100, what is the value of b?"
+      "question_text":
+          "Notebook and pen cost \$1.10. If the notebook costs \$1 more than the pen, how much does the pen cost?"
     },
     {
       "id": 66,
       "options": [
-        {"option_text": "6", "is_correct": false},
-        {"option_text": "12", "is_correct": true},
-        {"option_text": "8", "is_correct": false},
-        {"option_text": "10", "is_correct": false},
+        {"option_text": "64", "is_correct": true},
+        {"option_text": "81", "is_correct": false},
+        {"option_text": "49", "is_correct": false},
+        {"option_text": "36", "is_correct": false}
       ],
-      "question_text": "If 3c + 6 = 30, what is the value of c?"
+      "question_text": "What is the cube of 4?"
     },
     {
-      "id": 67,
+      "id": 15,
       "options": [
-        {"option_text": "5", "is_correct": false},
-        {"option_text": "8", "is_correct": false},
-        {"option_text": "11", "is_correct": false},
-        {"option_text": "14", "is_correct": true}
+        {"option_text": "120", "is_correct": false},
+        {"option_text": "240", "is_correct": true},
+        {"option_text": "360", "is_correct": false},
+        {"option_text": "480", "is_correct": false}
       ],
-      "question_text": "If 2d - 3 = 11, what is the value of d?"
+      "question_text": "If a car travels at a speed of 60 mph, how many miles will it travel in 4 hours?"
     },
     {
       "id": 68,
@@ -1027,12 +1028,13 @@ class GlobalConstants {
     {
       "id": 48,
       "options": [
-        {"option_text": "Footsteps", "is_correct": true},
-        {"option_text": "A secret", "is_correct": false},
-        {"option_text": "A riddle", "is_correct": false},
-        {"option_text": "A mystery", "is_correct": false},
+        {"option_text": "10 days", "is_correct": true},
+        {"option_text": "15 days", "is_correct": false},
+        {"option_text": "25 days", "is_correct": false},
+        {"option_text": "29 days", "is_correct": false},
       ],
-      "question_text": "The more you take, the more you leave behind. What am I? "
+      "question_text":
+          "There is a pond with lily pads. Every day, the number of lily pads doubles. If it takes 30 days for the lily pads to completely cover the pond, how many days will it take for the lily pads to cover half of the pond?"
     },
     {
       "id": 49,
@@ -1112,12 +1114,12 @@ class GlobalConstants {
     {
       "id": 66,
       "options": [
-        {"option_text": "A matchstick", "is_correct": false},
-        {"option_text": "A candle", "is_correct": false},
-        {"option_text": "A sunflower", "is_correct": true},
-        {"option_text": "A torch", "is_correct": false},
+        {"option_text": "412", "is_correct": false},
+        {"option_text": "511", "is_correct": false},
+        {"option_text": "512", "is_correct": true},
+        {"option_text": "611", "is_correct": false},
       ],
-      "question_text": "The more you take, the more you leave behind. What am I?"
+      "question_text": "If CAT is coded as 312, how is DOG coded?"
     },
     {
       "id": 67,
