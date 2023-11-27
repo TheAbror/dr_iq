@@ -106,7 +106,7 @@ class GlobalConstants {
       "question_text": "Which country is closest to the South Pole?"
     }
   ];
-///////////////////////////////////////////////////////////////
+
   static final List<Map<String, dynamic>> logicalReasoning = [
     {
       "id": 71,
@@ -450,14 +450,14 @@ class GlobalConstants {
       "question_text": "(7 x 9) - (3 x 4) + 10=?"
     },
     {
-      "id": 63,
+      "id": 17,
       "options": [
-        {"option_text": "16", "is_correct": false},
-        {"option_text": "18", "is_correct": false},
-        {"option_text": "24", "is_correct": true},
-        {"option_text": "20", "is_correct": false},
+        {"option_text": "144", "is_correct": false},
+        {"option_text": "169", "is_correct": false},
+        {"option_text": "196", "is_correct": false},
+        {"option_text": "225", "is_correct": true}
       ],
-      "question_text": "If 2z + 4 = 28, what is the value of z?"
+      "question_text": "What is the square of 15?"
     },
     {
       "id": 64,
@@ -503,12 +503,12 @@ class GlobalConstants {
     {
       "id": 68,
       "options": [
-        {"option_text": "24", "is_correct": false},
-        {"option_text": "30", "is_correct": false},
-        {"option_text": "42", "is_correct": true},
-        {"option_text": "36", "is_correct": false},
+        {"option_text": "252", "is_correct": false},
+        {"option_text": "264", "is_correct": false},
+        {"option_text": "276", "is_correct": false},
+        {"option_text": "288", "is_correct": true}
       ],
-      "question_text": "If 5e + 12 = 30, what is the value of e?"
+      "question_text": "What is the least common multiple (LCM) of 12 and 24?"
     },
     {
       "id": 69,
@@ -1160,6 +1160,111 @@ class GlobalConstants {
         {"option_text": "A coin", "is_correct": false}
       ],
       "question_text": "I can be cracked, made, told, and played. What am I?"
+    }
+  ];
+
+  static final List<Map<String, dynamic>> chapter1 = [
+    {
+      "id": 1,
+      "options": [
+        {"option_text": "3527", "is_correct": true},
+        {"option_text": "9678", "is_correct": false},
+        {"option_text": "5261", "is_correct": false},
+        {"option_text": "7768", "is_correct": false},
+      ],
+      "question_text": "Which number is the odd one out? \n 9678 4572 5261 5133 3527 6895 7768",
+    },
+    {
+      "id": 2,
+      "options": [
+        {"option_text": "A", "is_correct": false},
+        {"option_text": "B", "is_correct": false},
+        {"option_text": "C", "is_correct": false},
+        {"option_text": "D", "is_correct": true}
+      ],
+      "question_text": "assets/chapters/Screenshot 2023-11-27 at 15.41.01.png"
+    },
+    {
+      "id": 3,
+      "options": [
+        {"option_text": "A", "is_correct": false},
+        {"option_text": "B", "is_correct": true},
+        {"option_text": "C", "is_correct": false},
+        {"option_text": "D&E", "is_correct": false}
+      ],
+      "question_text": "assets/chapters/Screenshot 2023-11-27 at 16.09.07.png"
+    },
+    {
+      "id": 4,
+      "options": [
+        {"option_text": "40 minutes", "is_correct": false},
+        {"option_text": "35 minutes", "is_correct": false},
+        {"option_text": "44 minutes", "is_correct": true},
+        {"option_text": "22 minutes", "is_correct": false}
+      ],
+      "question_text":
+          "How many minutes is it before 12 noon, if 48 minutes ago it was twice as many minutes past 9 am?"
+    },
+    {
+      "id": 5,
+      "options": [
+        {"option_text": "Heptagon", "is_correct": false},
+        {"option_text": "Triangle", "is_correct": false},
+        {"option_text": "Cube", "is_correct": true},
+        {"option_text": "Pentagon", "is_correct": false}
+      ],
+      "question_text": "Which is the odd one out? \n heptagon, triangle, cube, pentagon"
+    },
+    {
+      "id": 6,
+      "options": [
+        {"option_text": "A", "is_correct": false},
+        {"option_text": "B", "is_correct": true},
+        {"option_text": "C", "is_correct": false},
+        {"option_text": "D", "is_correct": false}
+      ],
+      "question_text": "assets/chapters/Screenshot 2023-11-27 at 16.13.03.png"
+    },
+    {
+      "id": 7,
+      "options": [
+        {"option_text": "22", "is_correct": false},
+        {"option_text": "5", "is_correct": false},
+        {"option_text": "7", "is_correct": false},
+        {"option_text": "4", "is_correct": true}
+      ],
+      "question_text": "assets/chapters/Screenshot 2023-11-27 at 16.14.10.png"
+    },
+    {
+      "id": 8,
+      "options": [
+        {"option_text": "10", "is_correct": false},
+        {"option_text": "11", "is_correct": true},
+        {"option_text": "12", "is_correct": false},
+        {"option_text": "13", "is_correct": false}
+      ],
+      "question_text": "assets/chapters/Screenshot 2023-11-27 at 16.15.10.png"
+    },
+    {
+      "id": 9,
+      "options": [
+        {"option_text": "225, 537", "is_correct": false},
+        {"option_text": "355, 768", "is_correct": false},
+        {"option_text": "555, 456", "is_correct": false},
+        {"option_text": "888, 890", "is_correct": true}
+      ],
+      "question_text": "10, 30, 32, 96, 98, 294, 296, ?, ? \nWhat two numbers should replace the question marks?"
+    },
+    {
+      "id": 10,
+      "options": [
+        {"option_text": "20 socks", "is_correct": false},
+        {"option_text": "30 socks", "is_correct": false},
+        {"option_text": "40 socks", "is_correct": true},
+        {"option_text": "44 socks", "is_correct": false}
+      ],
+      "question_text":
+          "A man has 53 socks in his drawer: 21 identical blue, 15 identical black and 17 identical red. The lights are fused and he is completely in the dark. How many socks must he take out to make 100 per cent certain he has a pair of black socks?"
     }
   ];
 }
