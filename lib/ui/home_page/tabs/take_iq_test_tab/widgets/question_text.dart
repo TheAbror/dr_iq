@@ -35,13 +35,16 @@ class QuestionText extends StatelessWidget {
                       await showDialog(
                         context: context,
                         builder: (_) => Dialog(
-                          child: Container(
-                            width: 500.w,
-                            height: 500.w,
-                            decoration: BoxDecoration(
-                              image: DecorationImage(
-                                image: ExactAssetImage(textQuestion),
-                                fit: BoxFit.contain,
+                          child: InteractiveViewer(
+                            panEnabled: false,
+                            child: Container(
+                              width: 600.w,
+                              height: 500.w,
+                              decoration: BoxDecoration(
+                                image: DecorationImage(
+                                  image: ExactAssetImage(textQuestion),
+                                  fit: BoxFit.contain,
+                                ),
                               ),
                             ),
                           ),
@@ -50,14 +53,17 @@ class QuestionText extends StatelessWidget {
                     },
                   ),
                 )
-              : Text(
-                  textQuestion,
-                  style: TextStyle(
-                    color: AppColors.float,
-                    fontWeight: FontWeight.bold,
-                    fontSize: 24.sp,
+              : SingleChildScrollView(
+                  // physics: AlwaysScrollableScrollPhysics(),
+                  child: Text(
+                    textQuestion,
+                    style: TextStyle(
+                      color: AppColors.float,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 24.sp,
+                    ),
+                    textAlign: TextAlign.center,
                   ),
-                  textAlign: TextAlign.center,
                 ),
         ),
       ),

@@ -175,6 +175,8 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                       GlobalConstants.trickyQuestions,
                       GlobalConstants.moreTrickyQuestions,
                       GlobalConstants.testQuestions,
+                      GlobalConstants.chapter1,
+                      GlobalConstants.missingSection,
                     ];
 
                     int randomIndex = Random().nextInt(questionsList.length);

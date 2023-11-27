@@ -1,134 +1,24 @@
 class GlobalConstants {
-  static final List<Map<String, dynamic>> testQuestions = [
-    {
-      "id": 1,
-      "options": [
-        {"option_text": "20", "is_correct": false},
-        {"option_text": "24", "is_correct": false},
-        {"option_text": "32", "is_correct": true},
-        {"option_text": "64", "is_correct": false},
-      ],
-      "question_text": "What is the next number in the series? 2, 4, 8, 16, ?",
-    },
-    {
-      "id": 2,
-      "options": [
-        {"option_text": "Apple", "is_correct": false},
-        {"option_text": "Banana", "is_correct": false},
-        {"option_text": "Orange", "is_correct": false},
-        {"option_text": "Carrot", "is_correct": true}
-      ],
-      "question_text": "Which word does not belong to the group? Apple, Banana, Orange, Carrot, Grape?"
-    },
-    {
-      "id": 3,
-      "options": [
-        {"option_text": "5 days", "is_correct": false},
-        {"option_text": "6 days", "is_correct": true},
-        {"option_text": "7 days", "is_correct": false},
-        {"option_text": "8 days", "is_correct": false}
-      ],
-      "question_text":
-          "A snail climbs up a 10-foot pole during the day and slips down 5 feet at night. How many days will it take for the snail to reach the top of the pole?"
-    },
-    {
-      "id": 4,
-      "options": [
-        {"option_text": "All Oranges are Fruits", "is_correct": false},
-        {"option_text": "All Fruits are Oranges", "is_correct": false},
-        {"option_text": "Some Oranges are Fruits", "is_correct": true},
-        {"option_text": "No conclusion can be drawn", "is_correct": false}
-      ],
-      "question_text":
-          "If all Fruits are Apples, and some Apples are Oranges, which of the following statements must be true?"
-    },
-    {
-      "id": 5,
-      "options": [
-        {"option_text": "United States", "is_correct": false},
-        {"option_text": "Canada", "is_correct": false},
-        {"option_text": "Survivors are not buried", "is_correct": true},
-        {"option_text": "No conclusion can be drawn", "is_correct": false}
-      ],
-      "question_text":
-          "If a plane crashes on the border between the United States and Canada, where would the survivors be buried?"
-    },
-    {
-      "id": 6,
-      "options": [
-        {"option_text": "S", "is_correct": false},
-        {"option_text": "T", "is_correct": false},
-        {"option_text": "U", "is_correct": true},
-        {"option_text": "V", "is_correct": false}
-      ],
-      "question_text": "What letter comes next in the series? A, C, F, J, O, ..."
-    },
-    {
-      "id": 7,
-      "options": [
-        {"option_text": "Square", "is_correct": false},
-        {"option_text": "Triangle", "is_correct": false},
-        {"option_text": "Circle", "is_correct": false},
-        {"option_text": "Rectangle", "is_correct": true}
-      ],
-      "question_text": "Which shape is different from the others?"
-    },
-    {
-      "id": 8,
-      "options": [
-        {"option_text": "Earth", "is_correct": false},
-        {"option_text": "Venus", "is_correct": true},
-        {"option_text": "Mars", "is_correct": false},
-        {"option_text": "Mercury", "is_correct": false}
-      ],
-      "question_text":
-          "Which planet in our solar system has the longest day, taking approximately 243 Earth days to complete one rotation?"
-    },
-    {
-      "id": 9,
-      "options": [
-        {"option_text": "11", "is_correct": false},
-        {"option_text": "13", "is_correct": false},
-        {"option_text": "15", "is_correct": false},
-        {"option_text": "17", "is_correct": true}
-      ],
-      "question_text":
-          "The alphabet series follows a pattern: A=1, B=3, C=5, D=7, and so on. What number would represent the letter \"H\"?"
-    },
-    {
-      "id": 10,
-      "options": [
-        {"option_text": "Australia", "is_correct": false},
-        {"option_text": "Chile", "is_correct": false},
-        {"option_text": "Argentina", "is_correct": true},
-        {"option_text": "South Africa", "is_correct": false}
-      ],
-      "question_text": "Which country is closest to the South Pole?"
-    }
-  ];
-
   static final List<Map<String, dynamic>> logicalReasoning = [
     {
       "id": 71,
       "options": [
-        {"option_text": "Circle", "is_correct": false},
-        {"option_text": "Triangle", "is_correct": false},
-        {"option_text": "Square", "is_correct": false},
-        {"option_text": "Rectangle", "is_correct": true},
+        {"option_text": "2", "is_correct": false},
+        {"option_text": "3", "is_correct": false},
+        {"option_text": "5", "is_correct": false},
+        {"option_text": "7.5", "is_correct": true},
       ],
-      "question_text":
-          "All circles are triangles. All triangles are squares. What can be inferred from these ssatements?"
+      "question_text": "0, 4, 2, 6, 3, 7, 3.5, ? \nWhat number should replace the question mark?"
     },
     {
       "id": 72,
       "options": [
-        {"option_text": "Elephant", "is_correct": false},
-        {"option_text": "Lion", "is_correct": false},
-        {"option_text": "Penguin", "is_correct": true},
-        {"option_text": "Zebra", "is_correct": false},
+        {"option_text": "marimba", "is_correct": false},
+        {"option_text": "ncymbal", "is_correct": false},
+        {"option_text": "trombone", "is_correct": true},
+        {"option_text": "vibraphone", "is_correct": false},
       ],
-      "question_text":
-          "In a group of animals, some are elephants, some are lions, and some are zebras. All zebras are black and white. What can be concluded?"
+      "question_text": "Which is the odd one out? \ncymbal, marimba, vibraphone, trombone"
     },
     {
       "id": 73,
@@ -442,12 +332,12 @@ class GlobalConstants {
     {
       "id": 62,
       "options": [
-        {"option_text": "12", "is_correct": false},
-        {"option_text": "61", "is_correct": true},
-        {"option_text": "48", "is_correct": false},
-        {"option_text": "64", "is_correct": false},
+        {"option_text": "28, 30", "is_correct": false},
+        {"option_text": "30, 26", "is_correct": true},
+        {"option_text": "34, 34", "is_correct": false},
+        {"option_text": "36, 38", "is_correct": false},
       ],
-      "question_text": "(7 x 9) - (3 x 4) + 10=?"
+      "question_text": "1, 50, 6, 45, 11, 40, 16, 35, 21, ?, ? \nWhich numbers should replace the question marks?"
     },
     {
       "id": 17,
@@ -483,12 +373,12 @@ class GlobalConstants {
     {
       "id": 66,
       "options": [
-        {"option_text": "64", "is_correct": true},
-        {"option_text": "81", "is_correct": false},
-        {"option_text": "49", "is_correct": false},
-        {"option_text": "36", "is_correct": false}
+        {"option_text": "A", "is_correct": false},
+        {"option_text": "B", "is_correct": true},
+        {"option_text": "C", "is_correct": false},
+        {"option_text": "D", "is_correct": false}
       ],
-      "question_text": "What is the cube of 4?"
+      "question_text": "assets/chapters/Screenshot 2023-11-27 at 18.12.45.png"
     },
     {
       "id": 15,
@@ -513,22 +403,22 @@ class GlobalConstants {
     {
       "id": 69,
       "options": [
-        {"option_text": "24", "is_correct": true},
-        {"option_text": "15", "is_correct": false},
-        {"option_text": "18", "is_correct": false},
-        {"option_text": "21", "is_correct": false},
+        {"option_text": "4", "is_correct": true},
+        {"option_text": "5", "is_correct": false},
+        {"option_text": "6", "is_correct": false},
+        {"option_text": "7", "is_correct": false},
       ],
-      "question_text": "If 3f + 9 = 30, what is the value of f?"
+      "question_text": "assets/chapters/Screenshot 2023-11-27 at 18.14.24.png"
     },
     {
       "id": 70,
       "options": [
+        {"option_text": "5", "is_correct": false},
+        {"option_text": "7", "is_correct": false},
         {"option_text": "9", "is_correct": false},
-        {"option_text": "12", "is_correct": false},
-        {"option_text": "15", "is_correct": false},
-        {"option_text": "18", "is_correct": true},
+        {"option_text": "11", "is_correct": true},
       ],
-      "question_text": "If 2g - 6 = 12, what is the value of g?"
+      "question_text": "16, 23, 19, 19, 22, 15, 25, ?\nWhat number should replace the question mark?"
     }
   ];
 
@@ -1163,6 +1053,114 @@ class GlobalConstants {
     }
   ];
 
+  static final List<Map<String, dynamic>> testQuestions = [
+    {
+      "id": 1,
+      "options": [
+        {"option_text": "20", "is_correct": false},
+        {"option_text": "24", "is_correct": false},
+        {"option_text": "32", "is_correct": true},
+        {"option_text": "64", "is_correct": false},
+      ],
+      "question_text": "What is the next number in the series? 2, 4, 8, 16, ?",
+    },
+    {
+      "id": 2,
+      "options": [
+        {"option_text": "5", "is_correct": false},
+        {"option_text": "3", "is_correct": false},
+        {"option_text": "2", "is_correct": false},
+        {"option_text": "0", "is_correct": true}
+      ],
+      "question_text": "assets/chapters/Screenshot 2023-11-27 at 17.44.23.png"
+    },
+    {
+      "id": 3,
+      "options": [
+        {"option_text": "5 days", "is_correct": false},
+        {"option_text": "6 days", "is_correct": true},
+        {"option_text": "7 days", "is_correct": false},
+        {"option_text": "8 days", "is_correct": false}
+      ],
+      "question_text":
+          "A snail climbs up a 10-foot pole during the day and slips down 5 feet at night. How many days will it take for the snail to reach the top of the pole?"
+    },
+    {
+      "id": 4,
+      "options": [
+        {"option_text": "All Oranges are Fruits", "is_correct": false},
+        {"option_text": "All Fruits are Oranges", "is_correct": false},
+        {"option_text": "Some Oranges are Fruits", "is_correct": true},
+        {"option_text": "No conclusion can be drawn", "is_correct": false}
+      ],
+      "question_text":
+          "If all Fruits are Apples, and some Apples are Oranges, which of the following statements must be true?"
+    },
+    {
+      "id": 5,
+      "options": [
+        {"option_text": "United States", "is_correct": false},
+        {"option_text": "Canada", "is_correct": false},
+        {"option_text": "Survivors are not buried", "is_correct": true},
+        {"option_text": "No conclusion can be drawn", "is_correct": false}
+      ],
+      "question_text":
+          "If a plane crashes on the border between the United States and Canada, where would the survivors be buried?"
+    },
+    {
+      "id": 6,
+      "options": [
+        {"option_text": "S", "is_correct": false},
+        {"option_text": "T", "is_correct": false},
+        {"option_text": "U", "is_correct": true},
+        {"option_text": "V", "is_correct": false}
+      ],
+      "question_text": "What letter comes next in the series? A, C, F, J, O, ..."
+    },
+    {
+      "id": 7,
+      "options": [
+        {"option_text": "A", "is_correct": false},
+        {"option_text": "B", "is_correct": true},
+        {"option_text": "C", "is_correct": false},
+        {"option_text": "D", "is_correct": false}
+      ],
+      "question_text": "assets/chapters/Screenshot 2023-11-27 at 17.48.16.png"
+    },
+    {
+      "id": 8,
+      "options": [
+        {"option_text": "Earth", "is_correct": false},
+        {"option_text": "Venus", "is_correct": true},
+        {"option_text": "Mars", "is_correct": false},
+        {"option_text": "Mercury", "is_correct": false}
+      ],
+      "question_text":
+          "Which planet in our solar system has the longest day, taking approximately 243 Earth days to complete one rotation?"
+    },
+    {
+      "id": 9,
+      "options": [
+        {"option_text": "11", "is_correct": false},
+        {"option_text": "13", "is_correct": false},
+        {"option_text": "15", "is_correct": false},
+        {"option_text": "17", "is_correct": true}
+      ],
+      "question_text":
+          "The alphabet series follows a pattern: A=1, B=3, C=5, D=7, and so on. What number would represent the letter \"H\"?"
+    },
+    {
+      "id": 10,
+      "options": [
+        {"option_text": "Australia", "is_correct": false},
+        {"option_text": "Chile", "is_correct": false},
+        {"option_text": "Argentina", "is_correct": true},
+        {"option_text": "South Africa", "is_correct": false}
+      ],
+      "question_text": "Which country is closest to the South Pole?"
+    }
+  ];
+
   static final List<Map<String, dynamic>> chapter1 = [
     {
       "id": 1,
@@ -1265,6 +1263,109 @@ class GlobalConstants {
       ],
       "question_text":
           "A man has 53 socks in his drawer: 21 identical blue, 15 identical black and 17 identical red. The lights are fused and he is completely in the dark. How many socks must he take out to make 100 per cent certain he has a pair of black socks?"
+    }
+  ];
+
+  static final List<Map<String, dynamic>> missingSection = [
+    {
+      "id": 1,
+      "options": [
+        {"option_text": "A", "is_correct": false},
+        {"option_text": "B", "is_correct": true},
+        {"option_text": "C", "is_correct": false},
+        {"option_text": "D", "is_correct": false},
+      ],
+      "question_text": "assets/chapters/Screenshot 2023-11-27 at 17.54.22.png",
+    },
+    {
+      "id": 2,
+      "options": [
+        {"option_text": "A", "is_correct": false},
+        {"option_text": "B", "is_correct": true},
+        {"option_text": "C", "is_correct": false},
+        {"option_text": "D", "is_correct": false}
+      ],
+      "question_text": "assets/chapters/Screenshot 2023-11-27 at 17.55.26.png"
+    },
+    {
+      "id": 3,
+      "options": [
+        {"option_text": "1", "is_correct": false},
+        {"option_text": "3", "is_correct": true},
+        {"option_text": "5", "is_correct": false},
+        {"option_text": "7", "is_correct": false}
+      ],
+      "question_text": "assets/chapters/Screenshot 2023-11-27 at 17.56.41.png"
+    },
+    {
+      "id": 4,
+      "options": [
+        {"option_text": "10", "is_correct": false},
+        {"option_text": "15", "is_correct": false},
+        {"option_text": "17", "is_correct": true},
+        {"option_text": "19", "is_correct": false}
+      ],
+      "question_text": "assets/chapters/Screenshot 2023-11-27 at 17.57.44.png"
+    },
+    {
+      "id": 5,
+      "options": [
+        {"option_text": "45", "is_correct": false},
+        {"option_text": "49", "is_correct": true},
+        {"option_text": "50", "is_correct": false},
+        {"option_text": "55", "is_correct": false}
+      ],
+      "question_text": "assets/chapters/Screenshot 2023-11-27 at 17.58.38.png"
+    },
+    {
+      "id": 6,
+      "options": [
+        {"option_text": "A", "is_correct": false},
+        {"option_text": "B", "is_correct": true},
+        {"option_text": "C", "is_correct": false},
+        {"option_text": "D", "is_correct": false}
+      ],
+      "question_text": "assets/chapters/Screenshot 2023-11-27 at 16.13.03.png"
+    },
+    {
+      "id": 7,
+      "options": [
+        {"option_text": "22", "is_correct": false},
+        {"option_text": "5", "is_correct": false},
+        {"option_text": "7", "is_correct": false},
+        {"option_text": "4", "is_correct": true}
+      ],
+      "question_text": "assets/chapters/Screenshot 2023-11-27 at 16.14.10.png"
+    },
+    {
+      "id": 8,
+      "options": [
+        {"option_text": "6", "is_correct": false},
+        {"option_text": "8", "is_correct": true},
+        {"option_text": "7", "is_correct": false},
+        {"option_text": "13", "is_correct": false}
+      ],
+      "question_text": "assets/chapters/Screenshot 2023-11-27 at 18.00.31.png"
+    },
+    {
+      "id": 9,
+      "options": [
+        {"option_text": "225, 537", "is_correct": false},
+        {"option_text": "355, 768", "is_correct": false},
+        {"option_text": "555, 456", "is_correct": false},
+        {"option_text": "888, 890", "is_correct": true}
+      ],
+      "question_text": "10, 30, 32, 96, 98, 294, 296, ?, ? \nWhat two numbers should replace the question marks?"
+    },
+    {
+      "id": 10,
+      "options": [
+        {"option_text": "A", "is_correct": false},
+        {"option_text": "B", "is_correct": true},
+        {"option_text": "C", "is_correct": false},
+        {"option_text": "D", "is_correct": false}
+      ],
+      "question_text": "assets/chapters/Screenshot 2023-11-27 at 18.01.44.png"
     }
   ];
 }
