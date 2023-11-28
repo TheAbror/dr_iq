@@ -627,12 +627,13 @@ class GlobalConstants {
     {
       "id": 1,
       "options": [
-        {"option_text": "Square", "is_correct": false},
-        {"option_text": "Circle", "is_correct": false},
-        {"option_text": "Rectangle", "is_correct": true},
-        {"option_text": "Triangle", "is_correct": false}
+        {"option_text": "All Oranges are Fruits", "is_correct": false},
+        {"option_text": "All Fruits are Oranges", "is_correct": false},
+        {"option_text": "Some Oranges are Fruits", "is_correct": true},
+        {"option_text": "No conclusion can be drawn", "is_correct": false}
       ],
-      "question_text": "Which shape does not belong to the group?"
+      "question_text":
+          "If all Fruits are Apples, and some Apples are Oranges, which of the following statements must be true?"
     },
     {
       "id": 2,
@@ -659,7 +660,7 @@ class GlobalConstants {
       "options": [
         {"option_text": "Summer", "is_correct": false},
         {"option_text": "Winter", "is_correct": false},
-        {"option_text": "Square", "is_correct": true},
+        {"option_text": "Noon", "is_correct": true},
         {"option_text": "Spring", "is_correct": false},
       ],
       "question_text": "Which word does not belong to the group? "
@@ -679,7 +680,7 @@ class GlobalConstants {
       "options": [
         {"option_text": "Earth", "is_correct": false},
         {"option_text": "Mars", "is_correct": false},
-        {"option_text": "Oval", "is_correct": true},
+        {"option_text": "Noon", "is_correct": true},
         {"option_text": "Moon", "is_correct": false},
       ],
       "question_text": "Which word does not belong to the group?"
@@ -709,7 +710,7 @@ class GlobalConstants {
       "options": [
         {"option_text": "Orange", "is_correct": false},
         {"option_text": "Grape", "is_correct": false},
-        {"option_text": "Pineapple", "is_correct": true},
+        {"option_text": "Water", "is_correct": true},
         {"option_text": "Pear", "is_correct": false},
       ],
       "question_text": "Which word does not belong to the group?"
@@ -728,107 +729,106 @@ class GlobalConstants {
 
   static final List<Map<String, dynamic>> analyticalReasoning = [
     {
-      "id": 11,
+      "id": 1,
       "options": [
-        {"option_text": "Brother", "is_correct": false},
-        {"option_text": "Father", "is_correct": false},
-        {"option_text": "Uncle", "is_correct": false},
-        {"option_text": "The man in the portrait", "is_correct": true}
+        {"option_text": "3527", "is_correct": true},
+        {"option_text": "9678", "is_correct": false},
+        {"option_text": "5261", "is_correct": false},
+        {"option_text": "7768", "is_correct": false},
+      ],
+      "question_text": "Which number is the odd one out? \n 9678 4572 5261 5133 3527 6895 7768",
+    },
+    {
+      "id": 2,
+      "options": [
+        {"option_text": "A", "is_correct": false},
+        {"option_text": "B", "is_correct": false},
+        {"option_text": "C", "is_correct": false},
+        {"option_text": "D", "is_correct": true}
+      ],
+      "question_text": "assets/chapters/Screenshot 2023-11-27 at 15.41.01.png"
+    },
+    {
+      "id": 3,
+      "options": [
+        {"option_text": "A", "is_correct": false},
+        {"option_text": "B", "is_correct": true},
+        {"option_text": "C", "is_correct": false},
+        {"option_text": "D&E", "is_correct": false}
+      ],
+      "question_text": "assets/chapters/Screenshot 2023-11-27 at 16.09.07.png"
+    },
+    {
+      "id": 4,
+      "options": [
+        {"option_text": "40 minutes", "is_correct": false},
+        {"option_text": "35 minutes", "is_correct": false},
+        {"option_text": "44 minutes", "is_correct": true},
+        {"option_text": "22 minutes", "is_correct": false}
       ],
       "question_text":
-          "A man is looking at a portrait. His friend asks, 'Who is it that you are looking at?' The man replies, 'Brothers and sisters, I have none. But the father of that man in the portrait is my father's son.' Who is in the portrait?"
+          "How many minutes is it before 12 noon, if 48 minutes ago it was twice as many minutes past 9 am?"
     },
     {
-      "id": 12,
+      "id": 5,
       "options": [
-        {"option_text": "The hotel clerk kept it", "is_correct": false},
-        {"option_text": "The bellboy kept it", "is_correct": false},
-        {"option_text": "The guests got it back", "is_correct": true},
-        {"option_text": "The missing dollar never existed", "is_correct": false}
+        {"option_text": "Heptagon", "is_correct": false},
+        {"option_text": "Triangle", "is_correct": false},
+        {"option_text": "Cube", "is_correct": true},
+        {"option_text": "Pentagon", "is_correct": false}
       ],
-      "question_text":
-          "Three people check into a hotel room that costs \$30. Later, the hotel clerk realizes there was a mistake, and the room only cost \$25. The hotel clerk gives \$5 to the bellboy to return to the guests. The bellboy decides to keep \$2 and gives \$1 back to each guest. Now, each guest has paid \$9, and the bellboy has kept \$2. What happened to the missing dollar?"
+      "question_text": "Which is the odd one out? \n heptagon, triangle, cube, pentagon"
     },
     {
-      "id": 13,
+      "id": 6,
       "options": [
-        {"option_text": "It's buried in the U.S.", "is_correct": false},
-        {"option_text": "It's buried in Canada.", "is_correct": false},
-        {"option_text": "They don't bury survivors.", "is_correct": true},
-        {"option_text": "It depends on the survivors' wishes.", "is_correct": false}
+        {"option_text": "A", "is_correct": false},
+        {"option_text": "B", "is_correct": true},
+        {"option_text": "C", "is_correct": false},
+        {"option_text": "D", "is_correct": false}
       ],
-      "question_text": "If a plane crashes on the border between the U.S. and Canada, where do they bury the survivors?"
+      "question_text": "assets/chapters/Screenshot 2023-11-27 at 16.13.03.png"
     },
     {
-      "id": 14,
+      "id": 7,
       "options": [
-        {"option_text": "Once", "is_correct": true},
-        {"option_text": "Twice", "is_correct": false},
-        {"option_text": "Thrice", "is_correct": false},
-        {"option_text": "Infinite times", "is_correct": false}
+        {"option_text": "22", "is_correct": false},
+        {"option_text": "5", "is_correct": false},
+        {"option_text": "7", "is_correct": false},
+        {"option_text": "4", "is_correct": true}
       ],
-      "question_text": "How many times can you subtract 10 from 100?"
+      "question_text": "assets/chapters/Screenshot 2023-11-27 at 16.14.10.png"
     },
     {
-      "id": 15,
+      "id": 8,
       "options": [
-        {"option_text": "The oldest", "is_correct": false},
-        {"option_text": "The tallest", "is_correct": true},
-        {"option_text": "The heaviest", "is_correct": false},
-        {"option_text": "The smartest", "is_correct": false}
-      ],
-      "question_text": "Which word does not belong to the group? Elephant, Lion, Snake, Giraffe, Mango?"
-    },
-    {
-      "id": 16,
-      "options": [
-        {"option_text": "All cars are blue", "is_correct": false},
-        {"option_text": "Some cars are blue", "is_correct": true},
-        {"option_text": "No cars are blue", "is_correct": false},
-        {"option_text": "Cars are not blue", "is_correct": false}
-      ],
-      "question_text": "If all cars are vehicles, and some vehicles are blue, can we conclude that some cars are blue?"
-    },
-    {
-      "id": 17,
-      "options": [
-        {"option_text": "30 seconds", "is_correct": false},
-        {"option_text": "One minute", "is_correct": false},
-        {"option_text": "Two minutes", "is_correct": false},
-        {"option_text": "The egg won't hatch, it's a boiled egg", "is_correct": true}
-      ],
-      "question_text":
-          "A chicken and a half lay an egg and a half in a day and a half. How long does it take for the egg to hatch?"
-    },
-    {
-      "id": 18,
-      "options": [
-        {"option_text": "6", "is_correct": false},
-        {"option_text": "8", "is_correct": true},
         {"option_text": "10", "is_correct": false},
-        {"option_text": "12", "is_correct": false}
+        {"option_text": "11", "is_correct": true},
+        {"option_text": "12", "is_correct": false},
+        {"option_text": "13", "is_correct": false}
       ],
-      "question_text": "What comes next in the sequence: 2, 5, 10, 17, ...?"
+      "question_text": "assets/chapters/Screenshot 2023-11-27 at 16.15.10.png"
     },
     {
-      "id": 19,
+      "id": 9,
       "options": [
-        {"option_text": "Squash", "is_correct": true},
-        {"option_text": "Tennis", "is_correct": false},
-        {"option_text": "Badminton", "is_correct": false},
-        {"option_text": "Table Tennis", "is_correct": false},
+        {"option_text": "225, 537", "is_correct": false},
+        {"option_text": "355, 768", "is_correct": false},
+        {"option_text": "555, 456", "is_correct": false},
+        {"option_text": "888, 890", "is_correct": true}
       ],
-      "question_text": "Which sport does not belong to the group? Tennis, Badminton, Table Tennis, Squash, Basketball?"
+      "question_text": "10, 30, 32, 96, 98, 294, 296, ?, ? \nWhat two numbers should replace the question marks?"
     },
     {
-      "id": 20,
+      "id": 10,
       "options": [
-        {"option_text": "February", "is_correct": false},
-        {"option_text": "April", "is_correct": false},
-        {"option_text": "August", "is_correct": true},
-        {"option_text": "June", "is_correct": false},
+        {"option_text": "20 socks", "is_correct": false},
+        {"option_text": "30 socks", "is_correct": false},
+        {"option_text": "40 socks", "is_correct": true},
+        {"option_text": "44 socks", "is_correct": false}
       ],
-      "question_text": "Which month does not have 28 days?"
+      "question_text":
+          "A man has 53 socks in his drawer: 21 identical blue, 15 identical black and 17 identical red. The lights are fused and he is completely in the dark. How many socks must he take out to make 100 per cent certain he has a pair of black socks?"
     }
   ];
 
@@ -867,8 +867,8 @@ class GlobalConstants {
     {
       "id": 44,
       "options": [
-        {"option_text": "The letter 'A'", "is_correct": true},
-        {"option_text": "Tomorrow", "is_correct": false},
+        {"option_text": "The letter 'A'", "is_correct": false},
+        {"option_text": "Tomorrow", "is_correct": true},
         {"option_text": "Yesterday", "is_correct": false},
         {"option_text": "Today", "is_correct": false},
       ],
@@ -888,12 +888,12 @@ class GlobalConstants {
     {
       "id": 46,
       "options": [
-        {"option_text": "The letter 'O'", "is_correct": true},
+        {"option_text": "The letter 'E'", "is_correct": true},
         {"option_text": "The letter 'H'", "is_correct": false},
-        {"option_text": "The letter 'A'", "is_correct": false},
+        {"option_text": "The letter 'O'", "is_correct": false},
         {"option_text": "The letter 'B'", "is_correct": false},
       ],
-      "question_text": "What comes once in a year, twice in a month, but never in a week? "
+      "question_text": "What comes once in a year twice in a week and never in a month?"
     },
     {
       "id": 47,
@@ -908,10 +908,10 @@ class GlobalConstants {
     {
       "id": 48,
       "options": [
-        {"option_text": "10 days", "is_correct": true},
+        {"option_text": "10 days", "is_correct": false},
         {"option_text": "15 days", "is_correct": false},
         {"option_text": "25 days", "is_correct": false},
-        {"option_text": "29 days", "is_correct": false},
+        {"option_text": "29 days", "is_correct": true},
       ],
       "question_text":
           "There is a pond with lily pads. Every day, the number of lily pads doubles. If it takes 30 days for the lily pads to completely cover the pond, how many days will it take for the lily pads to cover half of the pond?"
@@ -963,12 +963,13 @@ class GlobalConstants {
     {
       "id": 63,
       "options": [
-        {"option_text": "A coin", "is_correct": true},
-        {"option_text": "A comet", "is_correct": false},
-        {"option_text": "A planet", "is_correct": false},
-        {"option_text": "A galaxy", "is_correct": false},
+        {"option_text": "Letter E", "is_correct": true},
+        {"option_text": "Letter V", "is_correct": false},
+        {"option_text": "Letter A", "is_correct": false},
+        {"option_text": "Letter W", "is_correct": false},
       ],
-      "question_text": "I wander through space, always looking for a place. What am I?"
+      "question_text":
+          "I am the beginning of everything, the end of everywhere. I am the beginning of eternity, the end of time and space. What am I?"
     },
     {
       "id": 64,
@@ -976,20 +977,19 @@ class GlobalConstants {
         {"option_text": "A rainbow", "is_correct": false},
         {"option_text": "A cloud", "is_correct": false},
         {"option_text": "A star", "is_correct": false},
-        {"option_text": "A coin", "is_correct": true}
+        {"option_text": "Odometer", "is_correct": true}
       ],
-      "question_text": "I'm born in the sky but fall to the ground. What am I?"
+      "question_text": "Travel a mile and I will change, travel a million and I will end as I started. What am I?"
     },
     {
       "id": 65,
       "options": [
-        {"option_text": "Alive", "is_correct": false},
-        {"option_text": "Dead", "is_correct": false},
-        {"option_text": "Square", "is_correct": true},
+        {"option_text": "Gold", "is_correct": false},
+        {"option_text": "Aluminium", "is_correct": false},
+        {"option_text": "Iceberg", "is_correct": true},
         {"option_text": "Unknown", "is_correct": false}
       ],
-      "question_text":
-          "I speak without a mouth and hear without ears. I have no body, but I come alive with the wind. What am I?"
+      "question_text": "Lighter than what I'm made of, more of me is hidden than is seen. \nWhat am I?"
     },
     {
       "id": 66,
@@ -1004,42 +1004,42 @@ class GlobalConstants {
     {
       "id": 67,
       "options": [
-        {"option_text": "A coin", "is_correct": true},
+        {"option_text": "A hurricane", "is_correct": true},
         {"option_text": "A secret", "is_correct": false},
         {"option_text": "A story", "is_correct": false},
         {"option_text": "A puzzle", "is_correct": false},
       ],
-      "question_text": "I can be kept, unfolded, solved, and tossed. What am I?"
+      "question_text": "I have an eye but cannot see. I’m faster than any man alive and have no limbs. \nWhat am I?"
     },
     {
       "id": 68,
       "options": [
         {"option_text": "A needle", "is_correct": false},
         {"option_text": "A compass", "is_correct": false},
-        {"option_text": "A coin", "is_correct": true},
+        {"option_text": "A tea bag", "is_correct": true},
         {"option_text": "A ruler", "is_correct": false},
       ],
-      "question_text": "I have no physical form, yet I can be spent. What am I?"
+      "question_text": "I go in dry and come out wet, The longer I’m in, the stronger I get. \nWhat am I?"
     },
     {
       "id": 69,
       "options": [
         {"option_text": "A towel", "is_correct": false},
         {"option_text": "A sponge", "is_correct": false},
-        {"option_text": "A bucket", "is_correct": true},
+        {"option_text": "A wheelbarrow", "is_correct": true},
         {"option_text": "A cloud", "is_correct": false}
       ],
-      "question_text": "I can be filled with holes and still hold water. What am I?"
+      "question_text": "I have two legs, but they only touch the ground while I'm at rest. \nWhat am I?"
     },
     {
       "id": 70,
       "options": [
-        {"option_text": "A joke", "is_correct": true},
+        {"option_text": "A joke", "is_correct": false},
         {"option_text": "A riddle", "is_correct": false},
         {"option_text": "A mystery", "is_correct": false},
-        {"option_text": "A coin", "is_correct": false}
+        {"option_text": "A coin", "is_correct": true}
       ],
-      "question_text": "I can be cracked, made, told, and played. What am I?"
+      "question_text": "I have a head, tail, but no arms and legs. What am I?"
     }
   ];
 
@@ -1148,111 +1148,6 @@ class GlobalConstants {
         {"option_text": "South Africa", "is_correct": false}
       ],
       "question_text": "Which country is closest to the South Pole?"
-    }
-  ];
-
-  static final List<Map<String, dynamic>> chapter1 = [
-    {
-      "id": 1,
-      "options": [
-        {"option_text": "3527", "is_correct": true},
-        {"option_text": "9678", "is_correct": false},
-        {"option_text": "5261", "is_correct": false},
-        {"option_text": "7768", "is_correct": false},
-      ],
-      "question_text": "Which number is the odd one out? \n 9678 4572 5261 5133 3527 6895 7768",
-    },
-    {
-      "id": 2,
-      "options": [
-        {"option_text": "A", "is_correct": false},
-        {"option_text": "B", "is_correct": false},
-        {"option_text": "C", "is_correct": false},
-        {"option_text": "D", "is_correct": true}
-      ],
-      "question_text": "assets/chapters/Screenshot 2023-11-27 at 15.41.01.png"
-    },
-    {
-      "id": 3,
-      "options": [
-        {"option_text": "A", "is_correct": false},
-        {"option_text": "B", "is_correct": true},
-        {"option_text": "C", "is_correct": false},
-        {"option_text": "D&E", "is_correct": false}
-      ],
-      "question_text": "assets/chapters/Screenshot 2023-11-27 at 16.09.07.png"
-    },
-    {
-      "id": 4,
-      "options": [
-        {"option_text": "40 minutes", "is_correct": false},
-        {"option_text": "35 minutes", "is_correct": false},
-        {"option_text": "44 minutes", "is_correct": true},
-        {"option_text": "22 minutes", "is_correct": false}
-      ],
-      "question_text":
-          "How many minutes is it before 12 noon, if 48 minutes ago it was twice as many minutes past 9 am?"
-    },
-    {
-      "id": 5,
-      "options": [
-        {"option_text": "Heptagon", "is_correct": false},
-        {"option_text": "Triangle", "is_correct": false},
-        {"option_text": "Cube", "is_correct": true},
-        {"option_text": "Pentagon", "is_correct": false}
-      ],
-      "question_text": "Which is the odd one out? \n heptagon, triangle, cube, pentagon"
-    },
-    {
-      "id": 6,
-      "options": [
-        {"option_text": "A", "is_correct": false},
-        {"option_text": "B", "is_correct": true},
-        {"option_text": "C", "is_correct": false},
-        {"option_text": "D", "is_correct": false}
-      ],
-      "question_text": "assets/chapters/Screenshot 2023-11-27 at 16.13.03.png"
-    },
-    {
-      "id": 7,
-      "options": [
-        {"option_text": "22", "is_correct": false},
-        {"option_text": "5", "is_correct": false},
-        {"option_text": "7", "is_correct": false},
-        {"option_text": "4", "is_correct": true}
-      ],
-      "question_text": "assets/chapters/Screenshot 2023-11-27 at 16.14.10.png"
-    },
-    {
-      "id": 8,
-      "options": [
-        {"option_text": "10", "is_correct": false},
-        {"option_text": "11", "is_correct": true},
-        {"option_text": "12", "is_correct": false},
-        {"option_text": "13", "is_correct": false}
-      ],
-      "question_text": "assets/chapters/Screenshot 2023-11-27 at 16.15.10.png"
-    },
-    {
-      "id": 9,
-      "options": [
-        {"option_text": "225, 537", "is_correct": false},
-        {"option_text": "355, 768", "is_correct": false},
-        {"option_text": "555, 456", "is_correct": false},
-        {"option_text": "888, 890", "is_correct": true}
-      ],
-      "question_text": "10, 30, 32, 96, 98, 294, 296, ?, ? \nWhat two numbers should replace the question marks?"
-    },
-    {
-      "id": 10,
-      "options": [
-        {"option_text": "20 socks", "is_correct": false},
-        {"option_text": "30 socks", "is_correct": false},
-        {"option_text": "40 socks", "is_correct": true},
-        {"option_text": "44 socks", "is_correct": false}
-      ],
-      "question_text":
-          "A man has 53 socks in his drawer: 21 identical blue, 15 identical black and 17 identical red. The lights are fused and he is completely in the dark. How many socks must he take out to make 100 per cent certain he has a pair of black socks?"
     }
   ];
 

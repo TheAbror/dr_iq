@@ -31,7 +31,7 @@ class _Body extends StatelessWidget {
         crossAxisSpacing: 10,
         mainAxisSpacing: 0,
       ),
-      itemCount: 13,
+      itemCount: 12,
       shrinkWrap: true,
       padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 16.w),
       physics: AlwaysScrollableScrollPhysics(),
@@ -97,12 +97,6 @@ class _Body extends StatelessWidget {
             questionsList = GlobalConstants.testQuestions;
             break;
           case 11:
-            image = 'assets/images/improve_iq_assets/3d-fluency-faq.png';
-            cardTitle = 'More Random Questions 2';
-
-            questionsList = GlobalConstants.chapter1;
-            break;
-          case 12:
             image = 'assets/images/improve_iq_assets/3d-fluency-faq.png';
             cardTitle = 'Find missing section';
             questionsList = GlobalConstants.missingSection;
