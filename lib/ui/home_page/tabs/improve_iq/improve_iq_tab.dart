@@ -93,12 +93,13 @@ class _Body extends StatelessWidget {
             break;
           case 10:
             image = 'assets/images/improve_iq_assets/3d-fluency-faq.png';
-            cardTitle = 'Test Questions';
+            cardTitle = 'More Random Questions';
             questionsList = GlobalConstants.testQuestions;
             break;
           case 11:
             image = 'assets/images/improve_iq_assets/3d-fluency-faq.png';
-            cardTitle = 'Chapter 1';
+            cardTitle = 'More Random Questions 2';
+
             questionsList = GlobalConstants.chapter1;
             break;
           case 12:

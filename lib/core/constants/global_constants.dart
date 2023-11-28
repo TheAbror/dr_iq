@@ -23,35 +23,32 @@ class GlobalConstants {
     {
       "id": 73,
       "options": [
-        {"option_text": "Green", "is_correct": false},
-        {"option_text": "Red", "is_correct": true},
-        {"option_text": "Blue", "is_correct": false},
-        {"option_text": "Yellow", "is_correct": false},
+        {"option_text": "462", "is_correct": false},
+        {"option_text": "683", "is_correct": true},
+        {"option_text": "385", "is_correct": false},
+        {"option_text": "198", "is_correct": false},
       ],
-      "question_text":
-          "If all green apples are red and some apples in the basket are green, what can be inferred about those apples?"
+      "question_text": "Which is the odd number out? 462 683 385 198 253 781 594"
     },
     {
       "id": 74,
       "options": [
-        {"option_text": "Cats", "is_correct": false},
-        {"option_text": "Dogs", "is_correct": false},
-        {"option_text": "Penguins", "is_correct": true},
-        {"option_text": "Fish", "is_correct": false},
+        {"option_text": "26, 28", "is_correct": false},
+        {"option_text": "28, 30", "is_correct": false},
+        {"option_text": "30, 26", "is_correct": true},
+        {"option_text": "32, 28", "is_correct": false},
       ],
-      "question_text":
-          "In a zoo, there are cats, dogs, and fish. Some animals swim, and penguins are birds that swim. What can be concluded?"
+      "question_text": "1, 50, 6, 45, 11, 40, 16, 35, 21, ?, ? \nWhich numbers should replace the question marks?"
     },
     {
       "id": 75,
       "options": [
-        {"option_text": "Circle", "is_correct": true},
-        {"option_text": "Blue", "is_correct": false},
-        {"option_text": "Square", "is_correct": false},
-        {"option_text": "Triangle", "is_correct": false},
+        {"option_text": "A", "is_correct": false},
+        {"option_text": "B", "is_correct": true},
+        {"option_text": "C", "is_correct": false},
+        {"option_text": "D", "is_correct": false},
       ],
-      "question_text":
-          "All blue shapes are circles. Some shapes in the set are blue. What can be inferred about those shapes?"
+      "question_text": "assets/chapters/Screenshot 2023-11-28 at 10.23.14.png"
     },
     {
       "id": 76,
@@ -66,45 +63,42 @@ class GlobalConstants {
     {
       "id": 77,
       "options": [
-        {"option_text": "Rectangle", "is_correct": false},
-        {"option_text": "Circle", "is_correct": true},
-        {"option_text": "Square", "is_correct": false},
-        {"option_text": "Triangle", "is_correct": false},
+        {"option_text": "2", "is_correct": false},
+        {"option_text": "4", "is_correct": true},
+        {"option_text": "6", "is_correct": false},
+        {"option_text": "8", "is_correct": false},
       ],
-      "question_text":
-          "All rectangles are squares. No squares are circles. What can be inferred about rectangles and circles?"
+      "question_text": "assets/chapters/Screenshot 2023-11-28 at 10.25.59.png"
     },
     {
       "id": 78,
       "options": [
-        {"option_text": "Blue", "is_correct": false},
-        {"option_text": "Square", "is_correct": false},
-        {"option_text": "Triangle", "is_correct": false},
-        {"option_text": "Circle", "is_correct": true},
+        {"option_text": "A", "is_correct": false},
+        {"option_text": "B", "is_correct": false},
+        {"option_text": "C", "is_correct": true},
+        {"option_text": "D", "is_correct": false},
       ],
-      "question_text":
-          "All blue shapes are circles. Some shapes in the set are blue. What can be inferred about those shapes?"
+      "question_text": "assets/chapters/Screenshot 2023-11-28 at 10.27.00.png"
     },
     {
       "id": 79,
       "options": [
-        {"option_text": "Penguins", "is_correct": true},
-        {"option_text": "Birds", "is_correct": false},
-        {"option_text": "Fish", "is_correct": false},
-        {"option_text": "Mammals", "is_correct": false},
+        {"option_text": "HIV", "is_correct": false},
+        {"option_text": "VHI", "is_correct": false},
+        {"option_text": "IVH", "is_correct": true},
+        {"option_text": "VVI", "is_correct": false},
       ],
-      "question_text": "All penguins are birds. Some birds can fly. What can be concluded about penguins and flying?"
+      "question_text": "MTD is to PXB as FRJ is to ...?"
     },
     {
       "id": 80,
       "options": [
-        {"option_text": "Red", "is_correct": false},
-        {"option_text": "Blue", "is_correct": false},
-        {"option_text": "Yellow", "is_correct": true},
-        {"option_text": "Green", "is_correct": false},
+        {"option_text": "8/16", "is_correct": false},
+        {"option_text": "1", "is_correct": false},
+        {"option_text": "7/20", "is_correct": true},
+        {"option_text": "5/11", "is_correct": false},
       ],
-      "question_text":
-          "If no yellow apples are red, and some apples in the basket are red, what can be inferred about those apples?"
+      "question_text": "Simplify: 14/55 : 56/77"
     }
   ];
 
@@ -178,7 +172,7 @@ class GlobalConstants {
         {"option_text": "Yellow", "is_correct": true},
         {"option_text": "Blue", "is_correct": false}
       ],
-      "question_text": "Which color does not belong to the group? Black, Red, Yellow, Blue, Green?"
+      "question_text": "Which color does not belong to the group? Black, Red, Yellow, Blue?"
     },
     {
       "id": 8,
@@ -258,12 +252,12 @@ class GlobalConstants {
     {
       "id": 5,
       "options": [
-        {"option_text": "The oldest", "is_correct": false},
-        {"option_text": "The tallest", "is_correct": true},
-        {"option_text": "The heaviest", "is_correct": false},
-        {"option_text": "The smartest", "is_correct": false}
+        {"option_text": "50", "is_correct": false},
+        {"option_text": "55", "is_correct": true},
+        {"option_text": "60", "is_correct": false},
+        {"option_text": "62", "is_correct": false}
       ],
-      "question_text": "Which word does not belong to the group? Elephant, Lion, Snake, Giraffe, Mango?"
+      "question_text": "assets/chapters/Screenshot 2023-11-28 at 10.41.34.png"
     },
     {
       "id": 6,
@@ -289,10 +283,10 @@ class GlobalConstants {
     {
       "id": 8,
       "options": [
-        {"option_text": "6", "is_correct": false},
-        {"option_text": "8", "is_correct": true},
-        {"option_text": "10", "is_correct": false},
-        {"option_text": "12", "is_correct": false}
+        {"option_text": "20", "is_correct": false},
+        {"option_text": "26", "is_correct": true},
+        {"option_text": "22", "is_correct": false},
+        {"option_text": "28", "is_correct": false}
       ],
       "question_text": "What comes next in the sequence: 2, 5, 10, 17, ...?"
     },
@@ -309,13 +303,14 @@ class GlobalConstants {
     {
       "id": 10,
       "options": [
-        {"option_text": "February", "is_correct": false},
-        {"option_text": "April", "is_correct": false},
-        {"option_text": "June", "is_correct": false},
-        {"option_text": "August", "is_correct": true}
+        {"option_text": "An egg", "is_correct": false},
+        {"option_text": "A clock", "is_correct": false},
+        {"option_text": "A mirror", "is_correct": false},
+        {"option_text": "Echo", "is_correct": true},
       ],
-      "question_text": "Which month does not have 28 days?"
-    }
+      "question_text":
+          "I speak without a mouth and hear without ears. I have no body, but I come alive with the wind. What am I?"
+    },
   ];
 
   static final List<Map<String, dynamic>> math = [
@@ -428,21 +423,20 @@ class GlobalConstants {
       "options": [
         {"option_text": "Pluto", "is_correct": false},
         {"option_text": "Saturn", "is_correct": false},
-        {"option_text": "Square", "is_correct": true},
+        {"option_text": "Gazorpazor", "is_correct": true},
         {"option_text": "Mars", "is_correct": false}
       ],
-      "question_text": "Which is not a planet in our solar system? Pluto, Saturn, Mars, Square, Jupiter?"
+      "question_text": "Which is not a planet in our solar system? "
     },
     {
       "id": 22,
       "options": [
-        {"option_text": "Rhombus", "is_correct": false},
-        {"option_text": "Hydrogen", "is_correct": false},
+        {"option_text": "Oxygen", "is_correct": false},
+        {"option_text": "Hydrogen^2", "is_correct": false},
         {"option_text": "Helium", "is_correct": false},
-        {"option_text": "Circle", "is_correct": true}
+        {"option_text": "Nitrogen", "is_correct": true}
       ],
-      "question_text":
-          "Which is not a primary element in the composition of water? Rhombus, Hydrogen, Helium, Circle, Nitrogen?"
+      "question_text": "Which is not a primary element in the composition of water?"
     },
     {
       "id": 23,
@@ -452,30 +446,27 @@ class GlobalConstants {
         {"option_text": "Circulation", "is_correct": false},
         {"option_text": "Trapezoid", "is_correct": false}
       ],
-      "question_text":
-          "Which process is responsible for the conversion of sunlight into energy in plants? Photosynthesis, Respiration, Circulation, Trapezoid, Transpiration?"
+      "question_text": "Which process is responsible for the conversion of sunlight into energy in plants? "
     },
     {
       "id": 24,
       "options": [
-        {"option_text": "Newton", "is_correct": false},
+        {"option_text": "Newton", "is_correct": true},
         {"option_text": "Einstein", "is_correct": false},
         {"option_text": "Galileo", "is_correct": false},
-        {"option_text": "Rectangle", "is_correct": true}
+        {"option_text": "Tesla", "is_correct": true}
       ],
-      "question_text":
-          "Who is known for his laws of motion and universal gravitation? Newton, Einstein, Galileo, Rectangle, Tesla?"
+      "question_text": "Who is known for his laws of motion and universal gravitation?"
     },
     {
       "id": 25,
       "options": [
-        {"option_text": "Solar System", "is_correct": false},
-        {"option_text": "Human Body", "is_correct": false},
+        {"option_text": "Trigonometry", "is_correct": false},
+        {"option_text": "Chemistry", "is_correct": false},
         {"option_text": "Hexagon", "is_correct": true},
         {"option_text": "Computer Science", "is_correct": false}
       ],
-      "question_text":
-          "Which subject does not belong to the group? Solar System, Human Body, Computer Science, Hexagon, Chemistry?"
+      "question_text": "Which subject does not belong to the group?"
     },
     {
       "id": 26,
@@ -485,7 +476,7 @@ class GlobalConstants {
         {"option_text": "Pentagon", "is_correct": true},
         {"option_text": "Kelvin", "is_correct": false}
       ],
-      "question_text": "Which is not a unit of temperature measurement? Celsius, Fahrenheit, Kelvin, Pentagon, Rankine?"
+      "question_text": "Which is not a unit of temperature measurement?"
     },
     {
       "id": 27,
@@ -493,9 +484,9 @@ class GlobalConstants {
         {"option_text": "Mars", "is_correct": false},
         {"option_text": "Saturn", "is_correct": false},
         {"option_text": "Jupiter", "is_correct": false},
-        {"option_text": "Triangle", "is_correct": true}
+        {"option_text": "Earth", "is_correct": true}
       ],
-      "question_text": "Which is not a gas giant in our solar system? Mars, Saturn, Jupiter, Triangle, Neptune?"
+      "question_text": "Which is not a gas giant in our solar system?"
     },
     {
       "id": 28,
@@ -503,30 +494,29 @@ class GlobalConstants {
         {"option_text": "Evaporation", "is_correct": false},
         {"option_text": "Condensation", "is_correct": false},
         {"option_text": "Sublimation", "is_correct": false},
-        {"option_text": "Square", "is_correct": true}
+        {"option_text": "Precipitation", "is_correct": true}
       ],
-      "question_text":
-          "Which is not a phase of the water cycle? Evaporation, Condensation, Sublimation, Square, Precipitation?"
+      "question_text": "Which is not a phase of the water cycle?"
     },
     {
       "id": 29,
       "options": [
-        {"option_text": "Rectangle", "is_correct": true},
+        {"option_text": "Aluminium", "is_correct": true},
         {"option_text": "Nucleus", "is_correct": false},
         {"option_text": "Electron", "is_correct": false},
         {"option_text": "Proton", "is_correct": false}
       ],
-      "question_text": "Which is not a subatomic particle? Nucleus, Electron, Proton, Rectangle, Neutron?"
+      "question_text": "Which is not a subatomic particle? "
     },
     {
       "id": 30,
       "options": [
         {"option_text": "Red Blood Cells", "is_correct": false},
-        {"option_text": "White Blood Cells", "is_correct": false},
+        {"option_text": "Black Blood Cells", "is_correct": true},
         {"option_text": "Platelets", "is_correct": false},
         {"option_text": "Plasma", "is_correct": false}
       ],
-      "question_text": "Which component is not found in blood? Red Blood Cells, White Blood Cells, Platelets, Plasma?"
+      "question_text": "Which component is not found in blood?"
     }
   ];
 
@@ -539,17 +529,17 @@ class GlobalConstants {
         {"option_text": "India", "is_correct": false},
         {"option_text": "Canada", "is_correct": false},
       ],
-      "question_text": "Which is not a country? Brazil, India, Canada, Australia?"
+      "question_text": "Which is not a country?"
     },
     {
       "id": 32,
       "options": [
         {"option_text": "Paris", "is_correct": false},
-        {"option_text": "Madrid", "is_correct": true},
+        {"option_text": "New York", "is_correct": true},
         {"option_text": "Rome", "is_correct": false},
         {"option_text": "Berlin", "is_correct": false},
       ],
-      "question_text": "Which is not a capital city? Paris, Rome, Berlin, Madrid?"
+      "question_text": "Which is not a capital city?"
     },
     {
       "id": 33,
@@ -559,7 +549,7 @@ class GlobalConstants {
         {"option_text": "Australia", "is_correct": true},
         {"option_text": "Russia", "is_correct": false},
       ],
-      "question_text": "Which is not a country in Asia? Japan, China, Russia, Australia?"
+      "question_text": "Which is not a country in Asia? "
     },
     {
       "id": 34,
@@ -567,9 +557,9 @@ class GlobalConstants {
         {"option_text": "Africa", "is_correct": false},
         {"option_text": "Asia", "is_correct": false},
         {"option_text": "Europe", "is_correct": false},
-        {"option_text": "Antarctica", "is_correct": true},
+        {"option_text": "USA", "is_correct": true},
       ],
-      "question_text": "Which is not a continent? Africa, Asia, Europe, Antarctica?"
+      "question_text": "Which is not a continent?"
     },
     {
       "id": 35,
@@ -579,17 +569,17 @@ class GlobalConstants {
         {"option_text": "Canada", "is_correct": false},
         {"option_text": "United States", "is_correct": false},
       ],
-      "question_text": "Which is not in North America? Mexico, Canada, United States, Brazil?"
+      "question_text": "Which is not in North America? "
     },
     {
       "id": 36,
       "options": [
-        {"option_text": "Australia", "is_correct": false},
-        {"option_text": "Brazil", "is_correct": false},
-        {"option_text": "South Africa", "is_correct": true},
-        {"option_text": "Canada", "is_correct": false},
+        {"option_text": "3", "is_correct": false},
+        {"option_text": "5", "is_correct": false},
+        {"option_text": "23 Africa", "is_correct": true},
+        {"option_text": "4", "is_correct": false},
       ],
-      "question_text": "Which is not in the Southern Hemisphere? Australia, Brazil, Canada, South Africa?"
+      "question_text": "How many countries in north america?"
     },
     {
       "id": 37,
@@ -599,7 +589,7 @@ class GlobalConstants {
         {"option_text": "Beijing", "is_correct": false},
         {"option_text": "Moscow", "is_correct": true},
       ],
-      "question_text": "Which is not an Asian capital city? Tokyo, Seoul, Beijing, Moscow?"
+      "question_text": "Which is not an Asian capital city? "
     },
     {
       "id": 38,
@@ -609,17 +599,17 @@ class GlobalConstants {
         {"option_text": "France", "is_correct": false},
         {"option_text": "Poland", "is_correct": true},
       ],
-      "question_text": "Which is not in Western Europe? Germany, Italy, France, Poland?"
+      "question_text": "Which is not in Western Europe? "
     },
     {
       "id": 39,
       "options": [
         {"option_text": "Argentina", "is_correct": false},
-        {"option_text": "Australia", "is_correct": true},
+        {"option_text": "Greenland", "is_correct": true},
         {"option_text": "Chile", "is_correct": false},
         {"option_text": "Peru", "is_correct": false},
       ],
-      "question_text": "Which is not in South America? Argentina, Chile, Peru, Australia?"
+      "question_text": "Which is not in South America?"
     },
     {
       "id": 40,
@@ -629,7 +619,7 @@ class GlobalConstants {
         {"option_text": "Kenya", "is_correct": false},
         {"option_text": "Nigeria", "is_correct": false},
       ],
-      "question_text": "Which is not in Africa? Egypt, Kenya, Nigeria, Bangladesh?"
+      "question_text": "Which is not in Africa? "
     }
   ];
 
