@@ -45,11 +45,6 @@ class PreferencesServices {
     return preferences.setString(ShPrefKeys.email, email);
   }
 
-  // static Future<bool> clearAll() async {
-  //   final preferences = await SharedPreferences.getInstance();
-  //   return await preferences.clear();
-  // }
-
   Future<void> saveStringList(List<String> stringList) async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
     await prefs.setStringList(ShPrefKeys.resultList, stringList);
@@ -71,33 +66,6 @@ class PreferencesServices {
     SharedPreferences prefs = await SharedPreferences.getInstance();
     await prefs.setStringList(ShPrefKeys.dateList, stringList);
   }
-
-  // Future<void> saveTodosList(List<String> todo) async {
-  //   SharedPreferences prefs = await SharedPreferences.getInstance();
-  //   await prefs.setStringList(ShPrefKeys.todos, todo);
-  // }
-
-  // Future<List<String>> getTodosList(String todo) async {
-  //   SharedPreferences prefs = await SharedPreferences.getInstance();
-  //   List<String> todoList = prefs.getStringList(ShPrefKeys.todos) ?? [];
-  //   return todoList;
-  // }
-
-  // Future<void> saveToDoList(List<ToDo> todos) async {
-  //   SharedPreferences prefs = await SharedPreferences.getInstance();
-  //   final String encoded = json.encode(todos);
-  //   await prefs.setString(ShPrefKeys.todoList, encoded);
-  // }
-
-  // Future<List<ToDo>> getToDoList() async {
-  //   SharedPreferences prefs = await SharedPreferences.getInstance();
-  //   final String? storedTodos = prefs.getString(ShPrefKeys.todoList);
-  //   if (storedTodos == null) {
-  //     return [];
-  //   }
-  //   final List<dynamic> decoded = json.decode(storedTodos);
-  //   return decoded.map((item) => ToDo.fromJson(item)).toList();
-  // }
 
   Future<List<ToDo>> getToDoList() async {
     SharedPreferences prefs = await SharedPreferences.getInstance();

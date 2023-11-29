@@ -63,23 +63,27 @@ Future<dynamic> finishDialog(BuildContext context, QuestionsState state) {
 
                 List<String>? existingResultsList = await preferencesServices.getResultList(ShPrefKeys.resultList);
                 List<String>? existingDateList = await preferencesServices.getDatesList(ShPrefKeys.dateList);
+
                 if (existingResultsList != null) {
                   existingResultsList.add(resultOfTest);
                 } else {
                   existingResultsList = [resultOfTest];
                 }
+                await preferencesServices.saveStringList(existingResultsList);
                 //
                 if (existingDateList != null) {
                   existingDateList.add(formattedDate);
                 } else {
                   existingDateList = [formattedDate];
                 }
-                await preferencesServices.saveStringList(existingResultsList);
                 await preferencesServices.saveDatesList(existingDateList);
 
-                Navigator.pop(dialogContext);
-                Navigator.pop(dialogContext);
-                Navigator.pop(dialogContext);
+                // Close the dialog
+                Navigator.of(dialogContext).pop();
+
+                // Go back to the previous screen
+                Navigator.of(context).pop();
+                Navigator.of(context).pop();
               },
               style: ButtonStyle(
                 backgroundColor: MaterialStateProperty.all(
