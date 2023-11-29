@@ -213,6 +213,24 @@ class _Body extends StatelessWidget {
                   '''It's important to note that while IQ measures certain aspects of intelligence, it doesn't capture the full spectrum of human capabilities. Cultivating a diverse set of skills and focusing on personal growth and well-being are essential for a fulfilling life.''',
             ),
             SizedBox(height: 15.h),
+            Divider(
+              height: 3,
+              thickness: 2,
+            ),
+
+            SizedBox(height: 15.h),
+
+            SmallText(
+              text:
+                  '''Questions used in this app were sourced from "The Ultimate IQ Test Book" and "What am I?" Riddles.\nWe appreciate the authors and creators of these resources for their valuable content.
+
+"The Ultimate IQ Test Book" - PHILIP CARTER & KEN RUSSELL.
+"What am I?" Riddles - Riddle Users
+
+We would like to express our gratitude for the inspiration and intellectual content provided by these sources. If you have any concerns or would like specific attribution, please feel free to contact us. Thank you for contributing to the enrichment of our app's content.
+ ''',
+            ),
+            SizedBox(height: 25.h),
           ],
         ),
       ),
