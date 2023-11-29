@@ -90,13 +90,13 @@ class _ReorderableListViewExampleState extends State<ReorderableExample> {
     setState(() {
       todo.isDone = !todo.isDone;
     });
+    PreferencesServices().saveToDoList(todosList);
   }
 
   void _deleteToDoItem(String id) {
     setState(() {
       todosList.removeWhere((item) => item.id == id);
 
-      // Save updated ToDo list to SharedPreferences
       PreferencesServices().saveToDoList(todosList);
     });
   }
@@ -130,10 +130,8 @@ class _ReorderableListViewExampleState extends State<ReorderableExample> {
       todosList.add(newTodo);
       _foundToDo = todosList;
 
-      // Save updated ToDo list to SharedPreferences
       PreferencesServices().saveToDoList(todosList);
 
-      // Clear the text field
       _todoController.clear();
     });
   }

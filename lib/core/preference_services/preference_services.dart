@@ -77,25 +77,42 @@ class PreferencesServices {
   //   await prefs.setStringList(ShPrefKeys.todos, todo);
   // }
 
-  Future<List<String>> getTodosList(String todo) async {
+  // Future<List<String>> getTodosList(String todo) async {
+  //   SharedPreferences prefs = await SharedPreferences.getInstance();
+  //   List<String> todoList = prefs.getStringList(ShPrefKeys.todos) ?? [];
+  //   return todoList;
+  // }
+
+  // Future<void> saveToDoList(List<ToDo> todos) async {
+  //   SharedPreferences prefs = await SharedPreferences.getInstance();
+  //   final String encoded = json.encode(todos);
+  //   await prefs.setString(ShPrefKeys.todoList, encoded);
+  // }
+
+  // Future<List<ToDo>> getToDoList() async {
+  //   SharedPreferences prefs = await SharedPreferences.getInstance();
+  //   final String? storedTodos = prefs.getString(ShPrefKeys.todoList);
+  //   if (storedTodos == null) {
+  //     return [];
+  //   }
+  //   final List<dynamic> decoded = json.decode(storedTodos);
+  //   return decoded.map((item) => ToDo.fromJson(item)).toList();
+  // }
+
+  Future<List<ToDo>> getToDoList() async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
-    List<String> todoList = prefs.getStringList(ShPrefKeys.todos) ?? [];
-    return todoList;
+    final String? storedTodos = prefs.getString(ShPrefKeys.todoList);
+    if (storedTodos == null) {
+      return [];
+    }
+    final List<dynamic> decoded = json.decode(storedTodos);
+    return decoded.map((item) => ToDo.fromJson(item)).toList();
   }
 
   Future<void> saveToDoList(List<ToDo> todos) async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
-    List<String> todoStrings = todos.map((todo) => jsonEncode(todo.toJson())).toList();
-    await prefs.setStringList(ShPrefKeys.todoList, todoStrings);
-  }
-
-  Future<List<ToDo>> getToDoList() async {
-    SharedPreferences prefs = await SharedPreferences.getInstance();
-    List<String> todoStrings = prefs.getStringList(ShPrefKeys.todoList) ?? [];
-    List<ToDo> todos = todoStrings.map((todoString) {
-      Map<String, dynamic> json = jsonDecode(todoString);
-      return ToDo.fromJson(json);
-    }).toList();
-    return todos;
+    final List<Map<String, dynamic>> todosMapList = todos.map((todo) => todo.toJson()).toList();
+    final String encoded = json.encode(todosMapList);
+    await prefs.setString(ShPrefKeys.todoList, encoded);
   }
 }

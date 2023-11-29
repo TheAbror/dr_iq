@@ -1,7 +1,7 @@
 part of 'todos_bloc.dart';
 
 class TodosState extends Equatable {
-  final List<String> todosList;
+  final List<ToDo> todosList;
   final BlocProgress blocProgress;
   final String failureMessage;
 
@@ -20,7 +20,7 @@ class TodosState extends Equatable {
   }
 
   TodosState copyWith({
-    List<String>? todosList,
+    List<ToDo>? todosList,
     BlocProgress? blocProgress,
     String? failureMessage,
   }) {

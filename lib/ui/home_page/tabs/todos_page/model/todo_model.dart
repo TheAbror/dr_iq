@@ -13,7 +13,7 @@ class ToDo {
     return {
       'id': id,
       'todoText': todoText,
-      'isDone': isDone,
+      'isDone': isDone, // Include isDone in the JSON representation
     };
   }
 
@@ -25,6 +25,21 @@ class ToDo {
     );
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
