@@ -15,8 +15,8 @@ class SignInPage extends StatefulWidget {
 }
 
 class _SignInPageState extends State<SignInPage> {
-  late String name = 'User';
-  late String age = 'Not Given';
+  late String name = ' ';
+  late String age = ' ';
   late String phone = 'Not Given';
   late String email = 'Not Given';
 
@@ -30,8 +30,8 @@ class _SignInPageState extends State<SignInPage> {
     String? emailD = await PreferencesServices.getEmail();
 
     // Assign retrieved values or default values if null
-    name = nameD != null && nameD.isNotEmpty ? nameD : 'User';
-    age = ageD != null && ageD.isNotEmpty ? ageD : 'Not Given';
+    name = nameD != null && nameD.isNotEmpty ? nameD : ' ';
+    age = ageD != null && ageD.isNotEmpty ? ageD : ' ';
     phone = phoneD != null && phoneD.isNotEmpty ? phoneD : 'Not Given';
     email = emailD != null && emailD.isNotEmpty ? emailD : 'Not Given';
 

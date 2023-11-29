@@ -45,10 +45,10 @@ class PreferencesServices {
     return preferences.setString(ShPrefKeys.email, email);
   }
 
-  static Future<bool> clearAll() async {
-    final preferences = await SharedPreferences.getInstance();
-    return await preferences.clear();
-  }
+  // static Future<bool> clearAll() async {
+  //   final preferences = await SharedPreferences.getInstance();
+  //   return await preferences.clear();
+  // }
 
   Future<void> saveStringList(List<String> stringList) async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
@@ -61,15 +61,15 @@ class PreferencesServices {
     return stringList;
   }
 
-  Future<void> saveDatesList(List<String> stringList) async {
-    SharedPreferences prefs = await SharedPreferences.getInstance();
-    await prefs.setStringList(ShPrefKeys.dateList, stringList);
-  }
-
   Future<List<String>> getDatesList(String resultList) async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
     List<String> stringList = prefs.getStringList(ShPrefKeys.dateList) ?? [];
     return stringList;
+  }
+
+  Future<void> saveDatesList(List<String> stringList) async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    await prefs.setStringList(ShPrefKeys.dateList, stringList);
   }
 
   // Future<void> saveTodosList(List<String> todo) async {

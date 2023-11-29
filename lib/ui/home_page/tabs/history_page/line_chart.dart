@@ -82,12 +82,12 @@ class MyLineChart extends StatelessWidget {
       );
 
   LineChartBarData get lineChartBarData1_1 => LineChartBarData(
-        isCurved: true,
+        isCurved: false,
         color: AppColors.textMain,
-        barWidth: 8,
-        isStrokeCapRound: true,
-        dotData: const FlDotData(show: false),
-        belowBarData: BarAreaData(show: false),
+        barWidth: 3,
+        isStrokeCapRound: false,
+        dotData: const FlDotData(show: true),
+        belowBarData: BarAreaData(show: true),
         spots: results.asMap().entries.map((entry) {
           double yValue = double.tryParse(entry.value) ?? 0.0;
           return FlSpot(entry.key.toDouble() + 1, yValue);

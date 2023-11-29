@@ -454,7 +454,7 @@ class GlobalConstants {
         {"option_text": "Newton", "is_correct": true},
         {"option_text": "Einstein", "is_correct": false},
         {"option_text": "Galileo", "is_correct": false},
-        {"option_text": "Tesla", "is_correct": true}
+        {"option_text": "Tesla", "is_correct": false}
       ],
       "question_text": "Who is known for his laws of motion and universal gravitation?"
     },

@@ -1,7 +1,8 @@
+import 'package:dr_iq/core/preference_services/shpref_keys.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_dialogs/flutter_dialogs.dart';
-import 'package:dr_iq/core/preference_services/preference_services.dart';
 import 'package:dr_iq/core/roots/app_routes.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 Future<dynamic> clearHistory(BuildContext context) {
   return showPlatformDialog(
@@ -12,17 +13,18 @@ Future<dynamic> clearHistory(BuildContext context) {
       actions: <Widget>[
         BasicDialogAction(
           title: const Text('Yes'),
-          onPressed: () {
-            //todo clear only history
-            PreferencesServices.clearAll().then((value) {
-              if (value) {
-                Navigator.pushNamedAndRemoveUntil(
-                  context,
-                  AppRoutes.homePage,
-                  (route) => false,
-                );
-              }
-            });
+          onPressed: () async {
+            // Obtain shared preferences.
+            final SharedPreferences prefs = await SharedPreferences.getInstance();
+
+            await prefs.remove(ShPrefKeys.dateList);
+            await prefs.remove(ShPrefKeys.resultList);
+            // ignore: use_build_context_synchronously
+            Navigator.pushNamedAndRemoveUntil(
+              context,
+              AppRoutes.homePage,
+              (route) => false,
+            );
           },
         ),
         BasicDialogAction(
