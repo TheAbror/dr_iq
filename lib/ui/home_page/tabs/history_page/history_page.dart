@@ -55,7 +55,7 @@ class HistoryPage extends StatelessWidget {
                         index: (index + 1).toString(),
                         date: date.substring(0, date.indexOf('2023') + 4),
                         time: '\n${date.substring(date.indexOf(',') + 1)}',
-                        score: state.resultList[index],
+                        score: state.resultList[index].toString().replaceAll('.0', ''),
                       );
                     },
                     separatorBuilder: (context, index) => Divider(),
