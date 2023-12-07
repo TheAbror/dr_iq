@@ -1,5 +1,5 @@
 # dr_iq
-![Alt Text]([url_to_your_uploaded_gif](https://github.com/TheAbror/dr_iq/issues/1#issue-2030019712))
+![Alt Text](gif](https://github.com/TheAbror/dr_iq/issues/1#issue-2030019712)
 
 A new Flutter project.
 
