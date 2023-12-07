@@ -1,5 +1,5 @@
 # dr_iq
-![Alt Text](gif](https://github.com/TheAbror/dr_iq/issues/1#issue-2030019712)
+![Alt Text](https://github.com/TheAbror/dr_iq/issues/1#issue-2030019712)
 
 A new Flutter project.
 
