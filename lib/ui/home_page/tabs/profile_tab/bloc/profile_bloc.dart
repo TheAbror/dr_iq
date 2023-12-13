@@ -30,6 +30,19 @@ class ProfileBloc extends Cubit<ProfileState> {
       phone = phoneD != null && phoneD.isNotEmpty ? phoneD : 'Not Given';
       email = emailD != null && emailD.isNotEmpty ? emailD : 'Not Given';
 
+      if (nameD == '' || nameD == null) {
+        nameD = 'User';
+      }
+      if (ageD == '' || ageD == null) {
+        ageD = 'Not Given';
+      }
+      if (phoneD == '' || phoneD == null) {
+        phoneD = 'Not Given';
+      }
+      if (emailD == '' || emailD == null) {
+        emailD = 'Not Given';
+      }
+
       emit(
         state.copyWith(
           name: nameD,

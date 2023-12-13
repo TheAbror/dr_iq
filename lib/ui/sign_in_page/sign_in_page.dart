@@ -15,10 +15,8 @@ class SignInPage extends StatefulWidget {
 }
 
 class _SignInPageState extends State<SignInPage> {
-  late String name = ' ';
-  late String age = ' ';
-  late String phone = 'Not Given';
-  late String email = 'Not Given';
+  late String name = '';
+  late String age = '';
 
   late TextEditingController _nameController = TextEditingController();
   late TextEditingController _ageController = TextEditingController();
@@ -26,17 +24,17 @@ class _SignInPageState extends State<SignInPage> {
   void callDB() async {
     String? nameD = await PreferencesServices.getName();
     String? ageD = await PreferencesServices.getAge();
-    String? phoneD = await PreferencesServices.getPhone();
-    String? emailD = await PreferencesServices.getEmail();
 
     // Assign retrieved values or default values if null
     name = nameD != null && nameD.isNotEmpty ? nameD : ' ';
     age = ageD != null && ageD.isNotEmpty ? ageD : ' ';
-    phone = phoneD != null && phoneD.isNotEmpty ? phoneD : 'Not Given';
-    email = emailD != null && emailD.isNotEmpty ? emailD : 'Not Given';
 
     _nameController.text = name;
     _ageController.text = age;
+
+    if (_ageController.text == 'Not Given') {
+      _ageController.text = '';
+    }
   }
 
   @override
