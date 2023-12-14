@@ -62,8 +62,6 @@ class PreferencesServices {
     return stringList;
   }
 
-//TODO CHANGE AVATAR PHOTO TO USER
-//TODO RECORD ROTATO VIDEO
   Future<void> saveDatesList(List<String> stringList) async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
     await prefs.setStringList(ShPrefKeys.dateList, stringList);

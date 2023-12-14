@@ -19,8 +19,8 @@ class PersonAdapter extends TypeAdapter<Person> {
     return Person(
       name: fields[0] as String,
       age: fields[1] as String,
-      phone: fields[2] as String,
-      email: fields[3] as String,
+      phone: fields[2] as String?,
+      email: fields[3] as String?,
     );
   }
 

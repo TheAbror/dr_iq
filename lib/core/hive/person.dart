@@ -7,8 +7,8 @@ class Person {
   Person({
     required this.name,
     required this.age,
-    required this.phone,
-    required this.email,
+    this.phone,
+    this.email,
   });
 
   @HiveField(0)
@@ -18,8 +18,8 @@ class Person {
   String age;
 
   @HiveField(2)
-  String phone;
+  String? phone;
 
   @HiveField(3)
-  String email;
+  String? email;
 }

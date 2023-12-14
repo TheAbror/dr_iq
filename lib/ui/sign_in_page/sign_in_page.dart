@@ -1,5 +1,7 @@
 // ignore_for_file: prefer_final_fields
 
+import 'package:dr_iq/core/hive/box_person.dart';
+import 'package:dr_iq/core/hive/person.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:dr_iq/core/colors/app_colors.dart';
@@ -90,6 +92,13 @@ class _SignInPageState extends State<SignInPage> {
                   final age = _ageController.text.trim();
                   await PreferencesServices.saveName(name);
                   await PreferencesServices.saveAge(age);
+
+                  boxPersons.put(
+                      'key_${_nameController.text}',
+                      Person(
+                        name: name,
+                        age: age,
+                      ));
 
                   // ignore: use_build_context_synchronously
                   Navigator.pushNamed(context, AppRoutes.homePage);
