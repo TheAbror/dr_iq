@@ -1,3 +1,6 @@
+import 'package:dr_iq/core/hive/box_person.dart';
+import 'package:dr_iq/core/hive/person.dart';
+import 'package:dr_iq/core/preference_services/shpref_keys.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -25,28 +28,21 @@ class _SplashPageState extends State<SplashPage> {
 
   @override
   Widget build(BuildContext context) {
+    Person person = boxPersons.get(ShPrefKeys.personInfo);
+
     return BlocListener<SplashBloc, SplashAuthStatus>(
       bloc: splashBloc,
       listener: (context, state) {
-        switch (state) {
-          case SplashAuthStatus.initial:
-            Navigator.of(context).pushNamedAndRemoveUntil(
-              AppRoutes.splashPage,
-              (route) => false,
-            );
-            break;
-          case SplashAuthStatus.authorized:
-            Navigator.of(context).pushNamedAndRemoveUntil(
-              AppRoutes.signin,
-              (route) => false,
-            );
-            break;
-          case SplashAuthStatus.notAuthorized:
-            Navigator.of(context).pushNamedAndRemoveUntil(
-              AppRoutes.homePage,
-              (route) => false,
-            );
-            break;
+        if ((person.name == null || person.age == null) || person.name == '' || person.age == '') {
+          Navigator.of(context).pushNamedAndRemoveUntil(
+            AppRoutes.signin,
+            (route) => false,
+          );
+        } else {
+          Navigator.of(context).pushNamedAndRemoveUntil(
+            AppRoutes.homePage,
+            (route) => false,
+          );
         }
       },
       child: Scaffold(
