@@ -1,3 +1,5 @@
+// ignore_for_file: unused_local_variable
+
 import 'package:dr_iq/core/bloc_progress/bloc_progress.dart';
 import 'package:dr_iq/core/bottom_sheet/primary_bottom_sheet.dart';
 import 'package:dr_iq/core/constants/something_went_wrong.dart';
@@ -96,7 +98,6 @@ class _Body extends StatelessWidget {
                       phone: phone,
                       email: email,
                     );
-                    print(result);
                     // ignore: use_build_context_synchronously
                     context.read<ProfileBloc>().loadData();
                   },

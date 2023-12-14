@@ -2,7 +2,8 @@
 
 import 'package:dr_iq/core/bottom_sheet/default_bottom_sheet.dart';
 import 'package:dr_iq/core/colors/app_colors.dart';
-import 'package:dr_iq/core/preference_services/preference_services.dart';
+import 'package:dr_iq/core/hive/box_person.dart';
+import 'package:dr_iq/core/hive/person.dart';
 import 'package:dr_iq/ui/home_page/tabs/profile_tab/bloc/profile_bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -75,19 +76,6 @@ class _PrimaryBottomSheetState extends State<PrimaryBottomSheet> {
   }
 
   @override
-  void dispose() {
-    super.dispose();
-    disposeTextEditingControllers();
-  }
-
-  void disposeTextEditingControllers() {
-    _controllerName.dispose();
-    _controllerAge.dispose();
-    _controllerPhone.dispose();
-    _controllerEmail.dispose();
-  }
-
-  @override
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
@@ -107,10 +95,17 @@ class _PrimaryBottomSheetState extends State<PrimaryBottomSheet> {
           final age = _controllerAge.text.trim();
           final phone = _controllerPhone.text.trim();
           final email = _controllerEmail.text.trim();
-          await PreferencesServices.saveName(name);
-          await PreferencesServices.saveAge(age);
-          await PreferencesServices.savePhone(phone);
-          await PreferencesServices.saveEmail(email);
+
+          boxPersons.put(
+            'name&age',
+            Person(
+              name: name,
+              age: age,
+              phone: phone,
+              email: email,
+            ),
+          );
+
           Navigator.pop(context);
           context.read<ProfileBloc>().loadData();
         },
