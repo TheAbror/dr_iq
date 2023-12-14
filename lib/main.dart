@@ -1,5 +1,6 @@
 import 'package:dr_iq/core/hive/box_person.dart';
 import 'package:dr_iq/core/hive/person.dart';
+import 'package:dr_iq/core/hive/result.dart';
 import 'package:dr_iq/ui/home_page/tabs/profile_tab/bloc/profile_bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -19,7 +20,11 @@ void main() async {
 
   Hive.registerAdapter(PersonAdapter());
 
+  Hive.registerAdapter(ResultAdapter());
+
   boxPersons = await Hive.openBox<Person>('personBox');
+
+  boxResult = await Hive.openBox<Result>('resultBox');
 
   ApiProvider.create();
 
