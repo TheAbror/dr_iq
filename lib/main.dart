@@ -1,3 +1,5 @@
+import 'package:dr_iq/core/hive/box_person.dart';
+import 'package:dr_iq/core/hive/person.dart';
 import 'package:dr_iq/ui/home_page/tabs/profile_tab/bloc/profile_bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -5,16 +7,19 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:dr_iq/core/api/api_provider.dart';
 import 'package:dr_iq/core/roots/main_route_generator.dart';
-import 'package:dr_iq/core/roots/logger.dart';
 import 'package:dr_iq/ui/splash_page/splash_auth_status.dart';
+import 'package:hive_flutter/hive_flutter.dart';
 
 import 'ui/splash_page/bloc/splash_bloc.dart';
 
-void main() {
+void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
-  /// For logging
-  setUpLogging();
+  await Hive.initFlutter();
+
+  Hive.registerAdapter(PersonAdapter());
+
+  boxPersons = await Hive.openBox<Person>('personBox');
 
   ApiProvider.create();
 
