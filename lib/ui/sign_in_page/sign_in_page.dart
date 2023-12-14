@@ -21,6 +21,7 @@ class SignInPage extends StatelessWidget {
     TextEditingController ageController = TextEditingController(text: person?.age ?? '');
 
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       backgroundColor: AppColors.float,
       body: SafeArea(
         child: Padding(

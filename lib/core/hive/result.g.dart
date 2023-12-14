@@ -8,7 +8,7 @@ part of 'result.dart';
 
 class ResultAdapter extends TypeAdapter<Result> {
   @override
-  final int typeId = 1;
+  final int typeId = 2;
 
   @override
   Result read(BinaryReader reader) {

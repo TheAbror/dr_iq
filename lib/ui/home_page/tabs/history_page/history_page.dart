@@ -1,10 +1,11 @@
+import 'package:dr_iq/core/hive/box_person.dart';
+import 'package:dr_iq/core/hive/result.dart';
+import 'package:dr_iq/core/preference_services/shpref_keys.dart';
 import 'package:dr_iq/ui/home_page/tabs/history_page/line_chart.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:dr_iq/core/constants/primary_loader.dart';
 import 'package:dr_iq/core/constants/something_went_wrong.dart';
-import 'package:dr_iq/core/bloc_progress/bloc_progress.dart';
 import 'package:dr_iq/ui/home_page/tabs/history_page/bloc/history_bloc.dart';
 import 'package:dr_iq/ui/home_page/tabs/history_page/history_body_item.dart';
 import 'package:dr_iq/ui/home_page/tabs/history_page/widgets/history_page_appbar.dart';
@@ -20,13 +21,9 @@ class HistoryPage extends StatelessWidget {
         create: (context) => HistoryBloc(),
         child: BlocBuilder<HistoryBloc, HistoryState>(
           builder: (context, state) {
-            if (state.blocProgress == BlocProgress.IS_LOADING) {
-              return const PrimaryLoader();
-            }
-            if (state.blocProgress == BlocProgress.FAILED) {
-              return const SomethingWentWrong();
-            }
-            if (state.resultList.isEmpty) {
+            Result? myResult = boxResult.get(ShPrefKeys.result);
+
+            if (myResult?.result.isEmpty ?? true) {
               return const NoRecordsFound();
             }
 
@@ -47,15 +44,15 @@ class HistoryPage extends StatelessWidget {
                   ListView.separated(
                     shrinkWrap: true,
                     physics: BouncingScrollPhysics(),
-                    itemCount: state.dateList.length,
+                    itemCount: boxResult.length,
                     itemBuilder: (context, index) {
-                      var date = state.dateList[index];
+                      Result? result = boxResult.getAt(index);
 
                       return HistoryBodyItem(
                         index: (index + 1).toString(),
-                        date: date.substring(0, date.indexOf('2023') + 4),
-                        time: '\n${date.substring(date.indexOf(',') + 1)}',
-                        score: state.resultList[index].toString().replaceAll('.0', ''),
+                        date: result?.date[index].substring(0, result.date[index].indexOf('2023') + 4) ?? '',
+                        time: '\n${result?.date[index].substring(result.date[index].indexOf(',') + 1)}',
+                        score: result?.result[index] ?? '',
                       );
                     },
                     separatorBuilder: (context, index) => Divider(),

@@ -1,11 +1,12 @@
 // ignore_for_file: avoid_print, unnecessary_null_comparison, use_build_context_synchronously
 
+import 'package:dr_iq/core/hive/box_person.dart';
+import 'package:dr_iq/core/hive/result.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:intl/intl.dart';
 import 'package:dr_iq/core/colors/app_colors.dart';
 import 'package:dr_iq/core/constants/global_constants.dart';
-import 'package:dr_iq/core/preference_services/preference_services.dart';
 import 'package:dr_iq/core/preference_services/shpref_keys.dart';
 import 'package:dr_iq/ui/home_page/tabs/take_iq_test_tab/bloc/questions_bloc.dart';
 import 'package:rive/rive.dart';
@@ -50,33 +51,41 @@ Future<dynamic> finishDialog(BuildContext context, QuestionsState state) {
             ),
             const SizedBox(height: 35),
             TextButton(
-              onPressed: () async {
-                // Navigator.pop(context);
-                var resultOfTest = ((state.result / questionsLength) * 100).toString();
+              onPressed: () {
+                // Result? myResult = boxResult.get(ShPrefKeys.result);
+
+                // List<String> oldResult = myResult?.date ?? [];
+
+                // final dateFormatter = DateFormat('dd-MM-yyyy, HH:mm');
+                // final today = DateTime.now();
+
+                // List<String> resultOfTest = [(state.result / questionsLength * 100).toString()];
+                // List<String> newResult = [...oldResult, ...resultOfTest];
+                // List<String> formattedDate = [dateFormatter.format(today)];
+
+                // boxResult.put(
+                //   ShPrefKeys.result,
+                //   Result(
+                //     result: newResult,
+                //     date: formattedDate,
+                //   ),
+                // );
+
+                Result? myResult = boxResult.get(ShPrefKeys.result);
+                List<String> oldResult = myResult?.result ?? [];
                 final dateFormatter = DateFormat('dd-MM-yyyy, HH:mm');
-
                 final today = DateTime.now();
-                var formattedDate = dateFormatter.format(today);
-                //
-                print(formattedDate);
-                var preferencesServices = PreferencesServices();
+                List<String> resultOfTest = [(state.result / questionsLength * 100).toString()];
+                List<String> newResult = [...oldResult, ...resultOfTest];
+                List<String> formattedDate = [dateFormatter.format(today)];
 
-                List<String>? existingResultsList = await preferencesServices.getResultList(ShPrefKeys.resultList);
-                List<String>? existingDateList = await preferencesServices.getDatesList(ShPrefKeys.dateList);
-
-                if (existingResultsList != null) {
-                  existingResultsList.add(resultOfTest);
-                } else {
-                  existingResultsList = [resultOfTest];
-                }
-                await preferencesServices.saveStringList(existingResultsList);
-                //
-                if (existingDateList != null) {
-                  existingDateList.add(formattedDate);
-                } else {
-                  existingDateList = [formattedDate];
-                }
-                await preferencesServices.saveDatesList(existingDateList);
+                boxResult.put(
+                  ShPrefKeys.result,
+                  Result(
+                    result: newResult,
+                    date: formattedDate,
+                  ),
+                );
 
                 // Close the dialog
                 Navigator.of(dialogContext).pop();
@@ -104,3 +113,25 @@ Future<dynamic> finishDialog(BuildContext context, QuestionsState state) {
     },
   );
 }
+
+
+/////////
+                // var preferencesServices = PreferencesServices();
+
+                // List<String>? existingResultsList = await preferencesServices.getResultList(ShPrefKeys.resultList);
+                // List<String>? existingDateList = await preferencesServices.getDatesList(ShPrefKeys.dateList);
+
+                // if (existingResultsList != null) {
+                //   existingResultsList.add(resultOfTest);
+                // } else {
+                //   existingResultsList = [resultOfTest];
+                // }
+                // await preferencesServices.saveStringList(existingResultsList);
+                // //
+                // if (existingDateList != null) {
+                //   existingDateList.add(formattedDate);
+                // } else {
+                //   existingDateList = [formattedDate];
+                // }
+                // await preferencesServices.saveDatesList(existingDateList);
+/////////

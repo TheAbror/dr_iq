@@ -30,12 +30,12 @@ class _SplashPageState extends State<SplashPage> {
 
   @override
   Widget build(BuildContext context) {
-    Person person = boxPersons.get(ShPrefKeys.personInfo);
+    Person? person = boxPersons.get(ShPrefKeys.personInfo);
 
     return BlocListener<SplashBloc, SplashAuthStatus>(
       bloc: splashBloc,
       listener: (context, state) {
-        if ((person.name == null || person.age == null) || person.name == '' || person.age == '') {
+        if ((person?.name == null || person?.age == null) || person?.name == '' || person?.age == '') {
           Navigator.of(context).pushNamedAndRemoveUntil(
             AppRoutes.signin,
             (route) => false,

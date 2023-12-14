@@ -10,7 +10,6 @@ import 'package:dr_iq/core/api/api_provider.dart';
 import 'package:dr_iq/core/roots/main_route_generator.dart';
 import 'package:dr_iq/ui/splash_page/splash_auth_status.dart';
 import 'package:hive_flutter/hive_flutter.dart';
-
 import 'ui/splash_page/bloc/splash_bloc.dart';
 
 void main() async {

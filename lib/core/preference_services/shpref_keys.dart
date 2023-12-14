@@ -8,4 +8,5 @@ abstract class ShPrefKeys {
   static const todos = 'todos';
   static const todoList = 'todoList';
   static const personInfo = 'PersonInfo';
+  static const result = 'result';
 }
