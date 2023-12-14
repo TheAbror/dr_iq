@@ -1,7 +1,7 @@
 import 'dart:math';
-import 'package:dr_iq/core/constants/global_constants.dart';
 import 'package:dr_iq/core/hive/box_person.dart';
 import 'package:dr_iq/core/hive/person.dart';
+import 'package:dr_iq/core/preference_services/questions_list_random.dart';
 import 'package:dr_iq/core/preference_services/shpref_keys.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -152,24 +152,10 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                   color: const Color(0xffc30010),
                   onTap: () {
                     //
-                    List<List<Map<String, dynamic>>> questionsList = [
-                      GlobalConstants.logicalReasoning,
-                      GlobalConstants.randomQuestions,
-                      GlobalConstants.criticalThinkingQuestions,
-                      GlobalConstants.math,
-                      GlobalConstants.generalKnowledge,
-                      GlobalConstants.countries,
-                      GlobalConstants.verbalReasoning,
-                      GlobalConstants.analyticalReasoning,
-                      GlobalConstants.trickyQuestions,
-                      GlobalConstants.moreTrickyQuestions,
-                      GlobalConstants.testQuestions,
-                      GlobalConstants.missingSection,
-                    ];
 
-                    int randomIndex = Random().nextInt(questionsList.length);
+                    int randomIndex = Random().nextInt(QuestionsListRandom.questionsList.length);
 
-                    List<Map<String, dynamic>> randomQuestions = questionsList[randomIndex];
+                    List<Map<String, dynamic>> randomQuestions = QuestionsListRandom.questionsList[randomIndex];
 
                     Navigator.pushNamed(
                       context,
