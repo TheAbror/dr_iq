@@ -2,51 +2,23 @@
 
 import 'package:dr_iq/core/hive/box_person.dart';
 import 'package:dr_iq/core/hive/person.dart';
+import 'package:dr_iq/ui/sign_in_page/widgets/continue_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:dr_iq/core/colors/app_colors.dart';
-import 'package:dr_iq/core/preference_services/preference_services.dart';
 import 'package:dr_iq/core/roots/app_routes.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-class SignInPage extends StatefulWidget {
+class SignInPage extends StatelessWidget {
   const SignInPage({super.key});
 
   @override
-  State<SignInPage> createState() => _SignInPageState();
-}
-
-class _SignInPageState extends State<SignInPage> {
-  late String name = '';
-  late String age = '';
-
-  late TextEditingController _nameController = TextEditingController();
-  late TextEditingController _ageController = TextEditingController();
-
-  void callDB() async {
-    String? nameD = await PreferencesServices.getName();
-    String? ageD = await PreferencesServices.getAge();
-
-    // Assign retrieved values or default values if null
-    name = nameD != null && nameD.isNotEmpty ? nameD : ' ';
-    age = ageD != null && ageD.isNotEmpty ? ageD : ' ';
-
-    _nameController.text = name;
-    _ageController.text = age;
-
-    if (_ageController.text == 'Not Given') {
-      _ageController.text = '';
-    }
-  }
-
-  @override
-  void initState() {
-    callDB();
-    super.initState();
-  }
-
-  @override
   Widget build(BuildContext context) {
+    Person? person = boxPersons.get('name&age');
+
+    TextEditingController nameController = TextEditingController(text: person?.name ?? '');
+    TextEditingController ageController = TextEditingController(text: person?.age ?? '');
+
     return Scaffold(
       backgroundColor: AppColors.float,
       body: SafeArea(
@@ -70,7 +42,7 @@ class _SignInPageState extends State<SignInPage> {
                     style: TextStyle(fontWeight: FontWeight.bold),
                   ),
                   TextFormField(
-                    controller: _nameController,
+                    controller: nameController,
                     textInputAction: TextInputAction.next,
                     style: TextStyle(fontWeight: FontWeight.bold),
                   ),
@@ -80,7 +52,7 @@ class _SignInPageState extends State<SignInPage> {
                     style: TextStyle(fontWeight: FontWeight.bold),
                   ),
                   TextFormField(
-                    controller: _ageController,
+                    controller: ageController,
                     style: TextStyle(fontWeight: FontWeight.bold),
                   ),
                 ],
@@ -88,43 +60,20 @@ class _SignInPageState extends State<SignInPage> {
               const Spacer(),
               GestureDetector(
                 onTap: () async {
-                  final name = _nameController.text.trim();
-                  final age = _ageController.text.trim();
-                  await PreferencesServices.saveName(name);
-                  await PreferencesServices.saveAge(age);
+                  final name = nameController.text.trim();
+                  final age = ageController.text.trim();
 
                   boxPersons.put(
-                      'key_${_nameController.text}',
-                      Person(
-                        name: name,
-                        age: age,
-                      ));
+                    'name&age',
+                    Person(
+                      name: name,
+                      age: age,
+                    ),
+                  );
 
-                  // ignore: use_build_context_synchronously
                   Navigator.pushNamed(context, AppRoutes.homePage);
                 },
-                child: Container(
-                  height: 45,
-                  width: double.infinity,
-                  padding: EdgeInsets.all(8.w),
-                  decoration: BoxDecoration(
-                    color: AppColors.textMain,
-                    borderRadius: BorderRadius.circular(8.r),
-                    border: Border.all(
-                      width: 0.5.w,
-                    ),
-                  ),
-                  child: Center(
-                    child: Text(
-                      'Continue',
-                      style: TextStyle(
-                        color: AppColors.float,
-                        fontWeight: FontWeight.bold,
-                        fontSize: 20.sp,
-                      ),
-                    ),
-                  ),
-                ),
+                child: ContinueButton(),
               ),
               const SizedBox(height: 40),
             ],

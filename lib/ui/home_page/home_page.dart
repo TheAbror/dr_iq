@@ -1,10 +1,11 @@
 import 'dart:math';
 import 'package:dr_iq/core/constants/global_constants.dart';
+import 'package:dr_iq/core/hive/box_person.dart';
+import 'package:dr_iq/core/hive/person.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:dr_iq/core/colors/app_colors.dart';
-import 'package:dr_iq/core/preference_services/preference_services.dart';
 import 'package:dr_iq/core/roots/app_routes.dart';
 import 'package:dr_iq/ui/home_page/tabs/take_iq_test_tab/widgets/home_page_item.dart';
 
@@ -16,19 +17,6 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
-  String? name = 'User';
-
-  void getName() async {
-    String? nameD = await PreferencesServices.getName();
-    if (nameD != null) {
-      name = nameD;
-    }
-    if (name == '') {
-      name = 'User';
-    }
-    setState(() {});
-  }
-
   late AnimationController _controller1;
   late AnimationController _controller2;
   late AnimationController _controller3;
@@ -36,10 +24,10 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
   late AnimationController _controller5;
   late AnimationController _controller6;
 
+  Person? person = boxPersons.get('name&age');
+
   @override
   void initState() {
-    getName();
-
     _controller1 = AnimationController(
       vsync: this,
       duration: Duration(milliseconds: 200),
@@ -142,7 +130,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
           children: [
             SizedBox(height: 40.h),
             Text(
-              'Hi ' '$name',
+              'Hi ${person?.name}',
               style: TextStyle(fontSize: 24.sp),
             ),
             Text(
