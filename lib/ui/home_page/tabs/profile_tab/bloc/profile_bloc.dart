@@ -3,6 +3,7 @@
 import 'package:dr_iq/core/bloc_progress/bloc_progress.dart';
 import 'package:dr_iq/core/hive/box_person.dart';
 import 'package:dr_iq/core/hive/person.dart';
+import 'package:dr_iq/core/preference_services/shpref_keys.dart';
 import 'package:equatable/equatable.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -14,7 +15,7 @@ class ProfileBloc extends Cubit<ProfileState> {
   void loadData() async {
     emit(state.copyWith(blocProgress: BlocProgress.IS_LOADING));
 
-    Person? person = boxPersons.get('name&age');
+    Person? person = boxPersons.get(ShPrefKeys.personInfo);
 
     emit(
       state.copyWith(

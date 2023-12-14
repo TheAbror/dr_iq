@@ -5,46 +5,6 @@ import 'package:dr_iq/ui/home_page/tabs/todos_page/model/todo_model.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class PreferencesServices {
-  static Future<String?> getName() async {
-    final preferences = await SharedPreferences.getInstance();
-    return preferences.getString(ShPrefKeys.name);
-  }
-
-  static Future<bool> saveName(String token) async {
-    final preferences = await SharedPreferences.getInstance();
-    return preferences.setString(ShPrefKeys.name, token);
-  }
-
-  static Future<String?> getAge() async {
-    final preferences = await SharedPreferences.getInstance();
-    return preferences.getString(ShPrefKeys.age);
-  }
-
-  static Future<bool> saveAge(String age) async {
-    final preferences = await SharedPreferences.getInstance();
-    return preferences.setString(ShPrefKeys.age, age);
-  }
-
-  static Future<String?> getPhone() async {
-    final preferences = await SharedPreferences.getInstance();
-    return preferences.getString(ShPrefKeys.phone);
-  }
-
-  static Future<bool> savePhone(String phone) async {
-    final preferences = await SharedPreferences.getInstance();
-    return preferences.setString(ShPrefKeys.phone, phone);
-  }
-
-  static Future<String?> getEmail() async {
-    final preferences = await SharedPreferences.getInstance();
-    return preferences.getString(ShPrefKeys.email);
-  }
-
-  static Future<bool> saveEmail(String email) async {
-    final preferences = await SharedPreferences.getInstance();
-    return preferences.setString(ShPrefKeys.email, email);
-  }
-
   Future<void> saveStringList(List<String> stringList) async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
     await prefs.setStringList(ShPrefKeys.resultList, stringList);

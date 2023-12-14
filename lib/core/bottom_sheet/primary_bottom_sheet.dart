@@ -4,6 +4,7 @@ import 'package:dr_iq/core/bottom_sheet/default_bottom_sheet.dart';
 import 'package:dr_iq/core/colors/app_colors.dart';
 import 'package:dr_iq/core/hive/box_person.dart';
 import 'package:dr_iq/core/hive/person.dart';
+import 'package:dr_iq/core/preference_services/shpref_keys.dart';
 import 'package:dr_iq/ui/home_page/tabs/profile_tab/bloc/profile_bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -97,7 +98,7 @@ class _PrimaryBottomSheetState extends State<PrimaryBottomSheet> {
           final email = _controllerEmail.text.trim();
 
           boxPersons.put(
-            'name&age',
+            ShPrefKeys.personInfo,
             Person(
               name: name,
               age: age,

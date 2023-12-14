@@ -2,6 +2,7 @@ import 'dart:math';
 import 'package:dr_iq/core/constants/global_constants.dart';
 import 'package:dr_iq/core/hive/box_person.dart';
 import 'package:dr_iq/core/hive/person.dart';
+import 'package:dr_iq/core/preference_services/shpref_keys.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
@@ -24,7 +25,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
   late AnimationController _controller5;
   late AnimationController _controller6;
 
-  Person? person = boxPersons.get('name&age');
+  Person? person = boxPersons.get(ShPrefKeys.personInfo);
 
   @override
   void initState() {

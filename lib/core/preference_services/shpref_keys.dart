@@ -7,4 +7,5 @@ abstract class ShPrefKeys {
   static const dateList = 'myDateList';
   static const todos = 'todos';
   static const todoList = 'todoList';
+  static const personInfo = 'PersonInfo';
 }

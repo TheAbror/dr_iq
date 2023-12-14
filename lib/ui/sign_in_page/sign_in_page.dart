@@ -2,6 +2,7 @@
 
 import 'package:dr_iq/core/hive/box_person.dart';
 import 'package:dr_iq/core/hive/person.dart';
+import 'package:dr_iq/core/preference_services/shpref_keys.dart';
 import 'package:dr_iq/ui/sign_in_page/widgets/continue_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -14,7 +15,7 @@ class SignInPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Person? person = boxPersons.get('name&age');
+    Person? person = boxPersons.get(ShPrefKeys.personInfo);
 
     TextEditingController nameController = TextEditingController(text: person?.name ?? '');
     TextEditingController ageController = TextEditingController(text: person?.age ?? '');
@@ -64,7 +65,7 @@ class SignInPage extends StatelessWidget {
                   final age = ageController.text.trim();
 
                   boxPersons.put(
-                    'name&age',
+                    ShPrefKeys.personInfo,
                     Person(
                       name: name,
                       age: age,
