@@ -50,9 +50,9 @@ class HistoryPage extends StatelessWidget {
 
                       return HistoryBodyItem(
                         index: (index + 1).toString(),
-                        date: result?.date[index].substring(0, result.date[index].indexOf('2023') + 4) ?? '',
-                        time: '\n${result?.date[index].substring(result.date[index].indexOf(',') + 1)}',
-                        score: result?.result[index] ?? '',
+                        date: result?.date ?? [], // Assuming date is List<String>
+                        time: '', // You need to fill in the logic for time
+                        score: result?.result ?? [], // Assuming result is List<String>
                       );
                     },
                     separatorBuilder: (context, index) => Divider(),

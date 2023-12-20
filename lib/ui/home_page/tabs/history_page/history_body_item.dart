@@ -4,8 +4,8 @@ import 'package:dr_iq/core/colors/app_colors.dart';
 
 class HistoryBodyItem extends StatelessWidget {
   final String index;
-  final String score;
-  final String date;
+  final List<String> score;
+  final List<String> date;
   final String time;
 
   const HistoryBodyItem({
@@ -31,14 +31,14 @@ class HistoryBodyItem extends StatelessWidget {
         ),
       ),
       title: Text(
-        'Score: $score  ',
+        'Score: ${score.join(', ')}', // Convert List<String> to String
         style: TextStyle(
           fontSize: 24.sp,
           fontWeight: FontWeight.bold,
         ),
       ),
       trailing: Text(
-        date + time,
+        '${date.join(', ')}\n $time', // Convert List<String> to String
         textAlign: TextAlign.end,
         style: TextStyle(
           fontSize: 14.sp,
