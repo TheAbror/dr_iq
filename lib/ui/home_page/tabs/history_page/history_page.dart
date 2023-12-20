@@ -41,21 +41,25 @@ class HistoryPage extends StatelessWidget {
                     ),
                   ),
                   SizedBox(height: 10.h),
-                  ListView.separated(
+                  ListView.builder(
                     shrinkWrap: true,
                     physics: BouncingScrollPhysics(),
                     itemCount: boxResult.length,
                     itemBuilder: (context, index) {
                       Result? result = boxResult.getAt(index);
 
-                      return HistoryBodyItem(
-                        index: (index + 1).toString(),
-                        date: result?.date ?? [], // Assuming date is List<String>
-                        time: '', // You need to fill in the logic for time
-                        score: result?.result ?? [], // Assuming result is List<String>
+                      return Column(
+                        children: [
+                          HistoryBodyItem(
+                            index: (index + 1).toString(),
+                            dates: result?.date[index] ?? '',
+                            time: '', // You need to fill in the logic for time
+                            scores: result?.result[index] ?? '',
+                          ),
+                          Divider(), // Add a divider between list items
+                        ],
                       );
                     },
-                    separatorBuilder: (context, index) => Divider(),
                   ),
                 ],
               ),
