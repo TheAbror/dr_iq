@@ -1,14 +1,14 @@
 import 'dart:math';
-import 'package:dr_iq/core/hive/box_person.dart';
-import 'package:dr_iq/core/hive/person.dart';
+
+import 'package:dr_iq/core/colors/app_colors.dart';
 import 'package:dr_iq/core/preference_services/questions_list_random.dart';
-import 'package:dr_iq/core/preference_services/shpref_keys.dart';
+import 'package:dr_iq/core/roots/app_routes.dart';
+import 'package:dr_iq/ui/home_page/tabs/profile_tab/bloc/profile_bloc.dart';
+import 'package:dr_iq/ui/home_page/tabs/take_iq_test_tab/widgets/home_page_item.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:dr_iq/core/colors/app_colors.dart';
-import 'package:dr_iq/core/roots/app_routes.dart';
-import 'package:dr_iq/ui/home_page/tabs/take_iq_test_tab/widgets/home_page_item.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -24,8 +24,6 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
   late AnimationController _controller4;
   late AnimationController _controller5;
   late AnimationController _controller6;
-
-  Person? person = boxPersons.get(ShPrefKeys.personInfo);
 
   @override
   void initState() {
@@ -64,6 +62,8 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
           ..addListener(() {
             setState(() {});
           });
+
+    context.read<ProfileBloc>().loadData();
 
     super.initState();
   }
@@ -108,100 +108,104 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
       ),
       body: Padding(
         padding: EdgeInsets.symmetric(horizontal: 20.w),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            SizedBox(height: 40.h),
-            Text(
-              'Hi ${person?.name}',
-              style: TextStyle(fontSize: 24.sp),
-            ),
-            Text(
-              'Welcome to Dr.iQ',
-              style: TextStyle(
-                fontSize: 28.sp,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-            SizedBox(height: 40.h),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        child: BlocBuilder<ProfileBloc, ProfileState>(
+          builder: (context, state) {
+            return Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                HomePageItem(
-                  controller: _controller1,
-                  icon: Icons.text_increase_sharp,
-                  text: 'Take IQ Test',
-                  color: const Color(0xffc30010),
-                  onTap: () {
-                    int randomIndex = Random().nextInt(QuestionsListRandom.questionsList.length);
+                SizedBox(height: 40.h),
+                Text(
+                  'Hi ${state.name}',
+                  style: TextStyle(fontSize: 24.sp),
+                ),
+                Text(
+                  'Welcome to Dr.iQ',
+                  style: TextStyle(
+                    fontSize: 28.sp,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                SizedBox(height: 40.h),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    HomePageItem(
+                      controller: _controller1,
+                      icon: Icons.text_increase_sharp,
+                      text: 'Take IQ Test',
+                      color: const Color(0xffc30010),
+                      onTap: () {
+                        int randomIndex = Random().nextInt(QuestionsListRandom.questionsList.length);
 
-                    Navigator.pushNamed(
-                      context,
-                      AppRoutes.takeiqtest,
-                      arguments: QuestionsListRandom.questionsList[randomIndex],
-                    );
-                  },
+                        Navigator.pushNamed(
+                          context,
+                          AppRoutes.takeiqtest,
+                          arguments: QuestionsListRandom.questionsList[randomIndex],
+                        );
+                      },
+                    ),
+                    HomePageItem(
+                      controller: _controller2,
+                      icon: Icons.add_task_sharp,
+                      text: 'Todos',
+                      color: AppColors.iconMain,
+                      onTap: () {
+                        Navigator.pushNamed(context, AppRoutes.todos);
+                      },
+                    ),
+                  ],
                 ),
-                HomePageItem(
-                  controller: _controller2,
-                  icon: Icons.add_task_sharp,
-                  text: 'Todos',
-                  color: AppColors.iconMain,
-                  onTap: () {
-                    Navigator.pushNamed(context, AppRoutes.todos);
-                  },
+                SizedBox(height: 15.h),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    HomePageItem(
+                      controller: _controller3,
+                      icon: Icons.school_outlined,
+                      text: 'Improve IQ',
+                      color: Colors.blue.shade900,
+                      onTap: () {
+                        Navigator.pushNamed(context, AppRoutes.improveIQ);
+                      },
+                    ),
+                    HomePageItem(
+                      controller: _controller4,
+                      icon: Icons.person_add_alt_1_outlined,
+                      text: 'Profile  ',
+                      color: AppColors.profileColor,
+                      onTap: () {
+                        Navigator.pushNamed(context, AppRoutes.profilePage);
+                      },
+                    ),
+                  ],
+                ),
+                SizedBox(height: 15.h),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    HomePageItem(
+                      controller: _controller5,
+                      icon: Icons.data_object_outlined,
+                      text: 'History',
+                      color: AppColors.historyPageColor,
+                      onTap: () {
+                        Navigator.pushNamed(context, AppRoutes.historyPage);
+                      },
+                    ),
+                    HomePageItem(
+                      controller: _controller6,
+                      icon: Icons.adobe_outlined,
+                      text: 'About IQ',
+                      color: AppColors.primary,
+                      onTap: () {
+                        Navigator.pushNamed(context, AppRoutes.aboutTab);
+                      },
+                    ),
+                  ],
                 ),
               ],
-            ),
-            SizedBox(height: 15.h),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                HomePageItem(
-                  controller: _controller3,
-                  icon: Icons.school_outlined,
-                  text: 'Improve IQ',
-                  color: Colors.blue.shade900,
-                  onTap: () {
-                    Navigator.pushNamed(context, AppRoutes.improveIQ);
-                  },
-                ),
-                HomePageItem(
-                  controller: _controller4,
-                  icon: Icons.person_add_alt_1_outlined,
-                  text: 'Profile  ',
-                  color: AppColors.profileColor,
-                  onTap: () {
-                    Navigator.pushNamed(context, AppRoutes.profilePage);
-                  },
-                ),
-              ],
-            ),
-            SizedBox(height: 15.h),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                HomePageItem(
-                  controller: _controller5,
-                  icon: Icons.data_object_outlined,
-                  text: 'History',
-                  color: AppColors.historyPageColor,
-                  onTap: () {
-                    Navigator.pushNamed(context, AppRoutes.historyPage);
-                  },
-                ),
-                HomePageItem(
-                  controller: _controller6,
-                  icon: Icons.adobe_outlined,
-                  text: 'About IQ',
-                  color: AppColors.primary,
-                  onTap: () {
-                    Navigator.pushNamed(context, AppRoutes.aboutTab);
-                  },
-                ),
-              ],
-            ),
-          ],
+            );
+          },
         ),
       ),
     );

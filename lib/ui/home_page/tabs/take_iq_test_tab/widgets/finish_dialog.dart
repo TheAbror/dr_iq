@@ -2,6 +2,7 @@
 
 import 'package:dr_iq/core/hive/box_person.dart';
 import 'package:dr_iq/core/hive/result.dart';
+import 'package:dr_iq/core/preference_services/preference_services.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:intl/intl.dart';
@@ -51,7 +52,7 @@ Future<dynamic> finishDialog(BuildContext context, QuestionsState state) {
             ),
             const SizedBox(height: 35),
             TextButton(
-              onPressed: () {
+              onPressed: () async {
                 // Result? myResult = boxResult.get(ShPrefKeys.result);
 
                 // List<String> oldResult = myResult?.date ?? [];
@@ -86,6 +87,30 @@ Future<dynamic> finishDialog(BuildContext context, QuestionsState state) {
                     date: formattedDate,
                   ),
                 );
+
+                //
+                print(formattedDate);
+                var preferencesServices = PreferencesServices();
+
+                var resultOfTests = ((state.result / questionsLength) * 100).toString();
+                var formattedDates = dateFormatter.format(today);
+
+                List<String>? existingResultsList = await preferencesServices.getResultList(ShPrefKeys.resultList);
+                List<String>? existingDateList = await preferencesServices.getDatesList(ShPrefKeys.dateList);
+
+                if (existingResultsList != null) {
+                  existingResultsList.add(resultOfTests);
+                } else {
+                  existingResultsList = [resultOfTests];
+                }
+                await preferencesServices.saveStringList(existingResultsList);
+                //
+                if (existingDateList != null) {
+                  existingDateList.add(formattedDates);
+                } else {
+                  existingDateList = [formattedDates];
+                }
+                await preferencesServices.saveDatesList(existingDateList);
 
                 // Close the dialog
                 Navigator.of(dialogContext).pop();

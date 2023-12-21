@@ -1,14 +1,13 @@
-import 'package:dr_iq/core/hive/box_person.dart';
-import 'package:dr_iq/core/hive/result.dart';
-import 'package:dr_iq/core/preference_services/shpref_keys.dart';
-import 'package:dr_iq/ui/home_page/tabs/history_page/line_chart.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:dr_iq/core/bloc_progress/bloc_progress.dart';
+import 'package:dr_iq/core/constants/primary_loader.dart';
 import 'package:dr_iq/core/constants/something_went_wrong.dart';
 import 'package:dr_iq/ui/home_page/tabs/history_page/bloc/history_bloc.dart';
 import 'package:dr_iq/ui/home_page/tabs/history_page/history_body_item.dart';
+import 'package:dr_iq/ui/home_page/tabs/history_page/line_chart.dart';
 import 'package:dr_iq/ui/home_page/tabs/history_page/widgets/history_page_appbar.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class HistoryPage extends StatelessWidget {
   const HistoryPage({super.key});
@@ -21,9 +20,13 @@ class HistoryPage extends StatelessWidget {
         create: (context) => HistoryBloc(),
         child: BlocBuilder<HistoryBloc, HistoryState>(
           builder: (context, state) {
-            Result? myResult = boxResult.get(ShPrefKeys.result);
-
-            if (myResult?.result.isEmpty ?? true) {
+            if (state.blocProgress == BlocProgress.IS_LOADING) {
+              return const PrimaryLoader();
+            }
+            if (state.blocProgress == BlocProgress.FAILED) {
+              return const SomethingWentWrong();
+            }
+            if (state.resultList.isEmpty) {
               return const NoRecordsFound();
             }
 
@@ -41,25 +44,21 @@ class HistoryPage extends StatelessWidget {
                     ),
                   ),
                   SizedBox(height: 10.h),
-                  ListView.builder(
+                  ListView.separated(
                     shrinkWrap: true,
                     physics: BouncingScrollPhysics(),
-                    itemCount: boxResult.length,
+                    itemCount: state.dateList.length,
                     itemBuilder: (context, index) {
-                      Result? result = boxResult.getAt(index);
+                      var date = state.dateList[index];
 
-                      return Column(
-                        children: [
-                          HistoryBodyItem(
-                            index: (index + 1).toString(),
-                            dates: result?.date[index] ?? '',
-                            time: '', // You need to fill in the logic for time
-                            scores: result?.result[index] ?? '',
-                          ),
-                          Divider(), // Add a divider between list items
-                        ],
+                      return HistoryBodyItem(
+                        index: (index + 1).toString(),
+                        date: date.substring(0, date.indexOf('2023') + 4),
+                        time: '\n${date.substring(date.indexOf(',') + 1)}',
+                        score: state.resultList[index].toString().replaceAll('.0', ''),
                       );
                     },
+                    separatorBuilder: (context, index) => Divider(),
                   ),
                 ],
               ),
