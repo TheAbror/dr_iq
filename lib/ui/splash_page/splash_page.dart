@@ -64,7 +64,13 @@ class _SplashPageState extends State<SplashPage> {
             const Center(
               child: CircularProgressIndicator(color: AppColors.textMain),
             ),
-            SizedBox(height: 155.h),
+            SizedBox(height: 160.h),
+            Center(
+              child: Image.asset(
+                'assets/images/1 2.png',
+                height: 90.h,
+              ),
+            )
           ],
         ),
       ),
