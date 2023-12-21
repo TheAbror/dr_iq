@@ -5,11 +5,7 @@ class SplashBloc extends Cubit<SplashAuthStatus> {
   SplashBloc() : super(SplashAuthStatus.initial);
 
   Future setupInitialSettings() async {
-    // final token = await PreferencesServices.getToken();
-
-    await Future.delayed(const Duration(seconds: 2000));
-
-    // emit(token == null ? SplashAuthStatus.notAuthorized : SplashAuthStatus.authorized);
+    await Future.delayed(const Duration(seconds: 2));
     emit(SplashAuthStatus.authorized);
   }
 }
