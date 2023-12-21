@@ -64,6 +64,7 @@ class TakeIQTest extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.end,
                       children: iconsList,
                     ),
+                    SizedBox(height: 10.h),
                   ],
                 );
               },
