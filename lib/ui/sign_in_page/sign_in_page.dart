@@ -73,7 +73,10 @@ class SignInPage extends StatelessWidget {
                     ),
                   );
 
-                  Navigator.pushNamed(context, AppRoutes.homePage);
+                  Navigator.of(context).pushNamedAndRemoveUntil(
+                    AppRoutes.homePage,
+                    (route) => false,
+                  );
                 },
                 child: ContinueButton(),
               ),
