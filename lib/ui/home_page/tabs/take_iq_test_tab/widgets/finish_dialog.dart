@@ -53,25 +53,6 @@ Future<dynamic> finishDialog(BuildContext context, QuestionsState state) {
             const SizedBox(height: 35),
             TextButton(
               onPressed: () async {
-                // Result? myResult = boxResult.get(ShPrefKeys.result);
-
-                // List<String> oldResult = myResult?.date ?? [];
-
-                // final dateFormatter = DateFormat('dd-MM-yyyy, HH:mm');
-                // final today = DateTime.now();
-
-                // List<String> resultOfTest = [(state.result / questionsLength * 100).toString()];
-                // List<String> newResult = [...oldResult, ...resultOfTest];
-                // List<String> formattedDate = [dateFormatter.format(today)];
-
-                // boxResult.put(
-                //   ShPrefKeys.result,
-                //   Result(
-                //     result: newResult,
-                //     date: formattedDate,
-                //   ),
-                // );
-
                 Result? myResult = boxResult.get(ShPrefKeys.result);
                 List<String> oldResult = myResult?.result ?? [];
                 final dateFormatter = DateFormat('dd-MM-yyyy, HH:mm');
