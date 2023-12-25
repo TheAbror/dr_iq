@@ -72,6 +72,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
   Future<dynamic> homeDialog() async {
     return Future.delayed(const Duration(seconds: 1), () {
       showDialog(
+        barrierDismissible: true,
         context: context,
         builder: (BuildContext context) {
           return Material(
