@@ -227,7 +227,8 @@ class _Body extends StatelessWidget {
 "The Ultimate IQ Test Book" - PHILIP CARTER & KEN RUSSELL.
 "What am I?" Riddles - Riddle Users
 
-We would like to express our gratitude for the inspiration and intellectual content provided by these sources. If you have any concerns or would like specific attribution, please feel free to contact us. Thank you for contributing to the enrichment of our app's content.
+We would like to express our gratitude for the inspiration and intellectual content provided by these sources. \n\nIf you have any concerns or would like specific attribution, please feel free to contact us. \nThank you for contributing to the enrichment of our app's content.
+\nGithub: https://github.com/TheAbror/dr_iq
  ''',
             ),
             SizedBox(height: 25.h),

@@ -64,8 +64,54 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
           });
 
     context.read<ProfileBloc>().loadData();
-
     super.initState();
+
+    homeDialog();
+  }
+
+  Future<dynamic> homeDialog() async {
+    return Future.delayed(const Duration(seconds: 1), () {
+      showDialog(
+        context: context,
+        builder: (BuildContext context) {
+          return Material(
+            color: Colors.transparent,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                GestureDetector(
+                  onTap: () => Navigator.pop(context),
+                  child: Container(
+                    height: 530.h,
+                    width: 350.w,
+                    padding: EdgeInsets.all(16.w),
+                    decoration: BoxDecoration(
+                      color: AppColors.float,
+                      borderRadius: BorderRadius.circular(12.r),
+                    ),
+                    child: Column(
+                      children: [
+                        Text(
+                          '''Welcome to our IQ training program designed to boost your intelligence quotient! The journey to enhancing your IQ score begins here, and we encourage you to approach it with a positive and determined mindset.
+                
+It's important to note that everyone starts at different levels, and initial scores may vary. If you find that your scores are not as high as you'd like them to be at first, don't be discouraged. Remember, this platform is a learning and training environment that covers a diverse range of topics. The key to success is consistent effort, continuous learning, and dedicated training.
+                
+So, stay motivated, persevere through any initial challenges, and enjoy the process of boosting your IQ. Your dedication to learning and training here will undoubtedly contribute to your intellectual growth across various topics. \n\nGood luck on your journey to unlocking your full potential!''',
+                          style: TextStyle(
+                            fontSize: 16.sp,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        )
+                      ],
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          );
+        },
+      );
+    });
   }
 
   @override
