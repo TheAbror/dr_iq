@@ -53,7 +53,11 @@ class TakeIQTest extends StatelessWidget {
                                 textQuestion: questions[state.questionCounter]['question_text'],
                               ),
                               MySpacer(),
-                              OptionsText(optionText: myValue, options: questions),
+                              OptionsText(
+                                state: state,
+                                optionText: myValue,
+                                options: questions,
+                              ),
                               Spacer(),
                             ],
                           );

@@ -8,11 +8,14 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class OptionsText extends StatelessWidget {
   final String optionText;
+  final QuestionsState state;
+
   final List<Map<String, dynamic>> options;
 
   const OptionsText({
     super.key,
     required this.optionText,
+    required this.state,
     required this.options,
   });
 
@@ -28,14 +31,16 @@ class OptionsText extends StatelessWidget {
             var myValue = options[state.questionCounter]["options"][index];
             return GestureDetector(
               onTap: () {
-                var isCorrect = myValue["is_correct"];
-                context.read<QuestionsBloc>().toNextQuestion();
-                print('Selected value: ${myValue["option_text"]}');
-                print('Is Correct: $isCorrect');
-                if (isCorrect == true) {
-                  context.read<QuestionsBloc>().resultOfTest();
-                } else {
-                  context.read<QuestionsBloc>().isInCorrect();
+                if (state.isLast + 1 <= 10) {
+                  var isCorrect = myValue["is_correct"];
+                  context.read<QuestionsBloc>().toNextQuestion();
+                  print('Selected value: ${myValue["option_text"]}');
+                  print('Is Correct: $isCorrect');
+                  if (isCorrect == true) {
+                    context.read<QuestionsBloc>().resultOfTest();
+                  } else {
+                    context.read<QuestionsBloc>().isInCorrect();
+                  }
                 }
               },
               child: Container(

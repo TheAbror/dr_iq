@@ -53,7 +53,7 @@ class HistoryPage extends StatelessWidget {
 
                       return HistoryBodyItem(
                         index: (index + 1).toString(),
-                        date: date.substring(0, date.indexOf('2023') + 4),
+                        date: date.substring(0, date.indexOf('2023') + 11),
                         time: '\n${date.substring(date.indexOf(',') + 1)}',
                         score: state.resultList[index].toString().replaceAll('.0', ''),
                       );
