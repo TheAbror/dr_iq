@@ -52,7 +52,7 @@ class _SplashPageState extends State<SplashPage> {
         body: Column(
           crossAxisAlignment: CrossAxisAlignment.end,
           children: [
-            SizedBox(height: 250.h),
+            Spacer(),
             Center(
               child: SvgPicture.asset(
                 'assets/images/Component 1.svg',
@@ -60,17 +60,18 @@ class _SplashPageState extends State<SplashPage> {
                 fit: BoxFit.fill,
               ),
             ),
-            SizedBox(height: 170.h),
+            Spacer(),
             const Center(
               child: CircularProgressIndicator(color: AppColors.textMain),
             ),
-            SizedBox(height: 160.h),
+            Spacer(),
             Center(
               child: Image.asset(
                 'assets/images/1 2.png',
                 height: 90.h,
               ),
-            )
+            ),
+            SizedBox(height: 40.h),
           ],
         ),
       ),

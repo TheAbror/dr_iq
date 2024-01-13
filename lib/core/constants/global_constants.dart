@@ -576,7 +576,7 @@ class GlobalConstants {
       "options": [
         {"option_text": "3", "is_correct": false},
         {"option_text": "5", "is_correct": false},
-        {"option_text": "23 Africa", "is_correct": true},
+        {"option_text": "23", "is_correct": true},
         {"option_text": "4", "is_correct": false},
       ],
       "question_text": "How many countries in north america?"

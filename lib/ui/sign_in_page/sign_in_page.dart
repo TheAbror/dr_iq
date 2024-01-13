@@ -25,10 +25,10 @@ class SignInPage extends StatelessWidget {
       backgroundColor: AppColors.float,
       body: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 20),
+          padding: EdgeInsets.symmetric(horizontal: 20.w),
           child: Column(
             children: [
-              const SizedBox(height: 70),
+              SizedBox(height: 70.h),
               Center(
                 child: SvgPicture.asset(
                   'assets/images/Component 1.svg',
@@ -36,7 +36,7 @@ class SignInPage extends StatelessWidget {
                   fit: BoxFit.fill,
                 ),
               ),
-              const SizedBox(height: 70),
+              SizedBox(height: 70.h),
               ListBody(
                 children: <Widget>[
                   const Text(
@@ -48,7 +48,7 @@ class SignInPage extends StatelessWidget {
                     textInputAction: TextInputAction.next,
                     style: TextStyle(fontWeight: FontWeight.bold),
                   ),
-                  const SizedBox(height: 20),
+                  SizedBox(height: 20.h),
                   const Text(
                     'Age',
                     style: TextStyle(fontWeight: FontWeight.bold),
