@@ -27,44 +27,45 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
 
   @override
   void initState() {
-    _controller1 =
-        AnimationController(vsync: this, duration: Duration(milliseconds: 200), lowerBound: 0.0, upperBound: 0.1)
-          ..addListener(() {
-            setState(() {});
-          });
+    super.initState();
 
-    _controller2 =
-        AnimationController(vsync: this, duration: Duration(milliseconds: 200), lowerBound: 0.0, upperBound: 0.1)
-          ..addListener(() {
-            setState(() {});
-          });
+    _controller1 = AnimationController(
+        vsync: this, duration: Duration(milliseconds: 200), lowerBound: 0.0, upperBound: 0.1)
+      ..addListener(() {
+        setState(() {});
+      });
 
-    _controller3 =
-        AnimationController(vsync: this, duration: Duration(milliseconds: 200), lowerBound: 0.0, upperBound: 0.1)
-          ..addListener(() {
-            setState(() {});
-          });
+    _controller2 = AnimationController(
+        vsync: this, duration: Duration(milliseconds: 200), lowerBound: 0.0, upperBound: 0.1)
+      ..addListener(() {
+        setState(() {});
+      });
 
-    _controller4 =
-        AnimationController(vsync: this, duration: Duration(milliseconds: 200), lowerBound: 0.0, upperBound: 0.1)
-          ..addListener(() {
-            setState(() {});
-          });
+    _controller3 = AnimationController(
+        vsync: this, duration: Duration(milliseconds: 200), lowerBound: 0.0, upperBound: 0.1)
+      ..addListener(() {
+        setState(() {});
+      });
 
-    _controller5 =
-        AnimationController(vsync: this, duration: Duration(milliseconds: 200), lowerBound: 0.0, upperBound: 0.1)
-          ..addListener(() {
-            setState(() {});
-          });
+    _controller4 = AnimationController(
+        vsync: this, duration: Duration(milliseconds: 200), lowerBound: 0.0, upperBound: 0.1)
+      ..addListener(() {
+        setState(() {});
+      });
 
-    _controller6 =
-        AnimationController(vsync: this, duration: Duration(milliseconds: 200), lowerBound: 0.0, upperBound: 0.1)
-          ..addListener(() {
-            setState(() {});
-          });
+    _controller5 = AnimationController(
+        vsync: this, duration: Duration(milliseconds: 200), lowerBound: 0.0, upperBound: 0.1)
+      ..addListener(() {
+        setState(() {});
+      });
+
+    _controller6 = AnimationController(
+        vsync: this, duration: Duration(milliseconds: 200), lowerBound: 0.0, upperBound: 0.1)
+      ..addListener(() {
+        setState(() {});
+      });
 
     context.read<ProfileBloc>().loadData();
-    super.initState();
 
     homeDialog();
   }
@@ -83,8 +84,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                 GestureDetector(
                   onTap: () => Navigator.pop(context),
                   child: Container(
-                    height: 550.h,
-                    width: 350.w,
+                    margin: EdgeInsets.symmetric(horizontal: 16.h),
                     padding: EdgeInsets.all(16.w),
                     decoration: BoxDecoration(
                       color: AppColors.float,
@@ -184,7 +184,8 @@ So, stay motivated, persevere through any initial challenges, and enjoy the proc
                       text: 'Take IQ Test',
                       color: const Color(0xffc30010),
                       onTap: () {
-                        int randomIndex = Random().nextInt(QuestionsListRandom.questionsList.length);
+                        int randomIndex =
+                            Random().nextInt(QuestionsListRandom.questionsList.length);
 
                         Navigator.pushNamed(
                           context,
