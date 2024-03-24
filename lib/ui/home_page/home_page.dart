@@ -83,7 +83,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                 GestureDetector(
                   onTap: () => Navigator.pop(context),
                   child: Container(
-                    height: 530.h,
+                    height: 550.h,
                     width: 350.w,
                     padding: EdgeInsets.all(16.w),
                     decoration: BoxDecoration(
